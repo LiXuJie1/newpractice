@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 375px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .first {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            color: #333333;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #efece5;
+            font-weight: bold;
+        }
+
+        .first .back {
+            padding-left: 16px;
+            width: 156px;
+        }
+
+        .first .title {
+            width: 200px;
+        }
+
+        .second {
+            padding-top: 14px;
+            padding-left: 22px;
+            border-bottom: 8px solid #f7f4ed;
+        }
+
+        .second .top {
+            display: flex;
+            align-items: center;
+        }
+
+        .second .top .message {
+            display: flex;
+            align-items: center;
+        }
+
+        .message .head {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            position: relative;
+            background: url('../images/QQ图片20180911114744.jpg') no-repeat top center;
+        }
+
+        .message .head .logo {
+            width: 17px;
+            height: 17px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .message .name {
+            padding-left: 19px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .message_pic img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .message_pic {
+            width: 20px;
+            height: 20px;
+            padding-left: 179px;
+        }
+
+        .second .active {
+            margin-top: 23px;
+            width: 325px;
+            height: 45px;
+            border-radius: 45px;
+            background-image: linear-gradient(-90deg, #ffeebd 0%, #ffc51b 100%);
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 21px;
+
+        }
+
+        .second .active span:first-child {
+            margin-left: 29px;
+            margin-right: 116px;
+        }
+
+        .demoBox {
+            display: flex;
+            align-items: center;
+            padding-top: 26px;
+            padding-bottom: 16px;
+            justify-content: space-between;
+            border-bottom: 1px solid #efece5;
+        }
+
+        .demoBox .left {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        .demoBox .left .pic img {
+            width: 23px;
+            height: 23px;
+        }
+
+        .demoBox .left .pic {
+            width: 23px;
+            height: 23px;
+
+        }
+
+        .demoBox .left .text {
+            padding-left: 20px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .demoBox .right {
+            color: #dfd7c3;
+            padding-right: 18px;
+        }
+
+        .big {
+            border-bottom: 8px solid #f7f4ed
+        }
+
+        .color {
+            background-color: #eceef3;
+            /* height: 117px; */
+            align-items: baseline;
+        }
+        .color .context{
+            display: block;
+
+        }
+        .content{
+            padding-top: 40px;
+            padding-left: 99px;
+            font-size: 13px;
+            color: #333;
+            background-color: #eceef3;
+            padding-bottom: 15px;
+        }
+        .bottom{
+            display: flex;
+            align-items: baseline;
+        }
+        .bottom .logoBox{
+            width: 93px;
+            text-align: center;
+            padding-top:8px;
+        }
+        .bottom .logoBox img{
+            width: 23px;
+            height: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="first">
+            <div class="back">
+                <</div> <div class="title">我的
+            </div>
+        </div>
+        <div class="second">
+            <div class="top">
+                <div class="message">
+                    <div class="head">
+                        <img class="logo" src="icons/icon-vip-r.png" alt="">
+                    </div>
+                    <div class="name">张大千</div>
+                </div>
+                <div class="message_pic">
+                    <img src="icons/icon-msg.png" alt="">
+                </div>
+            </div>
+            <div class="active">
+                <span>套餐A</span>
+                <span>剩余3次 共12次</span>
+            </div>
+        </div>
+        <!-- 普通 -->
+        <div class="demoBox">
+            <div class="left">
+                <div class="pic">
+                    <img src="icons/icon-cube.png" alt="">
+                </div>
+                <div class="text">预约</div>
+            </div>
+            <div class="right">></div>
+        </div>
+        <!-- 加粗 -->
+        <div class="demoBox big">
+            <div class="left">
+                <div class="pic">
+                    <img src="icons/icon-cube.png" alt="">
+                </div>
+                <div class="text">预约</div>
+            </div>
+            <div class="right">></div>
+        </div>
+
+        <!--  -->
+        <div class="demoBox">
+            <div class="left">
+                <div class="pic">
+                    <img src="icons/icon-cube.png" alt="">
+                </div>
+                <div class="text">预约</div>
+            </div>
+            <div class="right">></div>
+        </div>
+        <div class="demoBox">
+            <div class="left">
+                <div class="pic">
+                    <img src="icons/icon-cube.png" alt="">
+                </div>
+                <div class="text">预约</div>
+            </div>
+            <div class="right">></div>
+        </div>
+        <div class="demoBox big">
+            <div class="left">
+                <div class="pic">
+                    <img src="icons/icon-cube.png" alt="">
+                </div>
+                <div class="text">预约</div>
+            </div>
+            <div class="right">></div>
+        </div>
+        <div class="demoBox">
+            <div class="left">
+                <div class="pic">
+                    <img src="icons/icon-cube.png" alt="">
+                </div>
+                <div class="text">预约</div>
+            </div>
+            <div class="right">></div>
+        </div>
+        <div class="demoBox">
+            <div class="left">
+                <div class="pic">
+                    <img src="icons/icon-cube.png" alt="">
+                </div>
+                <div class="text">预约</div>
+            </div>
+            <div class="right">></div>
+        </div>
+        <div class="demoBox color">
+                <div class="left">
+                    <div class="pic">
+                        <img src="icons/icon-cube.png" alt="">
+                    </div>
+                    <div class="text">预约</div>
+                </div>
+                <div class="right">></div>
+        </div>
+        <div class="content">
+            联系我们：400-12334323123
+        </div>
+        <div class="bottom">
+            <div class="logoBox">
+                <div>
+                    <img src="icons/home.png" alt="">
+                </div>
+                <div>首页</div>
+            </div>
+            <div class="logoBox">
+                <div>
+                    <img src="icons/home.png" alt="">
+                </div>
+                <div>首页</div>
+            </div>
+            <div class="logoBox">
+                <div>
+                    <img src="icons/home.png" alt="">
+                </div>
+                <div>首页</div>
+            </div>
+            <div class="logoBox">
+                <div>
+                    <img src="icons/home.png" alt="">
+                </div>
+                <div>首页</div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+.bg-blue {
+	background-color: blue;
+}
+
+@media only screen and (min-width:1200px) {
+	.person-list .col-lg-4 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media only screen and (min-width: 100px) and (max-width: 768px) {
+	.person-list .col-xs-6 {
+		padding: 5px;
+	}
+}
+
+.nav-bar .dropdown-menu {
+	padding: 0;
+	border-top: 2px solid #3db45e;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+.nav-bar .dropdown-menu>li>a {
+	line-height: 36px;
+}
+
+.nav-bar .dropdown-menu>li>a:hover {
+	background-color: #3db45e;
+	color: white;
+}
+
+.form-horizontal {
+	margin-top: 10px;
+}
+
+.btn .caret {
+	margin-left: 3px;
+}
+
+.btn {
+	margin: 0 5px 10px 0;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li:nth-child(1)>a {
+	margin-top: 3px;
+}
+
+.navbar {
+	position: relative;
+	min-height: 50px;
+	margin-bottom: 0px;
+	border: 1px solid transparent;
+}
+
+.relative {
+	position: relative;
+}
+
+.container-fluid {
+	padding-right: 15px;
+	padding-left: 0px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#user_leftbar {
+	color: #fff;
+	width: 200px;
+	background-color: #92a8f7;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.user_list {
+	border-bottom: 1px solid #666;
+	border-top: 1px solid #666;
+}
+
+.user_list li {
+	padding: 10px;
+	list-style: none;
+}
+
+.user_list h3 {
+	margin: 0;
+	font-size: 14px;
+	display: block;
+	padding: 12px;
+}
+
+.user_list a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.user_list h3 .glyphicon {
+	margin-right: 10px;
+}
+
+.user_list h3 .caret {
+	margin-left: 50px;
+}
+
+.user_list li .glyphicon {
+	margin-right: 10px;
+}
+
+.user_list ul {
+	margin: 0;
+	border-bottom: 1px solid #666;
+	border-top: 1px solid #666;
+	display: none;
+}
+
+.user_right {
+	margin-left: 200px;
+	height: 100%;
+	background-color: #F0EEEF;
+}
+
+.right_nav {
+	background-color: #F9F9F7;
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+}
+
+.right_nav .glyphicon {
+	margin-right: 10px;
+}
+
+.tab-list {
+	margin: 20px;
+	padding: 20px;
+	background-color: #F9F7EF;
+	overflow-x: scroll;
+}
+
+.tab-list .table {
+	width: 1100px;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+	padding: 0;
+	text-align: center;
+	color: #8F8F8F;
+	line-height: 41px;
+	font-size: 14px;
+	vertical-align: top;
+	border-top: 1px solid #ddd;
+}
+
+.left-btn {
+	float: left;
+}
+
+.right-btn {
+	float: right;
+}
+
+.footer-left-btn {
+	margin-left: 20px;
+}

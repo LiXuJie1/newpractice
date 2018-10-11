@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .top {
+        transition: 1s;
+    }
+
+    .bottom {
+        transition: 1s;
+    }
+
+    /* .x:hover .top{
+        transform: rotate(45deg);
+    }
+    .x:hover .bottom{
+        transform: rotate(-45deg);
+    } */
+</style>
+
+<body style="height:10000px; ">
+    <div style="position:absolute;top:800px;">
+        <span class="counter">1,000</span>
+        <span class="counter">300</span>
+        <span class="counter">5000</span>
+        <span class="counter">4600</span>
+    </div>
+    <div class="x">
+        <div class="top" style="width:40px; height:2px;background-color:black;"></div>
+        <br>
+        <div class="bottom" style="width:40px; height:2px; background-color:black;"></div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.countup.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var flag = true;
+            $('.counter').countUp({
+                delay: 10,
+                time: 2000
+            });
+
+            $('.x').click(function () {
+                if (flag == true) {
+                    console.log(1)
+                    $('.top').css({
+                        transform: 'rotate(45deg)',
+                        transformOrigin:'left center'
+                    })
+                    $('.bottom').css({
+                        transform: 'rotate(-45deg)',
+                        transformOrigin:'left center'
+                    })
+                    flag = false;
+                }
+                else{
+                    console.log(2)
+                    $('.top').css({
+                        transform: 'rotate(0)',
+                        transformOrigin:'left center'
+                    })
+                    $('.bottom').css({
+                        transform: 'rotate(0)',
+                        transformOrigin:'left center'
+                    })
+                    flag = true;
+                }
+            })
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+.bac{
+    height: 550px;
+    background:url("../pic/bac.jpg") no-repeat top center;
+}
+.navTop{
+    width: 100%;
+    height: 58px;
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(165, 164, 161,30%);
+}
+.container{
+    width: 1100px;
+    margin: 0 auto;
+}
+.navTop{
+    z-index: 10;
+}
+.navList li{
+    color: #fff;
+    width: 66px;
+    padding: 22px 29px 20px 30px;
+}
+
+.navList div:first-child li{
+    /*width: 66px;*/
+    margin-left: 17px;
+    /*padding: 22px 29px 20px 30px;*/
+    /*background-color: #e80808;*/
+}
+.navList li:hover{
+ background-color: #e80808;
+}
+.list a{
+    color: #fff;
+}
+.navList>div{
+    height: 58px;
+    overflow: hidden; 
+}
+/*.navList .list div:nth-child(1){
+    display: none;
+}
+.navList .list div:nth-child(2){
+    display: none;
+}*/
+
+.list div{
+    width: 66px;
+    padding: 22px 29px 20px 30px;
+    background-color: rgba(165, 164, 161, 30%);
+}
+.list div:hover{
+    background-color: #e80808;
+}
+.navList .enjoy:hover{
+    overflow: visible;
+}
+.navList .demo:hover{
+    overflow: visible;
+}
+.navList .news:hover{
+    overflow: visible;
+}
+.navList .scene:hover{
+    overflow: visible;
+}
+.navList .intro:hover{
+    overflow: visible;
+}
+/*.navList .enjoy:hover .list div:nth-child(1){
+  display: block;
+  transition: 1s;
+}
+.navList .enjoy:hover .list div:nth-child(2){
+    display:block;
+    transition: 2s;
+}
+.navList .enjoy:hover .list div:nth-child(3){
+    display: block;
+    transition: 3;
+}*/
+
+
+
+.left{
+    width: 18px;
+    padding: 14px 12px 14px 10px;
+    background-color: rgba(115, 115, 111, 30%);
+    left: 0;
+    top: 50%;
+    margin-top: -90px;
+    /*margin-top: -275px;*/
+    cursor: pointer;
+}
+.right{
+    width: 18px;
+    padding: 14px 12px 14px 10px;
+    right: 0;
+    top: 50%;
+    margin-top: -90px;
+    background-color: rgba(115, 115, 111, 30%);
+    cursor: pointer;
+}
+/*.container2{
+    width: 1100px;
+    margin: 0 auto;
+    top: 50%;
+    margin-top: -30px;
+    left: 125px;
+    
+}*/
+.container2{
+    width: 1100px;
+    height: 395px;
+    margin: 0 auto;
+    overflow: hidden;
+    /*z-index: -1;*/
+}
+.container3{
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 387px;
+    text-align: center;
+    display: block;
+}
+.lump{
+    width: 42px;
+    height: 11px;
+    margin: 0 1px;
+    background-color: #797977;
+    display: inline-block;
+    cursor: pointer;
+}
+.lump:hover{
+    background-color: #f67573;
+}
+
+.container2 .right:hover{
+    background-color: rgba(115, 115, 111, 60%);
+}
+.container2 .left:hover{
+    background-color: rgba(115, 115, 111, 60%);
+}
+

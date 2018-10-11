@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="grades">
+    <button type="button" id="oBtn">按钮</button>
+    <script>
+    var grade=document.getElementById("grades");
+    var btn=document.getElementById("oBtn");
+    btn.onclick=function(){
+        if(grade.value==""){
+            alert("please enter a grade");
+        }
+        if(grade.value>90&&grade.value!=""){
+                alert("优秀");
+            }
+            else if(grade.value<90&&grade.value>=80&&grade.value!=""){
+                alert("良好");
+            }
+            else if(grade.value<80&&grade.value>=70&&grade.value!=""){
+                alert("及格");
+            }
+            else if(grade.value<70&&grade.value!=""){
+                alert("不及格");
+            }
+    }
+    </script>
+</body>
+</html>

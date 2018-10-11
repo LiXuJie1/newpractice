@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{
+            /* background:url('../images/fengche.png') no-repeat top center; */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="395px"height="383px"></canvas>
+</body>
+    <script>
+    oCanvas = document.getElementById('canvas');
+    oCanvas.onmousemove=function(e){
+        x=e.offsetX;
+        y=e.offsetY;
+        console.log(x);
+        console.log(y);
+
+    }
+    //画布
+    var width = oCanvas.width;
+    var height = oCanvas.height;
+    var i=0;
+    var t=0;
+    //画笔
+    var context = oCanvas.getContext('2d');
+    (function run(){
+    requestAnimationFrame(run);  
+    //绘制背景
+    context.fillStyle = "#48ddd3";
+    context.fillRect(0, 0, width, height);
+    function yun(a,b,c,d){
+    //保存位置  
+    context.save();
+    //云彩
+    context.translate(a+i,b);
+    context.scale(c,d)  
+    context.beginPath();
+    context.moveTo(126,200);
+    context.quadraticCurveTo(141,175,155,185);
+    context.quadraticCurveTo(185,153,195,184);
+    context.quadraticCurveTo(220,173,222,200);
+    context.closePath();
+    var color=context.createLinearGradient(174,169,170,200);
+    color.addColorStop(0,'#fff');
+    color.addColorStop(0.9,'#74e5dd');
+    color.addColorStop(1,'#5be1d9');
+    context.fillStyle=color;
+    context.fill();
+    context.restore();
+    i=i+0.05;
+    if(a+i>393){
+        i=-100;
+    }
+    }
+
+    //后面那座山
+    context.save();
+    // context.strokeStyle="#000";
+    context.fillStyle="#3dd4ce";
+    context.beginPath();
+    context.moveTo(0,248);
+    context.quadraticCurveTo(25,240,185,270);
+    context.quadraticCurveTo(58,305,0,303);
+    context.closePath();
+    // context.stroke();
+    context.fill();
+    context.restore();
+
+
+    // 前面那座山
+    context.save();
+    // context.strokeStyle="#000";
+    context.fillStyle="#1ac9c5";
+    context.beginPath();
+    context.moveTo(185,270);
+    context.quadraticCurveTo(310,225,393,262);
+    context.lineTo(393,382);
+    context.lineTo(393,382);
+    context.lineTo(0,382);
+    context.lineTo(0,303);
+    context.quadraticCurveTo(58,305,185,270);
+    context.closePath();
+    // context.stroke();
+    context.fill();
+    context.restore();
+
+function car(l,x,j,s,c,o){
+     //风车
+     context.save();
+     context.translate(l,x);
+     context.scale(j,s);
+    // context.strokeStyle="#000";
+    context.fillStyle='#17bcbb';
+    context.beginPath();
+    context.moveTo(-2,0);
+    context.lineTo(-5,87);
+    context.lineTo(5,87);
+    context.lineTo(2,0);
+    context.closePath();
+    // context.stroke();
+    context.fill();
+    context.restore();
+    //扇叶
+    context.save();
+    context.translate(l-2,x);
+    context.rotate(Math.PI/180*t);
+     context.scale(j,s);
+    context.fillStyle='#25c8c8';
+    // context.strokeStyle="#000";
+    context.beginPath();
+    context.moveTo(-3,1);
+    context.lineTo(10,-40);
+    context.lineTo(12,-39);
+    context.lineTo(5,0);
+    context.lineTo(30,29);
+    context.lineTo(29,31);
+    context.lineTo(0,6);
+    context.lineTo(-41,14);
+    context.lineTo(-42,12);
+    context.lineTo(-3,1);
+    context.closePath();
+    context.fill();
+    // context.stroke();
+    context.restore();
+    //圆
+    context.save();
+    context.translate(l-1,x);
+     context.scale(j,s);
+    context.fillStyle="#4edfd6";
+    context.beginPath();
+    context.arc(0,0,2,0,2*Math.PI,true);
+    context.closePath();
+    context.fill();
+    context.restore();
+    t++;
+}
+    car(286,177,0.8,0.8);
+    car(350,200,0.6,0.6);
+    car(100,230,0.4,0.4);
+    car(60,220,0.4,0.4);
+   
+    yun(60,60,0.8,0.8);
+    yun(-210,-180,1.5,1.5);
+    yun(60,-160,1.2,1.2);
+})();
+    
+
+    
+
+
+
+
+
+
+
+
+    
+    
+    </script>
+</html>

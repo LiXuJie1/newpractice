@@ -1,0 +1,66 @@
+.pic_box{
+    width: 790px;
+    height: 336px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.point_box{
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 20px;
+    bottom: 10px;
+    left: 50%;
+    text-align: center;
+    z-index: 1;
+    
+}
+/*.run_box{
+    left: -6320px;
+}*/
+.point_box .point{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin:3px 3px;
+    z-index: 1;
+}
+.point_box .point:first-child{
+    margin-left: 15px;
+    background-color: #ff666b;
+}
+.point_box .point:last-child{
+    margin-right: 15px;
+}
+.next,
+.last{
+    width: 20px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+    opacity: 0;
+    z-index: 1;
+}
+.next{
+    line-height: 40px;
+    top: 50%;
+    right: 20px;
+    margin-top: -15px;
+}
+.last{
+    line-height: 40px;
+    top: 50%;
+    left: 20px;
+    margin-top: -15px;
+}
+.pic_box:hover .next{
+    opacity: 1;
+}
+.pic_box:hover .last{
+    opacity: 1;
+}
+

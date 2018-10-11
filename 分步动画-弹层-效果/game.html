@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+    .container{
+        width: 1226px;
+        padding-right: 26px;
+        margin: 0 auto;
+    }  
+        .per {
+            position: relative;
+            width: 280px;
+            color: #fff;
+            font-size: 14px;
+            margin-right: 26px;
+            float: left;
+        }
+        
+        .per img {
+            width: 280px;
+            height: 350px;
+        }
+        .bac{
+            position: absolute;
+            width: 280px;
+            height: 350px;
+            background-color: rgba(0, 0, 0, 0.8);
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .des{
+            position: absolute;
+            bottom: 80px;
+            left: 99px;
+            opacity: 0;
+            color: #000;
+            text-align: center;
+        }
+        .des span{
+            display: block;
+            
+        }
+        .des span:first-child{
+            font-size: 12px;
+        }
+        .des span:last-child{
+            font-size: 14px;
+        }
+        .per:hover .bac{
+            display:block;
+        }
+        .per:hover .des{
+            bottom: 170px;
+            opacity: 1;
+            color: #fff;
+        }
+        .per:hover .intr{
+            bottom: -50px;
+            opacity: 1;
+            border-bottom: 1px solid #eee;
+        }
+        .tran{
+            transition: 0.5s;
+        }
+        .intr{
+            text-align: center;
+            position: absolute;
+            bottom: 4px;
+            left: 13px;
+            opacity: 0;
+            
+        }
+        .intr span{
+            width: 260px;
+            display: block;
+            color: #000;
+            font-weight: bold;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            
+        }
+        .intr span:last-child{
+            padding-bottom: 10px;
+        }
+        
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container clearfix">
+        <div class="per">
+            <img src="pic/20180817142212.jpg" alt="">
+            <div class="bac"></div>
+            <div class="des tran">
+                <span>Zedaf dnal</span>
+                <span>创造设计师</span>
+            </div>
+            <div class="intr tran">
+                <span>啦啦啦啦啦啦啦啦啦啦lal</span>
+                <span>反正要写点什么东西就对了具体是啥忘了ddddddddddddddddddd</span>
+            </div>
+        </div>
+
+        <!--2-->
+        <div class="per">
+            <img src="pic/20180817142212.jpg" alt="">
+            <div class="bac"></div>
+            <div class="des tran">
+                <span>Zedaf dnal</span>
+                <span>创造设计师</span>
+            </div>
+            <div class="intr tran">
+                <span>啦啦啦啦啦啦啦啦啦啦lal</span>
+                <span>反正要写点什么东西就对了具体是啥忘了</span>
+            </div>
+        </div>
+        <!--3-->
+        <div class="per">
+            <img src="pic/20180817142212.jpg" alt="">
+            <div class="bac"></div>
+            <div class="des tran">
+                <span>Zedaf dnal</span>
+                <span>创造设计师</span>
+            </div>
+            <div class="intr tran">
+                <span>啦啦啦啦啦啦啦啦啦啦lal</span>
+                <span>反正要写点什么东西就对了具体是啥忘了</span>
+            </div>
+        </div>
+        <!--4-->
+        <div class="per">
+            <img src="pic/20180817142212.jpg" alt="">
+            <div class="bac"></div>
+            <div class="des tran">
+                <span>Zedaf dnal</span>
+                <span>创造设计师</span>
+            </div>
+            <div class="intr tran">
+                <span>啦啦啦啦啦啦啦啦啦啦lal</span>
+                <span>反正要写点什么东西就对了具体是啥忘了</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../icon_font/iconfont.css">
+    <title>Document</title>
+    <style>
+        /* 属性选择器 */
+        div[title='Hello World']{
+            width: 50px;
+            height: 50px;
+        }
+
+        div[title*='llo']{
+            background-color: red;
+        }
+        div[title^='Hel']{
+            background-color: #00ff00;
+        }
+        div[title$='ld']{
+            background-color: #f000f0;
+        }
+        .box img:not(.loading){
+            opacity: 0.2;
+        }
+        .oo li:nth(1){
+            color: #00ff00;
+        }
+        .oo li:nth(1){
+            color: red;
+        }
+        .oo li:nth(1){
+            color: blue;
+        }
+        .oo li:nth(1){
+            color: yellow;
+        }
+        .oo li:nth(1){
+            color: black;
+        }
+        .oo li:nth(1){
+            color: mediumorchid;
+        }
+        .auucent:read-only{
+            background-color:#00ff00; 
+        }
+        h1{
+            background-color: mediumslateblue;     
+        } 
+        .summary{
+            padding:20px;
+          /* box-shadow= */
+          /* box-shadow */
+          }
+          .pic{
+              width: 263px;
+              height:351px;
+              position: relative;
+          }
+          .pic .cover{
+              position: absolute;
+              top: 0;
+              left: 0;
+              transition: 1s;
+          }
+          .pic:hover .cover{
+            box-shadow:0px 0px 10px 2px rgba(0, 0, 0, 0.8) inset;
+          }
+          @font-face{
+              font-family: 'title-font';
+              src:url('../font-awesome-4.7.0/庞门正道标题体');
+          }
+          .title h1{
+              font-size: 60px;
+              font-family: 'title-font';
+          }
+          .white{
+              color:slateblue;
+              font-size: 36px;
+          }
+          .bac{
+              width: 100%;
+              height: 400px;
+              background: url('../images/49951_14.jpg')  no-repeat  top center;
+              /* banner图优先cover */
+              /* background-size: cover; */
+              /* background-size: 300px 100px;死单位 */
+              background-size: 15% 30%;
+              /* background-size: contain; */
+          }
+    </style>
+</head>
+
+<body>
+    <div class="" title="Hello World"></div>
+    <h1></h1>
+    <div class="h">
+        <h2></h2>
+    </div>
+    <h2>
+        你好背景
+    </h2>
+    <div class="box">
+        <!-- <imgre="../images/1.png" alt=""> -->
+        <!-- <img class="loading" src="../images/2.png" alt=""> -->
+    </div>
+    <ul class="oo">
+        <li>mdfkamfmapd fm</li>
+        <li>mdfkamfmapd fm</li>
+        <li>mdfkamfmapd fm</li>
+        <li>mdfkamfmapd fm</li>
+        <li>mdfkamfmapd fm</li>
+        <li>mdfkamfmapd fm</li>
+        <li>mdfkamfmapd fm</li>
+    </ul>
+    <input type="text">
+    <div class="summary">ndkwalnlkanfnlwaknfkwmad</div>
+    <div class="pic">
+        <!-- <img src='../images/1.png' alt=""> -->
+        <div class="cover"></div>
+    </div>
+    <i class="iconfont icon-muyangzuo white"></i>
+    <i class="iconfont icon-shuipingzuo white"></i>
+    <i class="iconfont icon-shuangyuzuo white"></i>
+    <i class="iconfont icon-mojiezuo white"></i>
+    <i class="iconfont icon-chunvzuo white"></i>
+    <i class="iconfont icon-shizizuo white"></i>
+    <i class="iconfont icon-juxiezuo white"></i>
+    <i class="iconfont"></i>
+    <div class="bac"></div>
+</body>
+
+</html>

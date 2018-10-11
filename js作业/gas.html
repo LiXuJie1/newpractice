@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="gas">
+    <input type="text" name="" id="litre">
+    <button type="button" id="oBtn">按钮</button>
+    <script>
+        var gasnum=document.getElementById("gas");
+           var lit=document.getElementById("litre");
+           var price_list=[6,5,7,5.5]
+           oBtn.onclick=function(){
+               if( gasnum.value==""||lit.value==""){
+                   alert("please enter which gas and litre do you want");
+                   return 0;
+               }
+               var price;
+               if(gasnum.value=="92#"){
+                  if(lit.value<=20){
+                    price=lit.value*price_list[0];
+                    alert(price);
+                  }
+                  else{
+                     price=lit.value*price_list[1];
+                    alert(price);
+                  }
+               }
+
+               else if(gasnum.value=="97#"){
+                   if(lit.value<=30){
+                     price=lit.value*price_list[2];
+                      alert(price);
+                   }
+                   else{
+                    price=lit.value*price_list[3];
+                      alert(price);
+                   }
+               }
+
+           }
+
+    </script>
+</body>
+</html>

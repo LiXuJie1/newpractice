@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="images/launch-user-img02.png" alt=""id="log">
+    <script src="js/hammer.min.js" ></script>
+    <script>
+     var el = document.querySelector("#log");
+        var mc = new Hammer.Manager(el);
+        // mc.on("pinchstart pinchmove", onPinch);
+        // mc.get('pinch').set({
+        //     enable:true
+        // });
+        var initScale = 1;
+        mc.on('pinchOut',function(e){
+            initScale++;
+            el.style.transform="scale("+initScale+")";
+        })
+        mc.on('pinchIn',function(e){
+            initScale--
+            el.style.transform="scale("+initScale+")";
+        })
+        // function onPinch(ev) {
+        //     if (ev.type == 'pinchstart') {
+        //         initScale = transform.scale || 1;
+        //     }
+        //     el.className = '';
+        //     transform.scale = initScale * ev.scale;
+        //     requestElementUpdate();
+        //     logEvent(ev.type);
+
+        // }
+    </script>
+</body>
+
+</html>

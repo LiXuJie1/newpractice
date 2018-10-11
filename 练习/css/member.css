@@ -1,0 +1,55 @@
+.container{
+    width: 1001px;
+    margin: 0 auto;
+    
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.logo{
+   width: 166px;
+}
+.top{
+    
+}
+.logo:hover .first{
+    z-index: 10;
+}
+.logo:hover .txt{
+    color: #34b8de;
+}
+.logo:hover .etxt{
+    color: #34b8de;
+}
+.logo:hover .hr{
+    background-color: #34b8de;
+}
+.txt{
+    padding-top: 187px;
+    padding-left: 53px;
+    font-size: 14px;
+    color: #474747;
+}
+.hr{
+    margin-top: 12px;
+    margin-left: 63px;
+    width: 34px;
+    height: 1px;
+    background-color: #474747;
+}
+.etxt{
+    padding-top: 15px;
+    padding-left: 31px;
+    padding-bottom: 57px;
+    font-size: 14px;
+    color: #474747;
+}
+.second{
+    left: 0;
+    top: 0;
+}
+
+/*position: relative absolute;*/

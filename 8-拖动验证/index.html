@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+    .box {
+        width: 300px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #e8e8e8;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .bg {
+        width: 42px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #75CDF9;
+        color:#fff;
+    }
+
+    .btn {
+        width: 40px;
+        height: 38px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 1px solid #ccc;
+        cursor: move;
+        font-family: "宋体";
+        text-align: center;
+        background-color: #fff;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        color: #666;
+        z-index: 10;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box">
+        请拖动滑块解锁
+        <div class="bg" id="bg"></div>
+        <div class="btn" id="btn">&gt;&gt;</div>
+    </div>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        window.onload=function(){
+            oBg=document.getElementById('bg');
+            oBtn=document.getElementById('btn');
+            oBox=document.getElementById('box');
+            oBox.onselectstart = function() {
+					return false;
+				}
+				oBox.ondragstart = function() {
+					return false;
+				}
+
+            oBtn.onmousedown=function(e){
+                var startX=e.clientX;
+                var left=this.offsetLeft;
+                oBtn.style.transition='0s';
+                oBg.style.transition='0s';
+                
+                document.onmousemove=function(e){
+                    var endX=e.clientX;
+                    oBtn.style.left=left+endX-startX+'px';
+                    oBg.style.width=left+endX-startX+'px';
+                    if(parseInt(oBtn.style.left)<0){
+                        oBtn.style.left=0+'px';
+                        document.onmousemove=false;
+                    }
+                    if((parseInt(oBtn.style.left))>=oBox.clientWidth-oBtn.clientWidth){
+                        oBtn.onmousedown=false;
+                        document.onmousemove=false;
+                        oBtn.style.left=oBox.clientWidth-oBtn.clientWidth+'px';
+                        oBg.style.backgroundColor='#00ff00';
+                        oBtn.innerText="√";
+                        oBg.innerText='验证通过'
+                    }
+                }
+            }
+            document.onmouseup=function(){
+                    if(0<parseInt(oBtn.style.left)&&parseInt(oBtn.style.left)<oBox.clientWidth-oBtn.clientWidth){
+                        oBtn.style.left='0px';
+                        oBg.style.width='0px';
+                        oBtn.style.transition='1s';
+                        oBg.style.transition='1s';
+                    }
+                        document.onmousemove=false;
+                }
+        }
+    </script>
+</body>
+
+</html>

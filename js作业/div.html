@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var oBody=document.querySelector('body');
+        var co = ["red", "yellow", "blue", "green"];
+        document.body.style.width = "1000px";
+        document.body.style.height = "1000px";
+
+        for (var i = 0; i < 100; i++) {
+            document.body.innerHTML += '<div>' + i + '</div>';
+            var oDiv = document.querySelectorAll("div");
+            oDiv[i].style.width = "100px";
+            oDiv[i].style.height = "100px";
+            oDiv[i].style.backgroundColor = co[i % co.length];
+            oDiv[i].style.float = "left";
+        }
+        for (var i = 0; i < 100; i++) {
+            oDiv[i].addEventListener('click' , function () {
+                if (this.style.display != "none") {
+                    this.style.display = "none";
+                }
+            })
+        }
+        console.dir(oDiv);
+
+
+        // console.dir(oBody);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            /* 透视视角近大远小  一般给舞台加 如较大的div */
+            perspective: 1000px;
+            padding: 0;
+            margin: 0;
+            line-height: 0;
+        }
+        .tran5{
+            -webkit-transition: all 1s;
+        }
+        .photo{
+            width: 500px;
+            /* 开启3D */
+            transform-style: preserve-3d;
+            margin: 50px auto;
+            /* 旋转的中心点 */
+            transform-origin: bottom center;
+        }
+        .photo img{
+            display: block;
+        }
+        .photo::after{
+            content: '';
+            display: block;
+            width: 500px;
+            height: 40px;
+            background: url('../images/QQ图片20180911112914.jpg') no-repeat;
+            background-position: center bottom; 
+            transform: rotateX(-90deg);
+            transform-origin: top center;
+        }
+        .photo:hover{
+            transform: rotateX(60deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="photo tran5">
+        <img src="../images/QQ图片20180911112914.jpg" alt="">
+    </div>
+    
+</body>
+</html>

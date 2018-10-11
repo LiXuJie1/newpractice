@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="fullpage.min.css">
+    <style>
+        .min{
+            background-color: aqua;
+        }
+
+        .second {
+            background-color: firebrick;
+        }
+
+        .section:nth-child(3) {
+            background-color: lawngreen;
+        }
+
+        .section:nth-child(4) {
+            background-color: gold;
+        }
+        .iphone{
+            position: relative;
+            transform: translateX(-100%) scale(0.7) rotate(0deg);
+            opacity: 0;
+            transition:  all 1s;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+        }
+        .active .iphone{
+            transform: translateX(50%) scale(1) roate(360deg);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section active min">Some section</div>
+        <div class="section active second">Some section</div>
+    </div>
+   
+
+
+
+    <script src="fullpage.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            new fullpage('#fullpage', {
+                //options here
+                autoScrolling: true,
+                scrollHorizontally: true
+            });
+            fullpage_api.setAllowScrolling(true);
+        })
+
+    </script>
+</body>
+
+</html>

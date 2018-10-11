@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="number1">
+    <input type="text" name="" id="number2">
+    <input type="text" name="" id="number3">
+    <button type="button" id="oBtn">按钮</button>
+    <script>
+        var a;
+        var num1 = document.getElementById("number1");
+        var num2 = document.getElementById("number2");
+        var num3 = document.getElementById("number3");
+        var btn = document.getElementById("oBtn");
+        btn.onclick = function big() {
+            biger = (Number(num1.value) < Number(num2.value)) ? a = Number(num2.value) : a = Number(num1.value);
+            biger = (Number(a < num3.value)) ? a = Number(num3.value) : a;
+            alert(a);
+        }
+
+        // 比较最大值冒泡排序
+        // var a = new Array(3);
+        // var i;
+        // var j;
+        // var input;
+        // function sortarry(arry) {
+        //     for (i = 0; i < a.length; i++) {
+        //         a[i] = prompt("please enter number");
+        //         if (a[i] == "") {
+        //             alert("please enter a number");
+        //             i = i - 1;
+        //         }
+        //     }
+        //     for (j = 0; j < a.length; j++) {
+        //         for (i = 0; i < a.length - 1; i++) {
+        //             if (Number(a[i]) > Number(a[i + 1])) {
+        //                 input = a[i];
+        //                 a[i] = a[i + 1];
+        //                 a[i + 1] = input;
+        //             }
+        //         }
+        //     }
+        //     return arry;
+
+
+        // }
+        // sortarry(a);
+        // alert(a[a.length - 1]);
+
+
+
+// 1024以内7 11倍数字符串
+
+// var i;
+//         var a = "";
+//         for (i = 0; i < 1024; i++) {
+//             if (i % 7 == 0 && i % 11 == 0) {
+//                 a = a + i;
+//             }
+//         }
+//         console.log(a);
+    </script>
+</body>
+
+</html>

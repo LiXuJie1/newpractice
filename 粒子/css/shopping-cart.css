@@ -1,0 +1,227 @@
+.shopping-cart{
+	background-color: #fafafa;
+}
+*{
+	font-style: normal;
+}
+/*标题*/
+.title{
+	background: #FFFFFF;
+	padding: 15px 0;
+}
+.container{
+	width: 1000px;
+	margin: 0 auto;
+}
+.logo{
+	padding: 10px 0;
+}
+.logo img{
+	vertical-align: bottom;
+}
+.logo span{
+vertical-align: bottom;
+	display: inline-block;
+	font-size: 22px;
+	color: #000000;
+	font-weight: 500;
+	padding-left: 15px;
+}
+.process{
+	width: 469px;
+	height: 58px;
+	background: url(../images/page-step.png) 0px 0px;
+}
+/*主体*/
+.classify{
+	padding: 20px 0;
+	font-size: 16px;
+}
+.classify a{
+	display: inline-block;
+}
+/*表单*/
+.all-goods{
+	border:1px solid #c0c0c054 ;
+	background-color: #fff;
+	padding: 15px 15px 30px 15px;
+}
+/*第一行*/
+.lists{
+	padding: 5px 0 15px 0;
+	border-bottom:1px solid #c0c0c054;
+}
+.select{
+	width: 125px;
+}
+.check {
+	margin-right: 10px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 16px;
+	height: 18px;
+	background: url(../images/checkbox-ico.png) 0px 0px ;
+}
+.select span{
+	vertical-align: middle;
+}
+.item{
+	width: 220px;
+}
+.message{
+	width: 175px;
+}
+.price{
+	width: 138px;
+}
+.num{
+	width: 102px;
+}
+.sum{
+	width: 142px;
+}
+.operation{
+	width: 60px;
+}
+/*安妮珍选*/
+.annie{
+	padding: 20px 0 5px 0;
+	/* border-bottom: 1px solid #FF0000; */
+}
+.annie .word{
+	display: inline-block;
+	padding-right: 10px;
+}
+/*安妮商品*/
+.annie-goods{
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	border-right: 1px solid #eee;
+	background-color:#fafafa ;
+	padding: 20px 10px;
+}
+.annie .annie-goods:nth-child(4){
+	border-top: 1px solid #FF0000;
+}
+/* .lizi .annie-goods:first-child{
+	border-top: 1px solid #FF0000;
+} */
+.photo{
+	width: 330px;
+}
+.photo  img{
+	display: inline-block;
+	border: 1px solid #c0c0c054;
+	width: 70px;
+	height: 70px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.goods-word{
+	display: inline-block;
+	width: 180px;
+	vertical-align: top;
+}
+.size-word{
+	width: 175px;
+	height: 50px;
+}
+.size-word .size{
+	display: block;
+	width: 150px;
+	color: #9c9c9c;;
+}
+.annie-goods .piece{
+	width: 120px;
+	font-size: 14px;
+	padding-top: 18px;
+}
+.annie-goods .num{
+	width: 120px;
+	padding-top: 18px;
+}
+.annie-goods .num input{
+	float: left;
+    width: 36px;
+    height: 22px;
+    padding-bottom: 2px;
+    border: none;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    text-align: center;
+    color: #666;
+    font-size: 14px
+}
+.annie-goods .num span{
+	float: left;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #dcdcdc;
+    background-color: #fafafa;
+    text-shadow: 1px 1px 1px #fff;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    line-height: 20px;
+    color: #555;
+}
+.annie-goods .sum{
+	color: #FF0000;
+	font-size: 14px;
+	padding-top: 18px;
+}
+.annie-goods .delect{
+	font-size: 12px;
+	padding-top: 18px;
+}
+.account{
+	background-color:#fff ;
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	border-right: 1px solid #eee;
+}
+.all-select{
+	padding: 15px;
+	width: 800px;
+	vertical-align: bottom;
+}
+.all{
+	padding-right: 20px;
+}
+.pad{
+	padding-top: 13px;
+}
+.total{
+	width: 110px;
+	padding: 15px 20px;
+	color: #fff;
+	font-weight: 400;
+	font-size: 23px;
+	text-align: center;
+	background-color: #ddd;
+}
+.all-select .red{
+	color: #ff666b;
+}
+.all-select .pr-red{
+	font-size: 24px;
+	color: #ff666b;
+}
+/* 勾选类 */
+.add_price{
+	margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+	background: url('../images/checkbox-ico.png')0px -35px;
+}
+.cc{
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	border-right: 1px solid #eee;
+	background-color:#fafafa ;
+	padding: 20px 10px;
+}

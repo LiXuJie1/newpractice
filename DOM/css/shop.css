@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.choose{
+    width: 200px;
+    background-color: #42baff;
+    overflow: hidden;
+}
+.choose:hover{
+    overflow: visible;
+}
+.choose .threeB{
+    padding: 14px 10px 14px 16px;
+}
+.choose .title_choose{
+    font-size: 14px;
+    color: #fff;
+    padding: 16px 104px 13px 0;
+}
+.nav{
+    padding-top: 7px;
+    padding-left: 30px;
+}
+.nav li{
+    padding-right: 38px;
+}
+.nav li a{
+    font-size: 14px;
+    color: #000;
+}
+.nav li:nth-child(1) a{
+    font-size: 14px;
+    color: #ed1717;
+}
+
+.page backP{
+    width: 100%;
+}
+.page{
+    width: 100%;
+    height: 460px;
+    background: url("../pic/page.jpg") no-repeat top center;
+}
+/*下拉列表*/
+.list{
+    width: 200px;
+    height: 460px;
+    /*background-color: red;*/
+    position: absolute;
+    background-color: #6cc9ff;
+}
+.demo{
+   border-bottom: 1px solid #84d2ff;
+   background-color: #6cc9ff;
+}
+.demo:hover{
+    background-color: #fff;
+}
+.list1{
+    padding: 15px 13px 0 18px;
+}
+.list1 span{
+    font-size: 14px;
+    color: #555555;
+}
+.list1 img{
+    padding-top: 5px;
+}
+.list2{
+    padding: 0 13px 15px 13px;
+}
+.list2 div{
+    font-size: 12px;
+    color: #9c9c9c;
+    padding-right: 10px;
+} 
+.right_list{
+      right: -525px;
+      top: 0;
+      padding-bottom: 30px;
+      border-top:2px solid #6cc9ff;
+      border-right:2px solid #6cc9ff;
+      border-bottom:2px solid #6cc9ff; 
+      background-color: #fff;
+      /*border: 2px solid #6cc9ff;*/
+}
+.right_list .tiT{
+    font-size: 12px;
+    color: #42baff;
+    padding: 20px 0 5px 0;
+    margin-left: 20px;
+    margin-right: 30px;
+    border-bottom: 1px solid #6cc9ff;
+}
+
+.bot_list{
+    width: 522px;
+}
+.bot_list div{
+    padding-right: 10px;
+}
+.bot_list div a{
+    font-size: 12px;  
+    color: #555555;
+}
+.bot_list div:nth-child(1),
+.bot_list div:nth-child(8)
+{
+    padding-left: 20px;
+}
+.bot_list div:nth-child(2) a,
+.bot_list div:nth-child(6) a,
+.bot_list div:nth-child(10) a{
+    color: #42baff;
+}
+.one{
+    overflow: hidden;
+}
+.one:hover{
+    overflow: visible;
+}
+
+
+
+
+

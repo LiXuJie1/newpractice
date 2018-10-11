@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="num1" id="num1" value="">
+    <input type="text" name="num2" id="num2" value="">
+    <button type="button" id="sumBtn">按钮</button>
+    <script>
+    var num1=document.getElementById("num1");
+    var num2=document.getElementById("num2");
+    var btn=document.getElementById("sumBtn");
+    btn.onclick=function(){
+       console.log(Number(num1.value)+Number(num2.value));
+    }
+    
+     
+   
+
+
+
+
+        var age = 5;
+        //  实参传递给形参的只是一个副本，本身不进行运算
+        function plus(x) {
+            return x = x + 1;
+        }
+        plus(age);
+        console.log(age);
+
+        var arr = [52, 36, 96, 85, 64, 25];
+        var arr = {
+            0: 52,
+            1: 36,
+            2: 96,
+            3: 85,
+            4: 64,
+            5: 25
+        }
+
+        //  奇偶数
+        var num;
+        var i;
+        
+        // console.log(num);
+    for(i=0;i<5;i++){
+        num = prompt("enter a number");
+        if (num % 2 == 0) {
+            alert("这是偶数");
+        }
+        else {
+            alert("这是奇数");
+        }
+        }
+        // 检测数据类型
+        var res=typeof arr;
+        console.log(res);
+
+    </script>
+</body>
+
+</html>

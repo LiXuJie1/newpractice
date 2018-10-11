@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload=function(){
+            var deg=Math.PI/2
+            var res=Math.sin(deg);
+            var num=0.62;
+            var m =((Math.random()*43)+1);
+            console.log(Math.round(num));
+            console.log(parseInt(m));
+            console.log(Math.floor(num));
+            console.log(res);
+
+            var myVar=setInterval(function(){
+                myTimer()
+            },1000);
+            function myTimer(){
+                var d=new Date();
+                var t=d.toLocaleTimeString("demo").innerHTML=t;
+            }
+            function myStopFunction(){
+                clearInterval(myVar);
+            }
+        }
+    </script>
+</body>
+</html>

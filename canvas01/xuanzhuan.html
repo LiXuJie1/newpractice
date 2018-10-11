@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="400px" height="400px"></canvas>
+</body>
+<script>
+    //画布
+    oCanvas = document.getElementById('canvas');
+    var width = oCanvas.width;
+    var height = oCanvas.height;
+    //画笔
+    var context = oCanvas.getContext('2d');
+
+    //绘制背景
+    context.fillStyle = "#eee";
+    context.fillRect(0, 0, width, height);
+    //绘制矩形
+    context.fillStyle='#00ff00';
+    context.save();//保存坐标原点，style
+   //坐标变换
+   context.translate(200,100);
+   for(var i=0;i<100;i++){
+       context.rotate(0.1*Math.PI);
+       context.scale(0.9,0.9);
+       context.translate(20,20);
+       context.fillStyle="rgba(45,46,47,0.3)";
+       context.fillRect(0,0,200,100); 
+   }
+//    context.rotate(0.25*Math.PI);
+//    context.fillRect(0,0,100,100);
+//    context.restore(); 
+// //    context.scale()
+//     // context.rotate(0.3*Math.PI);
+//     context.fillRect(0,0,100,100);
+</script>
+
+</html>

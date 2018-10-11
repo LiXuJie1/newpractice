@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--<input type="text" name="" id="gas">
+    <input type="text" name="" id="litre">
+
+    <button type="button" id="oBtn">按钮</button>-->
+    <script>
+        // var tt = document.getElementById("txt");
+        // var btn = document.getElementById("oBtn");
+        // oBtn.onclick = function () {
+        //     if(tt.value==""){
+        //          console.log("please enter a number");
+        //          return 0;
+        //     }
+        //     if (tt.value % 2 == 0) {
+        //         console.log("这是偶数");
+        //     }
+
+        //     else {
+        //         console.log("这是奇数");
+        //     }
+        // }
+
+
+
+
+
+        //    学生成绩
+
+        //     var grade=prompt("请输入一个成绩(输入负数停止程序):");
+        //    if(grade==""){
+        //        alert("please enter a grade");
+        //    }
+        //     if(grade>90&&grade!=""){
+        //         alert("优秀");
+        //     }
+        //     else if(grade<90&&grade>=80&&grade!=""){
+        //         alert("良好");
+        //     }
+        //     else if(grade<80&&grade>=70&&grade!=""){
+        //         alert("及格");
+        //     }
+        //     else if(grade<70&&grade!=""){
+        //         alert("不及格");
+        //     }
+
+
+
+        // 加油站
+        //    var gasnum=document.getElementById("gas");
+        //    var lit=document.getElementById("litre");
+        //    var price_list=[6,5,7,5.5]
+        //    oBtn.onclick=function(){
+        //        if( gasnum.value==""||lit.value==""){
+        //            alert("please enter which gas and litre do you want");
+        //            return 0;
+        //        }
+        //        if(gasnum.value=="92#"){
+        //           if(lit.value<=20){
+        //            var price=lit.value*price_list[0];
+        //             alert(price);
+        //           }
+        //           else{
+        //              var price=lit.value*price_list[1];
+        //             alert(price);
+        //           }
+        //        }
+
+        //        else if(gasnum.value=="97#"){
+        //            if(lit.value<=30){
+        //              var price=lit.value*price_list[2];
+        //               alert(price);
+        //            }
+        //            else{
+        //             var price=lit.value*price_list[3];
+        //               alert(price);
+        //            }
+        //        }
+
+        //    }
+
+
+        //  比较最大值
+        // var a = new Array(3);
+        // var i;
+        // var j;
+        // var input;
+        // function sortarry(arry) {
+        //     for (i = 0; i < 3; i++) {
+        //         a[i]= prompt("please enter number");
+        //         if(a[i]==""){
+        //         alert("please enter a number");
+        //         i=i-1;
+        //         }
+        //     }
+        //     for(j=0;j<a.length;j++){
+        //         for(i=0;i<a.length-1;i++){
+        //             if(a[i]>a[i+1]){
+        //             input=a[i];
+        //             a[i]=a[i+1];
+        //             a[i+1]=input;
+        //             }
+        //         }
+        //     }
+        //     return arry;
+
+
+        // }
+        // sortarry(a);
+        // alert(a[a.length-1]);
+        // var sum = 0;
+        // function cal(j) {
+        //     for (var i = 0; i <= j; i++) {
+        //         sum = sum + i;
+        //     }
+        //     return sum;
+        // }
+        // cal(365);
+        // console.log(sum);
+        // var i;
+        // var sum = 0;
+        // for (i = 0; i <= 1024; i++) {
+        //     if (i % 2 == 0) {
+        //         sum = sum + 1;
+        //     }
+        // }
+
+        // console.log(sum);
+
+        // function run() {
+        //     var word = '';
+        //     var i;
+        //     for (i = 0; i <= 1024; i++) {
+        //         if (i % 7 == 0 && i % 11 == 0) {
+        //             word = word + i + ' ';
+        //         }
+        //     }
+        //     console.log(word);
+        //     return;
+        // }
+        // run();
+
+        // 数组排序去掉一个最小一个最大值
+        //   var i;
+        //   var j;
+        //   var score=[65,89,78,4,87,45,68,98,36,65];
+        //   var sum=0;
+        //   var res;
+        //   var sum2;
+        //   for( var i=0;i<score.length;i++){
+        //       sum=sum+score[i];
+        //   }
+        //   function run(arr){
+        //         for(j=0;j<arr.length;j++){
+        //             for(i=0;i<arr.length-1;i++){
+        //                 if(arr[i]>arr[i+1]){
+        //                    res=arr[i];
+        //                    arr[i]=arr[i+1];
+        //                    arr[i+1]=res;
+        //                 }
+        //             }
+        //         }
+        //         return arr;
+        //   }
+        //   run(score);
+        //   sum2=sum-score[0]-score[score.length-1];
+        //   console.log(sum2);
+
+
+        // foreach
+        // var score=[65,89,78,4,87,45,68,98,36,65];
+        // var min=score[0];
+        // var max=score[0];
+        // for( var i=0;i<score.length;i++){
+        //     if(min>score[i]){
+        //         min=score[i];
+        //     }
+        // }
+        // console.log(min);
+        // for( var i=0;i<score.length;i++){
+        //     if(max<score[i]){
+        //         max=score[i];
+        //     }
+        // }
+        // console.log(max);
+
+        // var index;
+        // var value;
+        // var array;
+        var arr = [21, 22, 23, 24];
+        var sum = 0;
+        arr.forEach(function (value, index, array) {
+            sum = sum + value;
+        })
+        console.log(sum);
+    </script>
+</body>
+
+</html>

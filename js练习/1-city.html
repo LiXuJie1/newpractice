@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css"></style>
+</head>
+
+<body>
+    <pre>
+		题目：
+			参考以下代码，页面加载后，将提供的空气质量数据数组，按照某种逻辑空气质量大于30进行过滤筛选，最后将符合条件的数据按照从小到大的格式要求显示在网页上
+		</pre>
+    <h3>污染城市列表</h3>
+    <ul id="aqi-list">
+        <!--<li>第1名：福州（样例），10</li>
+			<li>第2名：福州（样例），10</li>-->
+    </ul>
+    <script type="text/javascript">
+    var aqiData = [
+        ["北京", 90],
+        ["上海", 50],
+        ["福州", 10],
+        ["广州", 50],
+        ["成都", 90],
+        ["西安", 100]
+    ];
+    var oList = document.getElementById("aqi-list");
+
+    function getCity() {
+
+        /*
+        在注释下方编写代码
+        遍历读取aqiData中各个城市的数据
+        */
+        aqiData.sort(function(a, b) {
+            //升序
+            return a[1] - b[1];
+        });
+        // 创建新数组，指数>30
+        var newData = [];
+        for (var i = 0; i < aqiData.length; i++) {
+            if (aqiData[i][1] > 30) {
+                newData.push(aqiData[i]);
+            }
+        }
+        // 插入DOM
+        for (var i = 0; i < newData.length; i++) {
+            var oLi = document.createElement("li");
+            oLi.innerHTML = "第" + (i + 1) + "名：" + newData[i][0] + "，" + newData[i][1];
+            oList.appendChild(oLi);
+        }
+
+    };
+    getCity();
+    var birth=new Date(1988,5,17);
+    var now =new Date();
+    var time=now-birth;
+    var y=now.getFullYear()-(birth.getFullYear()+1);
+    var d=((now.getMonth())+1)*30+((12-now.getMonth()+1))*30;
+    if(d>360){
+        y=y+1;
+        d=d-360;
+    }
+    var h=now.getHours();
+    var min=now.getMinutes();
+    var s=now.getSeconds();
+    var ms=now.getMilliseconds();
+    // var min=(((now.getMonth())+1)*30)*60;
+    // var s=((((now.getMonth())+1)*30)*60)*60;
+    // var ms=(((((now.getMonth())+1)*30)*60)*60);
+    console.log(ms);
+    console.log(s);
+    console.log(min);
+    console.log(d);
+    console.log(y);
+    // var myVar=setInterval(function(){
+    //     myTimer()
+    // },1000);
+
+    // 
+    // con-
+    </script>
+</body>
+
+</html>

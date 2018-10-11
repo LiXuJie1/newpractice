@@ -1,0 +1,195 @@
+i {
+	font-style: normal;
+}
+
+
+/*标题*/
+
+.title {
+	background: #FFFFFF;
+	padding: 15px 0;
+	border-bottom: 1px solid #c0c0c047;
+}
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.logo {
+	padding: 10px 0;
+}
+
+.logo img {
+	vertical-align: bottom;
+}
+
+.logo span {
+	vertical-align: bottom;
+	display: inline-block;
+	font-size: 22px;
+	color: #000000;
+	font-weight: 500;
+	padding-left: 15px;
+}
+
+.process {
+	width: 469px;
+	height: 58px;
+	background: url(../images/page-step.png) 0px 0px;
+}
+
+.next_step {
+	width: 387px;
+	height: 48px;
+	background: url(../images/page-step.png) 0px -65px;
+}
+
+
+/*主体*/
+
+.pay {
+	background-color: #fafafa;
+	padding: 20px 40px 60px;
+}
+
+.pay_list {
+	border: 1px solid #c0c0c047;
+	background: #FFFFFF;
+	padding: 15px;
+}
+
+.pay_list .pay_title {
+	padding: 5px 0 15px;
+	border-bottom: 1px solid #c0c0c047;
+}
+
+.pay_title .wor_pay {
+	display:inline-block ;
+	padding-right: 10px;
+	font-size: 20px;
+	color: #000000;
+}
+
+.pay .pay_way {
+	border-bottom: 1px solid #c0c0c047;
+	height: 300px;
+	padding: 20px 30px;
+}
+
+.pay_way .alipay {
+	border: 1px solid red;
+	padding: 0px 20px;
+}
+
+.pay_way .alipay a {
+	display: block;
+	width: 126px;
+	height: 54px;
+	background: url(../images/banks-bg.png) 0px -943px;
+}
+
+.pay_way .or_alipay {
+	margin-left: 60px;
+	border: 1px solid #CCCCCC;
+	padding: 0px;
+}
+
+.pay_way .or_alipay a {
+	display: block;
+	width: 158px;
+	height: 54px;
+	background: url(../images/alipay-sm.png)no-repeat;
+}
+
+
+/*              付款         */
+
+.pay_many {
+	padding: 25px 10px 10px;
+}
+
+.pay_many .pay_btn {
+	font-size: 20px;
+	padding: 10px 20px;
+	background: #F4494E;
+	text-align: center;
+}
+
+.pay_btn a {
+	color: #FFFFFF;
+}
+
+.pay_many .price {
+	width: 117px;
+	padding: 10px 0;
+}
+
+.pay_many .price span {
+	font-size: 14px;
+}
+
+.pay_many .price .red {
+	font-size: 20px;
+	color: #FF666B;
+}
+
+.pay_many li>p {
+	margin-right: 20px;
+	border: 1px solid #CCCCCC;
+	padding: 0px 15px;
+	width: 105px;
+	height: 54px;
+	background: url(../images/banks-bg.png) 5px -943px;
+}
+.pay_many .use{
+	font-size: 16px;
+	padding: 20px;
+}
+/*弹层*/
+.layer{
+	padding: 30px;
+    display: none;
+    border-bottom: 1px solid #CCCCCC;
+}
+.pay_photo{
+    position: relative;
+    padding: 0 10px;
+    border-right:1px solid #CCCCCC;
+    width: 270px;
+}
+.pay_img{
+	width: 225px;
+}
+.re_photo{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 100px;
+	top: 85px;
+}
+.re_photo img{
+	width: 50px;
+	height: 50px;
+}
+.pay_word{
+	padding: 80px 0;
+	text-align: center;
+	width: 300px;
+	font-size: 15px;
+	color: #000000;
+}
+.pay_word p{
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+.pay_word a{
+	color: #2D93CA;
+}
+body .demo-class .layui-layer-btn .layui-layer-btn0{
+	background-color: #C2C2C2;
+	border: 0;
+	width: 80px;
+	padding: 0px 10px;
+	margin-bottom: 10px;
+}

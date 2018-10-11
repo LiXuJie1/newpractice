@@ -1,0 +1,221 @@
+/*全屏背景*/
+a:hover{
+	text-decoration: none;
+	color: #666
+}
+.goods-list {
+	background-color: #fafafa;
+	padding-top: 15px;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+/*下拉列表*/
+.goods-classify {
+	width: 1150px;
+	background-color: #FFFFFF;
+	margin: 15px 0;
+}
+
+.classify {
+	width: 1150px;
+}
+
+.item {
+	width: 1000px;
+}
+
+.title {
+	padding: 10px;
+}
+
+.item span {
+	width: 127px;
+	display: inline-block;
+	padding: 10px 90px 10px 10px;
+	text-align: left;
+}
+
+.btn {
+	position: relative;
+}
+/*下拉按钮*/
+.up-btn {
+	padding: 10px 20px 0px 0px;
+}
+/*上拉按钮*/
+.dis-btn {
+	position: absolute;
+	width: 60px;
+	top: 10px;
+	right: 0px;
+	display: none;
+}
+/*功效栏*/
+.function {
+	border-top: 1px solid #c0c0c04f;
+	width: 1150px;
+}
+/*品牌栏*/
+.brand {
+	border-top: 1px solid #c0c0c04f;
+	width: 1150px;
+}
+/*价格栏*/
+.piece {
+	border-top: 1px solid #c0c0c04f;
+	width: 1150px;
+	padding-bottom: 10px;
+}
+/*更多,收起颜色变化*/
+.red:hover {
+	color: red;
+}
+
+.black:hover {
+	color: black;
+	text-decoration: none;
+}
+
+.disappear {
+	display: none;
+}
+/*.item a{
+	color: #000000;
+}*/
+
+.item a:hover {
+	background-color: #ff000078;
+	color: #FFFFFF;
+	/*border: 1px solid #ff000078;
+	color: #000000;*/
+}
+
+
+/*-----所有商品展示-------*/
+
+
+/*销量价格人气*/
+.goods-introduce a{
+	text-decoration: none;
+}
+.sorting {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.sorting li {
+	padding: 0 20px;
+	border-right: 1px solid #c0c0c0;
+}
+
+.sorting li:last-child {
+	border: 0;
+}
+
+.sorting a {
+	padding: 0 5px;
+}
+
+
+/*字体颜色变红,出现下边框*/
+
+.sorting a:hover {
+	color: #ff000078;
+	border-bottom: 2px solid #ff000078;
+}
+
+
+/*人气俩字变红有下边框*/
+
+.popularity a {
+	color: #ff000078;
+	border-bottom: 2px solid #ff000078;
+}
+
+
+/*商品照片介绍*/
+
+.intro-list li {
+	width: 191px;
+	padding: 10px 10px 20px;
+	background-color: #FFFFFF;
+	margin-right: 23px;
+	box-shadow: 1px 0px 1px 0px rgba(0, 0, 0, 0.08);
+	margin-bottom: 25px;
+	position: relative;
+}
+.float-logo{
+	position: absolute;
+	bottom: 99px;
+	left: 7px;
+	width: 49px;
+	height: 50px;
+	background: url(../images/txt-icon1.png) -98px 0px;
+	/*background-position: -123px -23px;*/
+}
+.intro-list a {
+	color: #000000;
+}
+
+.intro-list a:hover {
+	color: #000000;
+}
+
+
+/*图片大小*/
+
+.intro-list img {
+	width: 190px;
+	height: 190px;
+}
+
+.intro-list a {
+	display: block;
+}
+
+
+/*字体设置*/
+
+.intro-list p {
+	padding: 10px 0 20px;
+	width: 191px;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+
+/*化妆水三字颜色变红*/
+
+.intro-list span {
+	color: #ff0000;
+}
+
+
+/*价钱字体颜色大小*/
+
+.pie-sign {
+	color: #ff000078;
+	font-size: 14px;
+}
+
+
+/*销量字体大小*/
+
+.sales {
+	font-size: 12px;
+}
+/*动画li*/
+.trans {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.intro-list li:hover {
+	box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.15);
+}

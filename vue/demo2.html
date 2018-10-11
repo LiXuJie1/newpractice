@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            .type{
+                display: inline-block;
+                padding: 6px 12px;
+                border: 2px solid #fff;
+                margin: 6px;
+                background-color: aqua;
+                cursor: pointer;
+            }
+            .type.selected{
+                border: 2px solid red;
+            }
+        </style>
+</head>
+<body>
+        <div id="app">
+                <span class="type" v-for="(item,index) in types" @click="change" :class="{selected:types.selected}">
+                    {{types.text}}
+                </span>
+                <button type="button" @click="point(0)">1</button>
+                <button type="button" @click="point(1)">2</button>
+                <button type="button" @click="point(2)">3</button>
+            </div>
+
+            <script src="vue.js"></script>
+            <script>
+                 var app=new Vue({
+            el:'#app',
+            data:{
+                 types:[{
+                    text:'xs',
+                    selected:false,
+                },
+                {
+                    text:'m',
+                    selected:false
+                },
+                {
+                    text:'l',
+                    selected:false
+                }],
+                box:[{
+                    flag:false
+                },{
+                    res:false
+                },{
+                    deg:false
+                }]
+            },
+            methods:{
+                
+                change:function(){
+                    // for(var i=0;i<types.length;i++){
+                        if(this.types.selected==false){
+                        this.types.text="黑色";
+                        // this.type.selected=true;
+                    }
+                    else{
+                        this.types.text="白色";
+                        // this.type.selected=false;
+                    }
+                    this.types.selected=!this.types.selected;
+                    },
+                    point:function(i){
+                        app.$set(app.status,i)
+                    }
+                    
+                    
+                }
+            // }
+        })
+    </script>
+</body>
+</html>

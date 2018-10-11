@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body {
+            background-color: #000;
+        }
+        
+        #clock {
+            width: 800px;
+            margin: 0 auto;
+            height: 700px;
+        }
+        
+        #clock_number {
+            padding-top: 200px;
+            color: #00ff00;
+            text-align: center;
+            font-size: 100px;
+            font-weight: bold;
+        }
+        
+        #clock_world {
+            padding-top: 20px;
+            color: #00ff00;
+            text-align: center;
+            font-size: 70px;
+            font-weight: bold;
+        }
+        
+        .button_box {
+            width: 600px;
+            /*padding-left: 350px;*/
+            /*text-align: center;*/
+            margin: 0 auto;
+        }
+        
+        .button_box button:nth-child(1) {
+            padding: 10px;
+            margin-left: 10px;
+        }
+        
+        .button_box button:nth-child(2) {
+            padding: 10px;
+            margin-left: 23px;
+        }
+        
+        .button_box button:nth-child(3) {
+            padding: 10px;
+            margin-left: 56px;
+        }
+        
+        .button_box button:nth-child(4) {
+            padding: 10px;
+            margin-left: 23px;
+        }
+        
+        .button_box button:nth-child(5) {
+            padding: 10px;
+            margin-left: 42px;
+        }
+        
+        .button_box button:nth-child(6) {
+            padding: 10px;
+            margin-left: 23px;
+        }
+        
+        .button_box button:nth-child(7) {
+            padding: 10px;
+            margin-left: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock">
+        <div id="clock_number"></div>
+        <div class="button_box">
+            <button type="button" id="btn1">+1</button>
+            <button type="button" id="btn2">-1</button>
+            <button type="button" id="btn3">+1</button>
+            <button type="button" id="btn4">-1</button>
+            <button type="button" id="btn5">+1</button>
+            <button type="button" id="btn6">-1</button>
+            <button type="button" id="btn7">设置闹钟</button>
+        </div>
+        <div id="clock_world"></div>
+    </div>
+    <script>
+        window.onload = function () {
+            var oDiv1 = document.getElementById("clock_number");
+            var oDiv2 = document.getElementById("clock_world");
+            var oBtn1 = document.getElementById("btn1");
+            var oBtn2 = document.getElementById("btn2");
+            var oBtn3 = document.getElementById("btn3");
+            var oBtn4 = document.getElementById("btn4");
+            var oBtn5 = document.getElementById("btn5");
+            var oBtn6 = document.getElementById("btn6");
+            var oBtn7 = document.getElementById("btn7");
+            var time;
+            var res = [];
+            var th = 0;
+            var tm = 0;
+            var ts = 0;
+            var td=0;
+            // var timee="";
+            function clock() {
+                var now = new Date();
+                var h = now.getHours() + th;
+                var min = now.getMinutes() + tm;
+                var se = now.getSeconds() + ts;
+                var ms = now.getMilliseconds();
+                var year = now.getFullYear();
+                var month = now.getMonth() + 1;
+                var da = now.getDate()+td;
+                var day = now.getDay();
+                var world = 'a';
+                var week = '';
+                if(month<10,da<10,h<10,min<10,se<10){
+                    month='0'+month;
+                    da='0'+da;
+                    h='0'+h;
+                    min='0'+min;
+                    se='0'+se;
+                }
+                if (month < 10, da < 10) {
+                    month = '0' + month;
+                    da = '0' + da;
+                }
+                if (h < 10) {
+                    h = '0' + h;
+                }
+                if (h >= 12) {
+                    h = h % 12;
+                    if (h < 10) {
+                        h = '0' + h;
+                    }
+                }
+                // if((parseInt(h/12))%2!=0){
+                //     world="p";
+                // }
+                if (min < 10) {
+                    min = '0' + min;
+                }
+                if (min >= 60) {
+                    min = min % 60;
+                    h = h + 1;
+                    if (min < 10) {
+                        min = '0' + min;
+                    }
+                }
+                if (min < 0) {
+                    th = th - 1;
+                    h = now.getHours() + th;
+                    tm = (59 - now.getMinutes()) - 1;
+                }
+
+
+                //秒运算
+                if (se < 10) {
+                    se = '0' + se;
+                }
+
+
+
+                console.log(min);
+
+                // for(var i=0;i<7;i++){
+                if (day == 0) {
+                    week = "日"
+                }
+                if (day == 1) {
+                    week = "一"
+                }
+                if (day == 2) {
+                    week = "二"
+                }
+                if (day == 3) {
+                    week = "三"
+                }
+                if (day == 4) {
+                    week = "四"
+                }
+                if (day == 5) {
+                    week = "五"
+                }
+                if (day == 6) {
+                    week = "六"
+                }
+                // }
+
+                // oBtn1.onclick = function () {
+                //     th = th + 1;
+                //     h = now.getHours() + th;
+                //     console.log(h);
+                // }
+                oBtn2.onclick = function () {
+                    th = th - 1;
+                    h = now.getHours() + th;
+                    if (h < 0) {
+                        td = td - 1;
+                        da = now.getDate() + td;
+                        th = (12 - now.getHours() ) - 1;
+                    }
+                }
+                oBtn3.onclick = function () {
+                    tm = tm + 1;
+                    min = now.getMinutes() + tm;
+                    
+                }
+                oBtn4.onclick = function () {
+                    tm = tm - 1;
+                    min = now.getMinutes() + tm;
+                    if (min < 0) {
+                        // min=min-1;
+                        th = th - 1;
+                        h = now.getHours() + th;
+                        tm = (59 - now.getMinutes() ) - 1;
+                    }
+
+                }
+
+                //秒运算
+                oBtn5.onclick = function () {
+                    ts = ts + 1;
+                    se = now.getSeconds() + ts;
+                    //  if (se >= 60) {
+                    //     se = se % 60;
+                    //     tm=tm + 1;
+                    //     if (se < 10) {
+                    //         se = '0' + se;
+                    //     }
+                    // }
+                    
+                }
+                oBtn6.onclick = function () {
+                    ts = ts - 1;
+                    se = now.getSeconds() + ts;
+                    if (se < 0) {
+                        // min=min-1;
+                        tm = tm - 1;
+                        min = now.getMinutes() + tm;
+                        ts = (59 - now.getSeconds()) - 1;
+                    }
+                }
+
+                oDiv1.innerHTML = h + ':' + min + ':' + se + world + 'm';
+                oDiv2.innerHTML = year + '年' + month + '月' + da + '日' + '星期' + week;
+
+
+                // 丁玲
+                oBtn7.onclick = function () {
+                    for (var i = 0; i < 3; i++) {
+
+                        if (i == 0) {
+                            var deg = "小时";
+                        }
+                        if (i == 1) {
+                            var deg = "分钟"
+                        }
+                        if (i == 2) {
+                            var deg = "秒"
+                        }
+                        res[i] = prompt("请设置所订闹钟的" + deg);
+                        res[i] = parseInt(res[i]);
+                        if (res[i] == '' || isNaN(res[i]) == true) {
+                            alert("请输入正确的时间");
+                            return false;
+                        }
+                    }
+                    // console.dir(res);
+                }
+                if (h == res[0] && min == res[1] && se == res[2]) {
+                    alert("时间到了！！！");
+                }
+            }
+            time = setInterval(clock, 1000);
+
+        }
+    </script>
+</body>
+
+</html>

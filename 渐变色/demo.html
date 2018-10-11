@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+            width: 300px;
+        }
+
+        /* .cover{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background:linear-gradient(to left top, rgba(53,179,229,0.7),rgba(21,188,119,0.7) 20%);
+            
+        } */
+        .circle{
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border-radius: 100%;
+            background: radial-gradient(circle at top left,#eee,#00fff0 120%);
+        }
+        .address{
+            border: 8px solid ;
+            width:300px;
+            height:200px;
+            border-image:url('../images/QQ图片20180911101535.png')  2 4 repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../images/49951_05.jpg" alt="">
+        <div class="cover"></div>
+    </div>
+    <div class="circle"></div>
+    <div class="address"></div>
+</body>
+</html>

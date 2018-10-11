@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;   
+    font-family: "Microsoft YaHei UI", "Microsoft YaHei UI Light", "微软雅黑", "宋体", Helvetica-Black-SemiBold, Tahoma, Arial, sans-serif;
+}
+.container{
+    width: 1171px;
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.back{
+    background-color: #282e3b;
+}
+.clear{
+    clear: both;
+}
+
+/*一*/
+.first_1 .logo {
+    padding-top: 59px;
+    padding-bottom: 24.5px;
+}
+.first_1 .text span{
+    width: 233px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #b2bacf;
+    padding-bottom: 27px;
+}
+.first_1 div:nth-child(3)>span a{
+    font-size: 14px;
+    color: #33b2c5; 
+}
+.first_1 .container{
+    padding-bottom: 74px;
+}
+
+
+
+
+/*二*/
+.second_1{
+    padding: 0 30px;
+}
+.second_1 .logo2{
+    padding-top: 40px;
+    padding-bottom: 26.5px;
+}
+.second_1 .logo2>img{
+    vertical-align: middle;
+}
+.second_1 .logo2>span{
+    vertical-align: middle;
+    font-size: 23px;
+    color: #fff;
+}
+.second_1 ul:nth-child(2) li .peoplePhoto img{
+    padding-top: 3.5px;
+}
+.second_1 ul:nth-child(2) li .intro>span{
+    width: 174px;
+    padding-left: 9px;
+}
+.second_1 ul:nth-child(2) li .intro>span a{  
+    font-size: 12px;
+    font-family: "Times New Roman";
+    color: #b2bacf;
+    line-height: 20px;
+}
+.second_1 ul:nth-child(2) li .suuport{
+    padding-left: 12px;
+}
+.second_1 ul:nth-child(2) li .suuport a:nth-child(1){
+    vertical-align: middle;
+}
+.second_1 ul:nth-child(2) li .suuport span:nth-child(2) a{
+    font-size: 12px;
+    color: #b2bacf;
+}
+.second_1 ul:nth-child(2) li .suuport a:nth-child(3){
+    padding-left: 22px;
+    vertical-align: middle;
+}
+
+.second_1 ul:nth-child(2) li .suuport span:nth-child(4) a{
+    font-size: 12px;
+    color: #b2bacf;
+    vertical-align: middle;
+}
+.second_1 ul:nth-child(2) li .suuport span:nth-child(4),
+.second_1 ul:nth-child(2) li .suuport span:nth-child(2){
+    vertical-align: middle;
+}
+.second_1 ul:nth-child(2) li{
+    padding-bottom: 20px;
+}
+
+
+
+
+/*三*/
+.third_1 .logo2{    
+    padding-top: 40px;
+    padding-bottom: 26.5px;
+}
+.third_1 .logo2>img{
+    vertical-align: middle;
+}
+.third_1 .logo2>span{
+    vertical-align: middle;
+    font-size: 23px;
+    color: #fff;
+}
+.third_1 ul{
+    width: 265px;
+    padding-bottom: 131px;
+}
+.third_1 ul>li{
+    margin:2.5px ;
+    /*height: 37px;*/
+}
+.third_1 ul>li{
+    padding: 12px 11px 10px 11px;;
+    background-color: #1c212b;
+}
+
+.third_1 ul>li>span a{
+    font-size: 16px;
+    color: #b2bacf;
+}
+
+
+
+
+
+/*四*/
+.forth_1{
+    padding-left: 30px;
+}
+.forth_1 .logo2{
+    padding-top: 40px;
+    padding-bottom: 26.5px;
+}
+.forth_1 .logo2>img{
+    vertical-align: middle;
+}
+.forth_1 .logo2>span{
+    vertical-align: middle;
+    font-size: 23px;
+    color: #fff;
+}
+.forth_1 ul{
+    width: 300px;
+}
+.forth_1 ul li:nth-child(2){
+    padding: 0 6px 0 6px;
+}
+.forth_1 ul li:nth-child(3){
+    padding-top: 0;
+}
+.forth_1 ul li:nth-child(4){
+    padding-top: 6px;
+}
+.forth_1 ul li:nth-child(5){
+    padding: 6px 6px 0 6px;
+}
+.forth_1 ul li:nth-child(6){
+    padding: 6px 0 0 0;
+}
+
+
+
+
+/*bottom*/
+.backC{
+    background-color: #171b24;
+}
+.backC .fl{
+    font-size: 14px;
+    color: #cdd1dd;
+    line-height: 75px;
+}
+.backC .fl a{
+    color: #cdd1dd;
+    padding-left: 32px;
+}

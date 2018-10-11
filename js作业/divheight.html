@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: #0000ff;
+            position: fixed;
+            right: 0;
+            top: 0;
+        }
+        
+        input {
+            padding: 10px 6px;
+            border: 1px solid #0000ff;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <form action="">
+        <input type="text" name="" id="input" value="请输入账号">
+    </form>
+    <script>
+        window.onload = function () {
+            var oBox = document.getElementById("box");
+            console.dir(oBox);
+            var winWidth = window.innerWidth;
+            var winHeight = window.innerHeight;
+            // oBox.offsetLeft="500";
+            // oBox.offsetTop="360p";
+
+
+
+            document.onkeydown = function (e) {
+                var left = oBox.offsetLeft;
+                var top = oBox.offsetTop;
+                var winWidth = window.innerWidth;
+                var winHeight = window.innerHeight;
+                var maxWidth = winWidth - oBox.offsetWidth;
+                var maxHeight = winHeight - oBox.offsetHeight;
+                console.log(e.keyCode)
+
+                switch (e.keyCode) {
+                    case 37:
+                        if (left - 20 < 0) {
+                            oBox.style.left = "0px";
+                            return false;
+                        }
+                        oBox.style.left = (left - 20) + 'px';
+                        break;
+                    case 39:
+                        if (left + 20 >= maxWidth) {
+                            oBox.style.right = "0px";
+                            return false;
+                        }
+                        oBox.style.left = (left + 20) + 'px';
+                        break;
+                    case 38:
+                        if (top - 20 < 0) {
+                            oBox.style.top = "0px";
+                            return false;
+                        }
+                        oBox.style.top = (top - 20) + 'px';
+                        break;
+                    case 40:
+                        if (top + 20 >= maxHeight) {
+                            oBox.style.bottom = "0px";
+                            return false;
+                        }
+                        oBox.style.top = (top + 20) + 'px';
+                        break;
+                }
+            }
+        }
+    </script>
+    <script>
+        var oInput = document.getElementById("input");
+        // oInput.inner
+        var placeholder = oInput.value;
+        oInput.onfocus = function () {
+            //  oInput.onkeydown=function(){
+            this.value = "";
+            // this.style.borderColor="red";
+            //  }
+        }
+        oInput.onblur = function () {
+            if (this.value != placeholder && this.value) {
+                return false;
+            }
+            // if(this.value!=){
+            this.value = placeholder;
+            // }
+        }
+
+        //表单验证
+        oInput.onchange = function () {
+            var age = this.value;
+            age = parseInt(age);
+            this.value = age;
+            if (isNaN(age)) {
+                this.value = '';
+                alert('please enter a right number');
+                return false;
+            }
+            if (age < 0 || age > 150) {
+                alert('please enter a right number');
+                return false;
+            }
+            console.log(age);
+        }
+        console.dir(oInput);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="400px" height="600px"></canvas>
+</body>
+<script>
+    //画布
+    oCanvas = document.getElementById('canvas');
+    var width = oCanvas.width;
+    var height = oCanvas.height;
+    //画笔
+    var context = oCanvas.getContext('2d');
+    var i=0;
+    (function run(){
+    requestAnimationFrame(run);
+    context.clearRect(0,0,width,height);
+    //绘制背景
+    context.fillStyle = "#eee";
+    context.fillRect(0, 0, width, height);
+    // 绘制小矩形
+    context.save();
+    context.translate(200,200);
+    context.fillStyle="blue";
+    context.rotate(i*Math.PI/180);
+    context.fillRect(20,20,10,10);
+   context.restore();
+    i++;
+    // if(i>200){
+    //     i=0;
+    // }
+    })();
+</script>
+
+</html>

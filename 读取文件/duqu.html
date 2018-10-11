@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="input">
+    <div width="1000" height="1000" id="preview"></div>
+    <script>
+        var oInput=document.getElementById('input');
+        var oPreview=document.getElementById('preview');
+        var fileReader=new FileReader();
+        oInput.onchange=function(){
+            fileReader.readAsDataURL(oInput.files[0]);
+        }
+        console.log(oInput.files[0]);   
+        fileReader.onload=function(){
+        oPreview.innerHTML='<img src="'+fileReader.result+'"></img>';
+        }
+    </script>
+</body>
+</html>

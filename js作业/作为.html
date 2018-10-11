@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <button type="button" id="btn">抽取</button>
+    <div id="dd"></div>
+    <script>
+        window.onload = function () {
+            var t=0;
+            var arr=[];
+            var res;
+            var timer;
+            var oBtn=document.getElementById('btn');
+            var oDiv=document.getElementById('dd');
+            var oSpan=document.createElement('span');
+            function run(time){
+                arr[t]=parseInt(Math.random()*time+1);
+                res=arr[t];
+                t+=1;
+                if(t>time){
+                    alert("别抽了对身体不好");
+                    return false;
+                }
+                for(var i=0;i<arr.length-1;i++){
+                    if(res==arr[i]){
+                        t=t-1;
+                       return run(time);
+                    }
+                }
+                oSpan.innerHTML=res+" ";
+                oDiv.appendChild(oSpan);
+                console.log(res);
+                
+            }
+            oBtn.onclick=function(){
+                run(43);
+            }
+
+        }
+    </script>
+</body>
+
+</html>

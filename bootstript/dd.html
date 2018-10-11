@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <ul class="goodsList" id="goods">
+                <li>商品分类</li>
+                <li>商品发布</li>
+                <li>出售中的商品</li>
+                <li>仓库中的商品</li>
+                <li>关联版式</li>
+                <li>商品规格</li>
+                <li>图片空间</li>
+            </ul>
+            <script src="js/jquery-1.12.4.min.js"></script>
+            <script>
+                $(document).ready(function(){
+            for(var i=0;i<$('.goodsList li').length;i++){
+                $($('.goodsList li')[i]).click(function(){
+                    console.log(1)
+                    $('.goodsList li').css({
+                    borderTop:'#f9f9f9',
+                    borderBottom:'#f9f9f9',
+                    borderLeft:'#f9f9f9',
+                })
+                $($('.goodsList li')[i]).css({
+                    borderTop:'#ccc',
+                    borderBottom:'#ccc',
+                    borderLeft:'#27a9e3',
+                })
+            })
+            }
+           
+        })
+            </script>
+</body>
+</html>

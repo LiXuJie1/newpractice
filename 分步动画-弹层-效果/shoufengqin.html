@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        
+        .nav li {
+            height: 260px;
+            text-align: center;
+            color: #fff;
+        }
+        li span {
+            font-size: 30px;
+            width: 30px;
+            display: block;
+            padding-left: 60px;
+            padding-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container ">
+        <ul class="nav clearfix ">
+            <li class="fl" id="pic1">
+                <span>温泉酒店</span>
+            </li>
+            <li class="fl " id="pic2">
+                <span>温泉酒店</span>
+            </li>
+            <li class="fl" id="pic3">
+                <span>温泉酒店</span>
+            </li>
+            <li class="fl" id="pic4">
+                <span>温泉酒店</span>
+            </li>
+            <li class="fl" id="pic5">
+                <span>温泉酒店</span>
+            </li>
+            <li class="fl " id="pic6">
+                <span>温泉酒店</span>
+            </li>
+            <li class="fl " id="pic7">
+                <span>温泉酒店</span>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var L=$('li').length;
+            var Wid=$('body','html').innerWidth;
+            $('.container').css({
+                width:Wid*0.9,
+                margin:'0 auto'
+            })
+            var W=$('.container').width();
+            $('li').css({
+                width: W/L
+            })
+            var nom=$('li').width();
+            var biger=$('li').width()*1.7;
+            var small=$('li').width()-((biger-$('li').width())/(L-1));
+            
+            //方法
+            function run(Id,img){
+                $(Id).css({
+                    background:'url(pic/pic'+img+'.jpg) no-repeat top center'
+                })
+                $(Id).mouseover(function () {
+                $(Id).siblings('li').find('span').stop(true).animate({
+                    opacity: '1'
+                })
+                $(Id).siblings('li').stop(true).animate({
+                    width: small
+                })
+                $(Id).stop(true).stop(true).animate({
+                    width: biger
+                } )
+                $(Id).find('span').stop(true).animate({
+                    opacity: '0'
+                })
+            })
+            $(Id).mouseleave(function () {
+                $(Id).stop(true).animate({
+                    width: nom
+                }, function () {
+                    $(Id).find('span').stop(true).animate({
+                        opacity: '1'
+                    })
+                })
+                $(Id).siblings('li').stop(true).animate({
+                    width: nom
+                })
+
+            })
+        }
+        run("#pic1",1);
+        run("#pic2",2);
+        run("#pic3",3);
+        run("#pic4",4);
+        run("#pic5",5);
+        run("#pic6",6);
+        run("#pic7",7);
+        })
+    </script>
+</body>
+
+</html>

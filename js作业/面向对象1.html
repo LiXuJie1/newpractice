@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--<input type="text" name="" id="num1" value=""></input>-->
+    <input type="text" name="" id="num1" value=""></input>
+    <!--<input type="text" name="" id="num3" value="" placeholder="请输入手机号"></input>-->
+    <!--<input type="text" name="" id="num2" value=""></input>-->
+    <!--<button type="button" id="cal">计算</button>-->
+    <button type="button" id="cal">点击</button>
+    <script>
+        window.onload = function () {
+            // 隐藏替换敏感词
+            var oBtn = document.getElementById("cal");
+            oBtn.onclick = function () {
+                var oTxt = document.getElementById("num1");
+                var str = oTxt.value;
+                var flag;
+                for (let i = 0; i < str.length; i++) {
+                    if (str[i] + str[i + 1] == "智障") {
+                         var flag1 = str.replace(str[i]+str[i+1], "**");
+                         str=flag1; 
+                    }
+                }
+                alert(str);
+            }
+        }
+
+
+
+            // 手机号
+        //     var oTxt3=document.getElementById("num3");
+        //     oTxt3.onchange=function(){
+        //         var otxt3=oTxt3.value;
+        //         if(otxt3.length!=11){
+        //             oTxt3.value="";
+        //             alert("请输入正确的手机号");
+        //             return false;
+        //         }
+
+        //         var res;
+        //         res=otxt3.slice(0,3)+' '+otxt3.slice(3,7)+' '+otxt3.slice(7,11);
+        //         this.value=res;
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

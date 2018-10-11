@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left:50%;
+            margin-left: -150px;
+            top: 50%;
+            margin-top: -150px;
+            /* border: 1px solid red;  */
+            background-color: #333;
+        }
+        .container button{
+            position: absolute;
+            right: 25px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" class="box">
+        <div class="container" v-show="ok">
+            <button type="button" @click="close">关闭</button>
+        </div>
+        <button type="button" @click="open">显示</button>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                ok:false,
+            },
+            methods: {
+                    open:function () {
+                        if (this.ok == false) {
+                            this.ok = true;
+                        }
+                    },
+                    close:function(){
+                        if(this.ok==true){
+                            this.ok=false;
+                        }
+                    }
+                }
+            })
+    </script>
+</body>
+
+</html>

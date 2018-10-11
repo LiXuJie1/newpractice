@@ -1,0 +1,488 @@
+i {
+	font-style: normal;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+
+a {
+	color: #000000;
+}
+
+.item_list a:hover {
+	color: #F66368;
+}
+
+.annie_word a:hover {
+	color: #F66368;
+}
+
+
+.black{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background:rgb(51,51,51);
+	opacity:0.4;
+	display: none;
+}
+/*标题*/
+
+.title {
+	background: #FFFFFF;
+	padding: 15px 0;
+	border-bottom: 1px solid #c0c0c047;
+}
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.logo {
+	padding: 10px 0;
+}
+
+.logo img {
+	vertical-align: bottom;
+}
+
+.logo span {
+	vertical-align: bottom;
+	display: inline-block;
+	font-size: 22px;
+	color: #000000;
+	font-weight: 500;
+	padding-left: 15px;
+}
+
+.process {
+	width: 469px;
+	height: 58px;
+	background: url(../images/page-step.png) 0px 0px;
+}
+
+.next_step {
+	width: 240px;
+	height: 48px;
+	background: url(../images/page-step.png) 0px -65px;
+}
+/*主体*/
+.order {
+	background-color: #fafafa;
+	padding: 20px 40px;
+}
+.infor_order {
+	border: 1px solid #c0c0c047;
+	background: #FFFFFF;
+	padding: 15px;
+}
+
+.infor_title li {
+	font-size: 16px;
+	color: #000000;
+	padding-bottom: 10px;
+}
+
+.infor_title a {
+	color: #cc9977;
+	font-size: 14px;
+}
+
+.adder {
+	padding-bottom: 20px;
+}
+
+.old-addr {
+	margin-right: 15px;
+	width: 230px;
+	height: 155px;
+	background: url(../images/address-bg.png) 0px 0px;
+}
+
+.receive {
+	padding: 10px;
+	height: 105px;
+}
+
+.re_officer {
+	border-bottom: 1px solid #c0c0c047;
+	padding-bottom: 10px;
+	font-size: 14px;
+}
+
+.pad {
+	padding-top: 10px;
+}
+
+.adder .edit {
+	padding: 0 10px;
+}
+
+.adder .edit a:hover {
+	color: #F66368;
+}
+
+.edit .red {
+	color: red;
+}
+
+.new_adder {
+	margin-right: 15px;
+	width: 230px;
+	height: 155px;
+	background: url(../images/address-bg.png) 0px 0px;
+}
+.back{
+	background:url(../images/address-bg.png) 0px -160px;
+}
+.iconfont {
+	font-size: 52px;
+	text-align: center;
+	padding-top: 30px;
+	color: #C0C0C0;
+}
+
+.txt {
+	font-size: 17px;
+	text-align: center;
+}
+
+
+/*商品信息*/
+
+.infor_item {
+	padding: 20px 0px;
+}
+
+.infor_item p {
+	color: #000000;
+	font-size: 14px;
+	font-weight: 400px;
+	padding-bottom: 10px;
+}
+
+.infor_item .item_line {
+	padding: 10px 0;
+	border-top: 1px solid #c0c0c047;
+	border-bottom: 1px solid #c0c0c047;
+}
+
+.infor_item .item_line span {
+	display: inline-block;
+	text-align: right;
+}
+
+.infor_item .item {
+	width: 220px;
+}
+
+.infor_item .info {
+	width: 209px;
+}
+
+.infor_item .price {
+	width: 152px;
+}
+
+.infor_item .num {
+	width: 150px;
+}
+
+.infor_item .sum {
+	width: 200px;
+}
+
+
+/**/
+
+.annie_goods {
+	margin-bottom: 20px;
+}
+
+.annie_goods .annie_word {
+	padding-bottom: 10px;
+	border-bottom: 2px solid #6495ed75;
+}
+
+.annie_goods .item_list {
+	padding: 20px 0;
+	border-bottom: 1px solid #c0c0c047;
+	background: #c2c2c226;
+}
+
+.item_list .photo {
+	padding-left: 20px;
+	width: 300px;
+}
+
+.item_list .photo img {
+	display: inline-block;
+	border: 1px solid #c0c0c054;
+	width: 70px;
+	height: 70px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.item_list .goods_word {
+	display: inline-block;
+	width: 209px;
+	vertical-align: top;
+}
+
+.item_list .size_word {
+	padding-left: 20px;
+	width: 175px;
+	height: 50px;
+}
+
+.item_list .size_word .size {
+	display: block;
+	width: 150px;
+	color: #9c9c9c;
+	;
+}
+
+.item_list .num {
+	width: 200px;
+	padding-top: 18px;
+	text-align: center;
+}
+
+.item_list .piece {
+	width: 114px;
+	font-size: 14px;
+	padding-top: 18px;
+	text-align: center;
+}
+
+.item_list .sum {
+	width: 115px;
+	color: #FF0000;
+	font-size: 14px;
+	padding-top: 18px;
+	text-align: right;
+}
+
+.annie_goods .annie_total {
+	background: #c2c2c226;
+	border-bottom: 1px dashed #6495ed75;
+	padding: 10px 20px;
+}
+
+
+/*备注框*/
+
+.remark {
+	width: 350px;
+	padding: 10px;
+}
+
+
+/*商品合计*/
+
+.annie_total .total {
+	padding-top: 5px;
+	font-size: 14px;
+	font-weight: 600;
+	width: 106px;
+}
+
+.annie_total li {
+	padding-top: 10px;
+}
+
+.annie_total .total span {
+	color: #ff0000a3;
+}
+
+.annie_total .invoice .check {
+	vertical-align: middle;
+	display: inline-block;
+	width: 16px;
+	height: 18px;
+	background: url(../images/checkbox-ico.png) 0px 0px;
+}
+
+.annie_total .invoice .in_ask {
+	vertical-align: middle;
+}
+
+
+/*发票单选框*/
+
+.annie_total .hidden_check {
+	display: none;
+	padding: 10px 20px;
+}
+
+.hidden_check label {
+	font-weight: 600;
+	color: #000000;
+}
+
+.hidden_check input {
+	width: 40px;
+}
+
+
+/*   丽子币              */
+
+.annie_money {
+	padding-right: 20px;
+}
+
+.annie_money li {
+	padding-bottom: 10px;
+	text-align: right;
+}
+
+.annie_money select {
+	padding: 4px;
+	border: 1px solid #ddd;
+	border-top-color: #ccc;
+}
+
+.annie_money input {
+	outline: 0;
+	border: 1px solid #ddd;
+	border-top-color: #ccc;
+	width: 50px;
+	padding: 5px;
+	text-align: right;
+	margin-right: 30px;
+}
+.annie_money input::-webkit-input-placeholder {
+        text-align: right;
+}
+.annie_money p {
+	padding: 4px;
+	color: #CCCCCC;
+}
+
+
+/*            提交订单                   */
+
+.rece_order {
+	background: #fff;
+	border: 1px solid #c0c0c047;
+	border-top: 0;
+}
+
+.rece_order .iconfont {
+	font-size: 15px;
+	color: #000000;
+}
+
+.rece_order span {
+	font-size: 14px;
+}
+
+.rece_order .collect {
+	width: 750px;
+	padding: 14px 20px 0;
+	line-height: 27px;
+}
+
+.collect a:hover {
+	color: #F66368;
+}
+
+.collect a:hover i {
+	color: #F66368;
+}
+
+.collect .my_red {
+	color: #ff0000;
+}
+
+.collect .incr-size {
+	font-size: 22px;
+}
+
+.rece_order .order_btn {
+	background: #ff00008c;
+	width: 170px;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.order_btn a {
+	font-size: 25px;
+	color: #FFFFFF;
+}
+/*                 弹窗                                      */
+.layer{
+	border: 1px solid #cccccc94;
+	border-radius: 3px;
+	background: #FFFFFF;
+	position: absolute;
+	width: 600px;
+	height: 380px;
+	left: 390px;
+	top: 136px;
+	display: none;
+	
+}
+.layer .layer_title{
+	background: #c0c0c02e;
+	padding: 10px 20px;
+	font-size: 17px;
+	border-bottom: 1px solid #CCCCCC;
+	line-height: 20px;
+}
+.layer_title .cancel_logo a{
+	vertical-align: middle;
+	font-size: 31px;
+	color: #C0C0C0;
+}
+.layer label{
+	display: inline-block;
+	width: 68px;
+	text-align: right;
+}
+.layer input{
+	padding:5px  10px;
+}
+.layer .excel{
+	padding: 20px;
+	border-bottom: 1px solid #cccccc94;
+}
+.layer .excel li{
+	font-size: 14px;
+	padding-bottom: 15px;
+}
+.layer .add_street{
+	width: 400px;
+}
+.layer_btn{
+	margin: auto;
+	width: 217px;
+	padding-top: 30px;
+}
+.layer_btn input{
+	width: 90px;
+	border: 0;
+	text-align: center;
+	padding: 8px 0;
+	border-radius: 2px;
+}
+.layer_btn .cancel{
+	background: #c0c0c0ad;
+}
+.layer_btn .confirm{
+	background: #FF666B;
+	color: #FFFFFF;
+	margin-right: 30px;
+	
+}
+/*弹窗*/
+body .demo-class .layui-layer-btn{
+	border-top:1px solid #CCCCCC;
+	background-color: #cccccc2b;
+}

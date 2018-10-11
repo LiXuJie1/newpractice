@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.banner{
+    /*background: url("../pic/bg.png")   repeat-y;*/
+    /*height: 400px;*/
+    /* background:url("../pic/rob.jpg") no-repeat top center; */
+    /*background-position: top center;*/
+    /* height: 1000px; */
+}
+.banner2{
+    /* height: 500px; */
+    /* background:url("../pic/rob.jpg") no-repeat fixed top center; */
+    /*background-attachment: fixed;*/
+    /*background-position: top center;*/
+}

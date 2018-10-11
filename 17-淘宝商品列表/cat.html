@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Animal(age){
+        this.species='动物';
+        this.age=age;
+    }
+    //猫科
+    function Cat(color){
+        this.trick='萌';
+        this.color=color;
+    }
+    Cat.prototype= new Animal();
+    var cat=new Cat('white');
+    console.log(cat.species);
+
+
+
+    function dog(){
+        this.wow=function(){
+            alert('wow');
+        }
+        this.yelp=function(){
+            this.wow();
+        }
+    }
+    function MadDog(){
+
+    }
+    MadDog.prototype=new Dog();
+    MadDog.prototype.constructor=MadDog;
+    var dog=new Dog();
+    var madDog=new MadDog();
+    console.log(dog);
+
+
+
+
+
+
+
+
+
+    var dog=new Animal();
+    console.log(dog);
+    function dog(bark){
+        setInterval(function(){
+            this.bark='wa';
+        },500)
+        
+    }
+    </script>
+</body>
+</html>

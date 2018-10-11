@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>iframe嵌套</h1>
+    <!--<iframe src="http://www.baidu.com" width="100%" height="600px"></iframe>;-->
+    <!--无法使用js操作页面很麻烦-->
+    <form action="http://www.baidu.com " method="get">
+        <label for="user">账号：</label>
+        <input type="text" name="user"id="user" value="" placeholder="">
+        <br>
+        <label for="ps">密码：</label>
+        <input type="password" name="password"id="ps" value="" placeholder="">
+        <br>
+        <label for="">省份：</label>
+        <select name="" id="">
+            <option value="SD">山东</option>
+            <option value="">河北</option>
+            <option value="">上海</option>
+            <option value="">浙江</option>
+            <option value="">广州</option>
+        </select>
+        <label for="">城市：</label>
+        <select name="" id="">
+            <option value="">潍坊</option>
+            <option value="">菏泽</option>
+            <option value="">城阳</option>
+            <option value="">市北</option>
+            <option value="">市南</option>
+        </select>
+        <label for="">区域：</label>
+        <select name="" id="">
+            <option value="">城阳</option>
+            <option value="">市北</option>
+            <option value="">市南</option>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+        <label for="">性别</label>
+        <!--<input type="checkbox" value="">-->
+        <label for="man">
+            <input id="man" name="sex"type="radio">男
+        </label>
+        <label for="woman">
+            <input id="woman"name="sex" type="radio">
+        女</label>
+
+<br>
+        <!--复选框组 name 一致-->
+       <label for="">爱好：</label>
+       <label for="">
+           <input type="checkbox"name="fav"id=""value="">旅游
+       </label>
+       <label for="">
+           <input type="checkbox"name="fav"id=""value="">摄影
+       </label>
+       <label for="">
+           <input type="checkbox"name="fav"id=""value="">游泳
+       </label>
+       <label for="">
+           <input type="checkbox"name="fav"id=""value="">阅读
+       </label>
+       <!--多行文本-->
+      
+<br>
+      <label for="">介绍：</label>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+
+      <!--button按钮-->
+      <input type="submit" name="" id="" value="提交">
+      <input type="reset" name="" id="" value="重置">
+      <input type="button" name="" id="" value="按钮">
+      <button type="submit">提交</button>
+
+      <!--默认-->
+      <input type="">
+      <button>1111</button>
+
+
+      <!--隐藏数据 对用户不可见-->
+      <input type="hidden">
+    </form>
+
+</body>
+</html>

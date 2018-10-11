@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    position: relative;
+    /*overflow: hidden;*/
+}
+ul>li{
+   font-size: 50px; 
+}
+.move-list{
+    width: 200px;
+    height: 200px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #f00;
+    border: 1px solid #00f;
+    border-radius: 5px;
+    /*left: 0;*/
+    position: absolute;
+}
+.move-list:hover{
+    background-color: #0f0;
+    left: 0px;
+    /*left:200px;*/
+}
+.tra{
+    transition: 5s;
+    left: 200px;
+}
+#title{
+
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: #0f0;
+    line-height: 200px;
+    /*padding-top:100px; */
+    text-align: center;
+    color: #fff;
+}
+.float-box1{
+    width: 200px;
+    height: 200px;
+    background-color: #f0f;
+    float: left;
+}
+.float-box2{
+    width: 200px;
+    height: 200px;
+    background-color: #00f;
+    float: left;
+}
+.float-box3{
+    width: 200px;
+    height: 200px;
+    background-color: #0f0;
+    float: left;
+}
+.BigOne{
+    width: 600px;
+    /*height: 600px;*/
+    /*overflow: hidden;*/
+    
+    border: 2px solid #f00
+}
+.clear{
+    clear: both;
+}
+/*.box2{
+    width: 200px;
+    height: 200px;
+    background-color: #f00;
+    clear: both;
+}*/

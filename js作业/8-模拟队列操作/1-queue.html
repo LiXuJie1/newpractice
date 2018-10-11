@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="reset.css">
+    <style type="text/css">
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+        
+        .numberInput {
+            width: 272px;
+            height: 30px;
+            margin-left: 250px;
+            /*margin: 40px  auto;*/
+            margin-top: 40px;
+            padding-left: 28px;
+        }
+        
+        .into {
+            width: 600px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        
+        .leftInto {
+            width: 60px;
+            height: 30px;
+        }
+        
+        .rightInto {
+            width: 60px;
+            height: 30px;
+        }
+        
+        .pic {
+            width: 300px;
+            /*border: 1px solid red;*/
+            margin: 0 auto;
+            text-align: center;
+            /*position: relative;*/
+        }
+        .pic div{
+            /*position: absolute;*/
+        }
+    </style>
+</head>
+
+<body>
+    <img src="intro.jpg" alt="">
+    <div class="container">
+        <input type="text" id="number" class="numberInput" placeholder="在此输入数字">
+        <button type="button" id="btn1">排序</button>
+        <div class="into clearfix">
+            <button type="button" class="leftInto fl" id="leftInto">左侧入</button>
+            <button type="button" class="rightInto fr" id="rightInto">右侧入</button>
+        </div>
+        <div class="pic" id="pic">
+        </div>
+        <div class="into clearfix">
+            <button type="button" class="leftInto fl" id="leftInto2">左侧出</button>
+            <button type="button" class="rightInto fr" id="rightInto2">右侧出</button>
+        </div>
+    </div>
+
+    <div>
+        题目： 如图，模拟一个队列，队列的每个元素是一个数字，初始队列为空 有一个input输入框，以及4个操作按钮
+    </div>
+    <ul>
+        <li>
+            点击"左侧入"，将input中输入的数字从左侧插入队列中；
+        </li>
+        <li>点击"右侧入"，将input中输入的数字从右侧插入队列中；</li>
+        <li>点击"左侧出"，读取并删除队列左侧第一个元素，并弹窗显示元素中数值；</li>
+        <li>
+            点击"右侧出"，读取并删除队列右侧第一个元素，并弹窗显示元素中数值；
+        </li>
+        <li>
+            点击队列中任何一个元素，则该元素会被从队列中删除;
+        </li>
+    </ul>
+    <div class="" id="result">
+    </div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $('#leftInto').click(function () {
+                var num = parseInt($('#number').val());
+                if(isNaN(num)||num<10||num>500){
+                    alert('please enter right number');
+                    return false;
+                }
+                var div = $('<div></div>');
+                $(this).parent('.into').siblings('#pic').prepend(div);
+                $(this).parent('.into').siblings('#pic').find(div).css({
+                    width: '10px',
+                    height: num + 'px',
+                    backgroundColor: '#00ff00',
+                    // display: 'inline-block',
+                    marginRight: '10px',
+                    position:'relative'
+                })
+            })
+
+            //右
+            $('#rightInto').click(function () {
+                var num = parseInt($('#number').val());
+                if(isNaN(num)||num<10||num>500){
+                    alert('please enter right number');
+                    return false;
+                }
+                var div = $('<div></div>');
+                $(this).parent('.into').siblings('#pic').append(div);
+                $(this).parent('.into').siblings('#pic').find(div).css({
+                    width: '10px',
+                    height: num + 'px',
+                    backgroundColor: '#00ff00',
+                    display: 'inline-block',
+                    marginRight: '10px'
+                })
+            })
+            //左出
+            $('#leftInto2').click(function () {
+                $(this).parent('.into').siblings('#pic').find("div:first-child").remove();
+            })
+
+            //右出
+            $('#rightInto2').click(function () {
+                $(this).parent('.into').siblings('#pic').find("div:last-child").remove();
+            })
+
+
+            //事件委托  终点有点忘了
+            $('#pic').on('click', 'div', function (e) {
+                var target = $(e.target);
+                target.remove();
+            })
+
+            $('#btn1').click(function () {
+                
+                var arr = [];
+                for (var i = 0; i < $(this).siblings('#pic').find('div').length;i++){
+                    arr[i]=$(this).siblings('#pic').find('div')[i].clientHeight;
+                }
+                for(let i=0;i<$(this).siblings('#pic').find('div').length-1;i++){
+                    for(var j=0;j<$(this).siblings('#pic').find('div').length-1-i;j++){
+                        var res;
+                        if(arr[j]>arr[j+1]){
+                            res=arr[j];
+                            arr[j]=arr[j+1];
+                            var width=$(this).siblings('#pic').find('div').eq(j).offset().left;
+                            $(this).siblings('#pic').find('div').eq(j).css('left',width+20+'px');
+                            arr[j+1]=res;
+                            var width2=$(this).siblings('#pic').find('div').eq(j+1).offset().left;
+                            $(this).siblings('#pic').find('div').eq(j+1).css('left',width-20+'px');
+                            console.log(width); 
+                            console.log(width2); 
+                        }
+                    }
+                    
+                }
+                console.dir($(this).siblings('#pic').find('div').eq(1).css);
+                // console.log($(this).siblings('#pic').find('div').eq(1).offsetLeft);
+                
+            })
+
+        })
+        // ('left',$(this).siblings('#pic').find('div')[j].offsetLeft+20+'px');
+    </script>
+</body>
+
+</html>

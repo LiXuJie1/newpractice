@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<style type="text/css">
+		.slider_main {
+			width: 790px;
+			height: 340px;
+			margin: 20px auto;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.slider_list {
+			position: absolute;
+			left: 0;
+			top: 0;
+			margin: 0;
+			padding: 0;
+			height: 340px;
+		}
+
+		.item {
+			float: left;
+			list-style: none;
+		}
+
+		.item:first-child {
+			display: block;
+		}
+
+		.item a {
+			font-size: 0;
+		}
+
+		.circle_dot {
+			position: absolute;
+			left: 50%;
+			bottom: 20px;
+			margin: auto;
+			font-size: 0;
+			padding: 4px 8px;
+			border-radius: 12px;
+			background-color: hsla(0, 0%, 100%, .3);
+			z-index: 1;
+			transform: translateX(-50%);
+		}
+
+		.dot {
+			display: inline-block;
+			margin: 0 5px;
+			width: 12px;
+			height: 12px;
+			border-radius: 100%;
+			background-color: #fff;
+			cursor: pointer;
+		}
+
+		.dot.active {
+			background-color: #db192a;
+		}
+
+		.arrow {
+			display: none;
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			margin-top: -30px;
+			width: 30px;
+			height: 60px;
+			background-color: rgba(0, 0, 0, .1);
+			line-height: 60px;
+			text-align: center;
+			color: #fff;
+			font-size: 20px;
+			cursor: pointer;
+		}
+
+		.arrow:hover {
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		.arrow_left {
+			left: 0;
+		}
+
+		.arrow_right {
+			right: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="banner1" class="slider_main">
+		<ul class="slider_list clearfix">
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/1.jpg" />
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/2.jpg" />
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/3.jpg" />
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/4.jpg" />
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/5.jpg" />
+				</a>
+			</li>
+
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/6.jpg" />
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/7.jpg" />
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/8.jpg" />
+				</a>
+			</li>
+		</ul>
+		<!--指示器-->
+		<div class="circle_dot">
+
+		</div>
+		<!--箭头-->
+		<div class="arrow_left arrow">&lt;</div>
+		<div class="arrow_right arrow">&gt;</div>
+	</div>
+	<div id="banner2" class="slider_main">
+		<ul class="slider_list clearfix">
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/1.jpg" />
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/2.jpg" />
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/3.jpg" />
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/4.jpg" />
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/5.jpg" />
+				</a>
+			</li>
+
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/6.jpg" />
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/7.jpg" />
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<img class="item_img" src="img/8.jpg" />
+				</a>
+			</li>
+		</ul>
+		<div class="circle_dot">
+
+		</div>
+		<div class="arrow_left arrow">&lt;</div>
+		<div class="arrow_right arrow">&gt;</div>
+	</div>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function Slide(selector) {
+			this.$wrap = $(selector);
+			this.$list = this.$wrap.find(".slider_list");
+			this.$item = this.$wrap.find(".item");
+			this.$firstItem = this.$wrap.find(".item:first-child");
+			this.$dotBox = this.$wrap.find(".circle_dot");
+			this.$arrowLeft = this.$wrap.find(".arrow_left");
+			this.$arrowRight = this.$wrap.find(".arrow_right");
+			this.first = this.$firstItem.clone(true);
+			this.clone();
+			this.$num = this.$wrap.find(".item").length;
+			this.$width = this.$wrap.find(".item").width();
+			this.$list.width(this.$width * this.$num);
+			this.timer = "";
+			this.i = 0;
+			this.init();
+		}
+		Slide.prototype = {
+			constructor: Slide,
+			//生成圆点
+			init: function () {
+				this.createDot();
+				//					this.clone();
+				this.setActiveDot();
+				this.play();
+				this.bindEvent();
+			},
+			createDot: function () {
+				var self = this;
+				this.$item.each(function () {
+					self.$dotBox.append('<div class="dot"></div>');
+				});
+			},
+
+			//克隆元素
+			clone: function () {
+				this.$list.append(this.first);
+				//					this.$num = this.$item.length;
+				//					this.$list.width(this.$width * this.$num);
+			},
+			setActiveDot: function () {
+				this.$dotBox.find('.dot').removeClass("active").eq(this.i).addClass("active");
+			},
+			//设置定时器
+			play: function () {
+				var self = this;
+				clearInterval(this.timer);
+				this.timer = setInterval(function () {
+					self.show();
+				}, 1000);
+			},
+			//取消定时器
+			stop: function () {
+				clearInterval(this.timer);
+			},
+			show: function () {
+				this.i++;
+				if (this.i == this.$num) {
+					this.i = 1; //这里不是i=0
+					this.$list.css({
+						left: 0
+					}); //保证无缝轮播，设置left值
+				};
+				this.$list.stop().animate({
+
+					left: -this.i * this.$width,
+				});
+				if (this.i == this.$num - 1) { //设置小圆点指示
+					this.$dotBox.find(".dot").eq(0).addClass('active').siblings().removeClass('active');
+				} else {
+					this.$dotBox.find(".dot").eq(this.i).addClass('active').siblings().removeClass('active');
+				}
+			},
+			bindEvent: function () {
+				//指示器
+				var self = this;
+				this.$dotBox.on("mouseenter", '.dot', function () {
+					var index = $(this).index();
+					self.stop();
+					self.$list.stop(true).animate({
+						left: -index * self.$width
+					});
+					$(this).addClass('active').siblings().removeClass('active');
+					self.i = index;
+				});
+
+				this.$wrap.on("mouseenter", function () {
+					self.stop();
+					self.$arrowLeft.fadeIn();
+					self.$arrowRight.fadeIn();
+				})
+				this.$wrap.on("mouseleave", function () {
+					self.play();
+					self.$arrowLeft.fadeOut();
+					self.$arrowRight.fadeOut();
+				})
+				//左右箭头
+				this.$arrowRight.click(function () {
+					self.i++;
+					if (self.i == self.$num) {
+						self.i = 1; //这里不是i=0
+						self.$list.css({
+							left: 0
+						}); //保证无缝轮播，设置left值
+					};
+					self.$list.stop().animate({
+						left: -self.i * self.$width
+					});
+					if (self.i == self.$num - 1) { //设置小圆点指示
+						self.$dotBox.find(".dot").eq(0).addClass('active').siblings().removeClass('active');
+					} else {
+						self.$dotBox.find(".dot").eq(self.i).addClass('active').siblings().removeClass('active');
+					}
+				});
+				this.$arrowLeft.click(function () {
+					self.i--;
+					if (self.i == -1) {
+						self.i = self.$num - 2;
+						self.$list.css({
+							left: -(self.$num - 1) * self.$width
+						});
+					}
+					self.$list.stop().animate({
+						left: -self.i * self.$width
+					});
+					self.$dotBox.find('.dot').eq(self.i).addClass('active').siblings().removeClass('active');
+				})
+			}
+
+		}
+		new Slide("#banner1");
+		new Slide("#banner2");
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            /* text-align: ; */
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="400px" height="600px"></canvas>
+</body>
+<script>
+    //画布
+    oCanvas = document.getElementById('canvas');
+    var width = oCanvas.width;
+    var height = oCanvas.height;
+    //画笔
+    var context = oCanvas.getContext('2d');
+
+ 
+    //绘制背景
+    context.fillStyle = "#eee";
+    
+    context.fillRect(0, 0, width, height);
+    // context.globalCompositeOperation='source-in'; 
+    context.fillStyle="blue";
+    
+    context.fillRect(0,0,100,100);
+    
+    context.fill();
+   //圆
+   
+    context.beginPath();
+    
+    context.arc(200,200,80,0,2*Math.PI);
+    
+    context.closePath();
+    
+    context.fillStyle="#00ff00";
+    
+    context.fill();
+    //清空画布
+    // context.clearRect(180,200,80,80)
+    oCanvas.onmousedown=function(e){
+        // var x=e.offsetX;
+        // var y=e.offsetY;
+        // context.clearRect(x,y,50,50);
+        // console.log(x);
+        document.onmousemove=function(e){
+            var endx=e.offsetX-25;
+            var endy=e.offsetY-25;
+            // console.log(endx)
+            context.clearRect(endx,endy,50,50);
+        }
+    }
+    
+</script>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sum {
+            margin-top: 100px;
+            width: 800px;
+            /*border: 1px solid #000;*/
+            text-align: center;
+            /*box-shadow: 2px -3px 0px 0px rgba(0, 0, 0, 0.2);*/
+        }
+        
+        .show {
+            width: 744px;
+            height: 60px;
+            background-color: #000;
+            color: #fff;
+            text-align: right;
+            font-size: 30px;
+        }
+        
+        .btnBox {
+            width: 780px;
+            padding-left: 27px;
+            padding-top: 30px;
+        }
+        
+        button {
+            width: 160px;
+            height: 80px;
+            margin-right: 35px;
+            margin-top: 10px;
+            /*margin-left: 10px;*/
+            outline: none;
+            border-radius: 4px;
+            background-color: #3162a5;
+            font-size: 30px;
+            color: #fff;
+        }
+        
+        #save,
+        #get,
+        #back,
+        #clear1 {
+            background-color: #485160;
+        }
+        
+        #divide,
+        #multiply,
+        #plus,
+        #equal,
+        #subtract {
+            background-color: #80563e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sum ">
+            <input type="text" id="show" class="show">
+
+            <div class="btnBox clearfix">
+                <button id="save" class="save fl">存储</button>
+                <button id="get" class="get fl">读取</button>
+                <button id="back" class="back fl">退格</button>
+                <button id="clear1" class="clear1 fl">清屏</button>
+                <button id="sven" class="push fl">7</button>
+                <button id="eight" class="push fl">8</button>
+                <button id="nine" class="push fl">9</button>
+                <!--<button id="divide" class="divide fl">÷</button>-->
+                <button id="divide" class="push2 fl">÷</button>
+                <button id="four" class="push fl">4</button>
+                <button id="five" class="push fl">5</button>
+                <button id="six" class="push fl">6</button>
+                <!--<button id="multiply" class="multiply fl">×</button>-->
+                <button id="multiply" class="push2 fl">×</button>
+                <button id="one" class="push fl">1</button>
+                <button id="two" class="push fl">2</button>
+                <button id="three" class="push fl">3</button>
+                <!--<button id="plus" class="plus fl">＋</button>-->
+                <button id="plus" class="push2 fl">＋</button>
+                <button id="zero" class="push fl">0</button>
+                <button id="point" class="push fl">.</button>
+                <button id="equal" class="equal fl">＝</button>
+                <!--<button id="subtract" class="subtract fl">-</button>-->
+                <button id="subtract" class="push2 fl">-</button>
+                <!--<button id="save" class="fl">存储</button>-->
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var flag = 0;
+            // var $num1;
+            // var $num2;
+            // var $num3;
+            // var $num4;
+            // var $num5;
+            var $sum;
+            var arr = [];
+            var arr3 = [];
+            var arr4 = [];
+            var arr5 = [];
+            var arr6 = [];
+            var arr7 = [];
+            var first=[];
+            var second=[];
+            var arr2;
+            var t = 0;
+            var flag=0;
+            //输入
+            $('.push').click(function () {
+                if (flag == 1) {
+                    j = 0;
+                    arr5[j] = parseFloat($(this).text());
+                    arr6[j] = $(this).text();
+                    arr7 = arr5;
+                    if (j > 0) {
+                        arr7 = arr6;
+                    }
+                    j+=1;
+                    flag=0;
+                }
+                if(flag==0){
+                arr3[t] = parseFloat($(this).text());
+                arr4[t] = $(this).text();
+                arr2 = $('#show').val();
+                arr = arr3;
+                if (t > 0) {
+                    arr = arr4;
+                }
+                $('#show').val(arr2 = arr2 + arr[t]);
+                t += 1;
+                
+                }    
+
+            }) 
+            //加
+            $('#plus').click(function () {
+                arr[t] = $(this).text();
+                // console.log(t);
+                $('#show').val(arr2 = arr2 + arr[t]);
+                t += 1;
+                flag = 1;
+            })
+
+            //减
+            $('#subtract').click(function () {
+                arr[t] = $(this).text();
+                $('#show').val(arr2 = arr2 + arr[t]);
+                t += 1;
+                flag = 2;
+            })
+            //乘
+            $('#multiply').click(function () {
+                arr[t] = parseFloat($(this).text());
+                $('#show').val(arr2 = arr2 + arr[t]);
+                t += 1;
+                flag = 3;
+            })
+            //除
+            $('#divide').click(function () {
+                arr[t] = parseFloat($(this).text());
+                $('#show').val(arr2 = arr2 + arr[t]);
+                t += 1;
+                flag = 4;
+            })
+
+            //    等于
+            $('#equal').click(function () {
+                // console.log(arr);
+                //  $sum = parseFloat(first) + parseFloat(second);
+                $('#show').val('');
+                if (flag == 0) {
+                    for(var i=0;i<arr.length;i++){
+                        first=first+arr[i];
+                    }
+                    for(var i=0;i<arr7.length;i++){
+                        second=second+arr7[i];
+                    }
+                    
+                    // console.log(first);
+                    console.log(second);
+                    $sum = parseFloat(first) + parseFloat(second);
+                    console.log($sum);
+                }
+                if (flag == 2) {
+                    // $sum = parseFloat($num3) - parseFloat($num2);
+                    $sum = parseFloat(arr[0]) - parseFloat(arr[2]);
+                }
+                if (flag == 3) {
+                    // $sum = parseFloat($num4) * parseFloat($num2);
+                    $sum = parseFloat(arr[0]) * parseFloat(arr[2]);
+                }
+                if (flag == 4) {
+                    // $sum = parseFloat($num5) / parseFloat($num2);
+                    $sum = parseFloat(arr[0]) / parseFloat(arr[2]);
+                }
+                $('#show').val($sum);
+               flag=0;
+            })
+
+            //清屏
+            $('#clear1').click(function () {
+                $('#show').val('');
+            })
+
+        })
+    </script>
+</body>
+
+</html>

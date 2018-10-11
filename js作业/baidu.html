@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style></style>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /*ul{
+           
+            
+        }*/
+        ul li{
+            padding-left: 12px;
+            padding-right: 12px;
+            font-size: 24px;
+            background-color: rgba(28, 40, 64, 80%);
+        }
+        ul li a{
+            color: #fff;
+        }
+        ul li:last-child{
+            height: 30px;
+            overflow: hidden;
+        }
+        .list{
+            background-color: #fff;
+            text-align: center;
+            padding-top: 19px;
+        }
+        .list a{
+            font-size: 16px;
+            color: #000;
+        }
+        .list1{
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="clearfix">
+    <ul class="anv fr clearfix">
+        <li class="fl"><a href="">新闻</a></li>
+        <li class="fl"><a href="">hao123</a></li>
+        <li class="fl"><a href="">地图</a></li>
+        <li class="fl"><a href="">视频</a></li>
+        <li class="fl"><a href="">贴吧</a></li>
+        <li class="fl"><a href="">学术</a></li>
+        <li class="fl"><a href="">luotuo19880328</a></li>
+        <li class="fl"><a href="">设置</a></li>
+        <li class="fl re"><a href="">更多产品</a>
+            <div class="list1 ab">
+            <div class="list">
+                    <a href=""><img src="pic/nuo.png" alt="">
+                    <div>糯米</div></a>
+            </div>
+            <div class="list">
+                    <a href=""><img src="pic/red.png" alt="">
+                    <div>糯米</div></a>
+            </div>
+            <div class="list">
+                    <a href=""><img src="pic/tu.png" alt="">
+                    <div>糯米</div></a>
+            </div>
+            <div class="list">
+                    <a href=""><img src="pic/que.png" alt="">
+                    <div>糯米</div></a>
+            </div>
+            <div class="list">
+                    <a href=""><img src="pic/wen.png" alt="">
+                    <div>糯米</div></a>
+            </div>
+            <div class="list">
+                    <a href=""><img src="pic/shan.png" alt="">
+                    <div>糯米</div></a>
+            </div>
+            <div class="list">
+                    <a href=""><img src="pic/earth.png" alt="">
+                    <div>糯米</div></a>
+            </div>
+            <div class="list">
+                    <div><a href="">全部产品>></a></div>
+            </div>
+            </div>
+        </li>
+    </ul>
+    </div>
+    <script>
+        window.onload=function(){
+            var oLi=document.querySelectorAll("li");
+            for(var i=0;i<oLi.length;i++){
+            oLi[i].onmouseover=function(){
+                this.children[0].style.color="#000";
+                this.style.backgroundColor="#fff";
+                
+            }
+            oLi[i].onmouseout=function(){
+                this.children[0].style.color="#fff";
+                this.style.backgroundColor="rgba(28, 40, 64, 80%)";
+            }
+            oLi[oLi.length-1].onmouseover=function(){
+                this.style.backgroundColor="#fff";
+                this.children[0].style.color="#000";
+                this.style.overflow="visible";
+            }
+            oLi[oLi.length-1].onmouseout=function(){
+                this.style.backgroundColor="rgba(28, 40, 64, 80%)";
+                this.children[0].style.color="#fff";
+                this.style.overflow="hidden";
+            }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.container{
+    width: 1120px;
+    margin: 0 auto;
+}
+/*浮动公共类*/
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.nav{
+    background-color: #000;
+}
+.AboutUs{
+    background-color: #a2293c;
+}
+.Hr{
+    background-color: #2d2e32;
+}
+.CopyRight{
+    background-color: #b22f41;
+}

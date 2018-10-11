@@ -1,0 +1,101 @@
+.bac{
+	width: 900px;
+	height: 810px;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+	background: url('bg.jpg')no-repeat top center;
+	
+}
+.bac span:first-child{
+	display: block;
+	font-size: 35px;
+	font-weight: bold;
+	padding-top: 10px;
+}
+.bac span:last-child{
+	display: block;
+	font-size: 12px;
+}
+.bac form{
+	width: 350px;
+	padding-left: 267px;
+	padding-top: 10px;
+}
+.bac form input{
+	width: 338px;
+	height: 28px;
+	/*margin-bottom: 30px;*/
+	border-radius: 4px;
+	outline: none;
+	font-size: 16px;
+	padding-left: 12px;
+	border: 0;
+	color:#fff;
+	background-color: rgba(225, 225, 225, 0.6);
+}
+input::-webkit-input-placeholder {
+        color: #fff;
+        font-size: 16px;
+        text-align: left;
+    }
+
+.bac form button{
+	width: 350px;
+	height: 40px;
+	/*margin-top: 30px;*/
+	border-radius: 4px;
+	border: 0;
+	background-color: #2a7ed8;
+}
+.box{
+	height: 60px;
+}
+
+
+
+
+.Validform_checktip{
+	margin-left:0px;
+	line-height:20px;
+	height:20px;
+	overflow:hidden;
+	color:#999;
+	font-size:12px;
+}
+.Validform_right{
+	width: 350px;
+	height: 30px;
+	color:#fff;
+	text-align: center;
+	/*padding-left:20px;*/
+	border-radius: 4px;
+	line-height: 30px;
+	z-index: 1;
+	background-color:#71b83d;
+}
+.Validform_wrong{
+	width: 350px;
+	height: 30px;
+	border-radius: 4px;
+	line-height: 30px;
+	text-align: center;
+	/*background-color: red;*/
+	color:#fff;
+	/*padding-left:20px;*/
+	white-space:nowrap;
+	background-color:red;
+}
+.Validform_loading{
+	padding-left:20px;
+	background:url(../images/onLoad.gif) no-repeat left center;
+}
+.Validform_error{
+	background-color:#ffe7e7;
+}
+#Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
+#Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
+#Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#000;}
+#Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
+#Validform_msg a.Validform_close:hover{color:#cc0;}
+#Validform_msg .Validform_info{padding:8px;border:1px solid #000; border-top:none; text-align:left;}

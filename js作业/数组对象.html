@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [12, 56, 87, 95, 48, 49, 78, 65];
+        var str = arr.join("-");
+        console.log(str);
+        console.log(arr);
+        function run(arr1) {
+            for (var j = 0; j < arr1.length - 1; j++) {
+                for (var i = 0; i < arr1.length - 1 - i; i++) {
+                    if (arr1[i] > arr1[i + 1]) {
+                        var res = arr1[i];
+                        arr1[i] = arr1[i + 1];
+                        arr1[i + 1] = res;
+                    }
+                }
+            }
+            return arr1;
+        }
+        run(arr);
+        console.log(arr);
+        // console.log(arr);
+    //     var array=[];
+    //     for(var i=0;i<arr.length;i++){
+    //         if(arr[i]%2==0){
+    //           array.push(arr[i]);
+    //         //   console.log(i);
+    //         } 
+    //     }
+
+
+    //     var student=[{
+    //         name:'黄渤',
+    //         age:18
+    //     },{
+    //         name:'黄磊',
+    //         age:24
+    //     },{
+    //         name:'孙红雷',
+    //         age:16
+    //     },{
+    //         name:'罗志祥',
+    //         age:12
+    //     },{
+    //         name:'张艺兴',
+    //         age:20
+    //     }]
+    //    student.sort(function(a,b){
+    //        if(a.age>b.age){
+    //            return 1;
+    //        }
+    //        else{
+    //            return -1;
+    //        }
+    //    })
+    //    console.log(student);
+
+
+
+    //      console.log(array);
+    </script>
+</body>
+
+</html>

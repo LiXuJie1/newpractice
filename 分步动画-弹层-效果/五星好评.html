@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .eva {
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+        
+        .white {
+            font-size: 30px;
+            /*display: none;*/
+        }
+        
+        .green {
+            color: green;
+            font-size: 30px;
+            display: none;
+        }
+        
+        ul {
+            padding-left: 100px;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="eva">
+        <ul class="clearfix">
+            <li class="fl">
+                <span class="white">☆</span>
+                <span class="green">★</span>
+            </li>
+            <li class="fl">
+                <span class="white">☆</span>
+                <span class="green">★</span>
+            </li>
+            <li class="fl">
+                <span class="white">☆</span>
+                <span class="green">★</span>
+            </li>
+            <li class="fl">
+                <span class="white">☆</span>
+                <span class="green">★</span>
+            </li>
+            <li class="fl">
+                <span class="white">☆</span>
+                <span class="green">★</span>
+            </li>
+        </ul>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var flag = true;
+            $('ul li').mouseover(function () {
+                // if(flag==true){
+                var $in = $(this).index();
+                $('ul li:lt(' + ($in + 1) + ')').find('.white').css('display', 'none');
+                $('ul li:lt(' + ($in + 1) + ')').find('.green').css('display', 'block');
+                // }
+            })
+
+            $('ul li').mouseleave(function () {
+                if (flag == true) {
+                    var $in = $(this).index();
+                    $('ul li:lt(' + ($in + 1) + ')').find('.white').css('display', 'block');
+                    $('ul li:lt(' + ($in + 1) + ')').find('.green').css('display', 'none');
+                }
+                if (flag == false) {
+                    var $in = $(this).index();
+                    $('ul li:gt(' + ($in ) + ')').find('.white').css('display', 'block');
+                    $('ul li:gt(' + ($in ) + ')').find('.green').css('display', 'none');
+                }
+            })
+
+
+
+
+
+
+
+
+            $('ul li').click(function () {
+                var $in = $(this).index();
+                $('ul li:lt(' + ($in + 1) + ')').find('.white').css('display', 'none');
+                $('ul li:lt(' + ($in + 1) + ')').find('.green').css('display', 'block');
+                flag = false;
+                //
+                //
+            })
+        })
+    </script>
+</body>
+
+</html>

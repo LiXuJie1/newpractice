@@ -1,0 +1,97 @@
+.title{
+	width: 1200px;
+	height: 62px;
+	margin: 0 auto;
+}
+.logo{
+	/*height: 62px;*/
+	padding: 14px 14px 14px 120px;
+	
+}
+.container-back{
+	border-bottom: 1px solid #CCCCCC;
+}
+.page-all{
+	width: 1000px;
+	height: 517px;
+	margin-left: 200px;
+	margin-top: 30px;
+}
+.page {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 15px 20px;
+}
+.pay_box dl {
+    margin-bottom: 20px;
+}
+.pay_platform {
+    height: 380px;
+}
+.pay_box dl dt {
+    color: #999;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    
+}
+.pay_box dl dt b {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    margin-right: 10px;
+}
+.banks .banks-bd {
+    height: 54px;
+    width: 158px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #fff;
+    position: relative;
+    padding-left: 24px;
+}
+.pay_fd {
+    padding: 20px 150px 10px 0;
+    border-top: 1px solid #ddd;
+    text-align: right;
+    font-size: 14px;
+    color: #999;
+    position: relative;
+}
+.pay_fd .bd .banks {
+    display: inline-block;
+    width: 156px;
+    height: 52px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    margin: 0 20px;
+}
+.pay_fd .bd em {
+    font-size: 24px;
+    font-family: Arial;
+    margin: 0 20px 0 2px;
+    color: #ff666b;
+    vertical-align: middle;
+}
+.pay_fd .pay_form {
+    position: absolute;
+    right: 0;
+    top: 21px;
+}
+.pay_fd .pay_form .btn {
+    height: 50px;
+    font-size: 18px;
+    padding: 0 22px;
+        border-radius: 2px;
+    color: #fff;
+    background-color: #ff666b;
+    border: 1px solid #ff666b;
+
+}
+.page dd img{
+	border: 1px solid #FF666B;
+}
+.page-all{
+	margin-bottom: 90px;
+}
+

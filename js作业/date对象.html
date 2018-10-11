@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#box{
+				color: #00ff00;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box"></div>
+		<!--<div id="box2"></div>-->
+		<button type="button" id="start">开始</button>
+		<button type="button" id="stop">停止</button>
+		<script type="text/javascript">
+			window.onload = function() {
+				//查找元素
+				var oBox = document.getElementById("box");
+				// var oBox2 = document.getElementById("box2");
+				var oStart = document.getElementById("start");
+				var oStop = document.getElementById("stop");
+				//定时器的使用---设定变量
+				var timer;
+				//				timer = setInterval(function() {
+				//					clock();
+				//				}, 1); //500毫秒，执行一次
+				timer = setInterval(clock, 1);
+				//停止
+				oStop.onclick = function() {
+					clearInterval(timer); //传要停的定时器的名为参数
+				}
+				//开始
+				//bug!!!
+				//重复绑定定时器
+				//每点一下开始会越来越快
+
+				oStart.onclick = function() {
+					//在点击事件里绑定timer的时候，清除一次定时器。
+					clearInterval(timer);
+					timer = setInterval(clock, 1);
+				}
+
+				function clock() {
+					//前提条件
+					var now = new Date();
+					//console.log(now);
+					//获取
+					var year = now.getFullYear();
+					var month = now.getMonth() + 1;
+					var day = now.getDate();
+					var week = now.getDay();
+					var hour = now.getHours();
+					var min = now.getMinutes();
+					var second = now.getSeconds();
+					var milli = now.getMilliseconds();
+					oBox.innerHTML = year + "-" + month + "-" + day + " " +
+						hour + ":" + min + ":" + second + ":" + milli;
+				}
+				clock();
+
+// 				function gouqie() {
+// 					//时间差
+// 					var birthday = new Date(1997, 5, 14);
+// 					//				console.log(birthday);
+// 					var now = new Date();
+// 					var time = now - birthday;
+// //					console.log(time);
+// 					var year = parseInt(time / 31536000000);
+// //					console.log(year);
+// 					var tianyu = time % 31536000000;
+// //					console.log(tianyu);
+// 					var day = parseInt(tianyu / 86400000);
+// //					console.log(day);
+// 					var shiyu = tianyu % 86400000;
+// //					console.log(shiyu);
+// 					var hour = parseInt(shiyu / 3600000);
+// //					console.log(hour);
+// 					var fenyu = shiyu % 3600000;
+// //					console.log(fenyu);
+// 					var min = parseInt(fenyu / 60000);
+// //					console.log(min);
+// 					var miaoyu = fenyu % 60000;
+// //					console.log(miaoyu);
+// 					var second = parseInt(miaoyu / 1000);
+// //					console.log(second);
+// 					var milli = miaoyu % 1000;
+// //					console.log(milli);
+// 					oBox2.innerHTML = '亲爱的吴朝旭您已经苟活了：'+year+'年 '+day+'天 '+hour+'小时 '+
+// 					min+'分钟 '+second+'秒 '+milli+'毫秒。';
+// 				}
+// 				gouqie();
+				// var huozhe;
+				// huozhe = setInterval(gouqie, 1);
+				
+				//设置十天之后的日期
+				// var now = new Date();
+				// var Tenday = now.getTime()+10*24*60*60*1000;
+				
+			}
+		</script>
+	</body>
+
+</html>

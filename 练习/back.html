@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/back.css">
+    <style>
+        .box{
+            width: 250px;
+            height: 162px;
+            border: 1px solid #000;
+            position: relative;
+        }
+        .box:hover{
+            border-color: red;
+        }
+        .box:hover .del{
+            opacity: 1;
+            bottom:10px;
+        }
+        .head{
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .head span:first-child{
+            /* border: 1px solid red; */
+            /* padding-left: 150px; */
+        }
+        .head span:last-child{
+            border: 1px solid red;
+            margin-left: 60px;
+        }
+        .phone {
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .address{
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .del{
+            color: blue;
+            right: 20px;
+            bottom: 0px;
+            position: absolute;
+            opacity: 0;
+        }
+        .tran{
+            transition: 1s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="head">
+            <span>姓名：</span>
+            <span>默认地址</span>        
+        </div>
+        <div class="phone">
+            <span>电话号码:</span>
+        </div>
+        <div class="address">
+            地址： 安徽免费免费
+        </div>
+        <div class="del tran">
+            <span>删除</span>
+            <span>编辑</span>        
+        </div>
+    </div>
+    
+</body>
+</html>

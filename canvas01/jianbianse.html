@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="1000px" height="1000px"></canvas>
+</body>
+<script>
+    //画布
+    oCanvas = document.getElementById('canvas');
+    var width = oCanvas.width;
+    var height = oCanvas.height;
+    //画笔
+    var context = oCanvas.getContext('2d');
+
+    //绘制背景
+    context.fillStyle = "#eee";
+    context.fillRect(0, 0, width, height);
+    //线性渐变
+    // var grd = context.createLinearGradient(0, 200, 400, 200);
+    // grd.addColorStop(0, '#00ff00');
+    // grd.addColorStop(0.5, '#ff0000');
+    // grd.addColorStop(1, '#0000ff');
+    // context.fillStyle = grd;
+    // context.fillRect(0, 100, 400, 200);
+    //径向渐变
+    var circleGrd = context.createRadialGradient(500, 500, 10, 500, 500, 10);
+    circleGrd.addColorStop(0, '#00ff00');
+    circleGrd.addColorStop(0.3, '#ff0000');
+    circleGrd.addColorStop(1, '#0000ff');
+    context.fillStyle = circleGrd;
+    context.fillRect(0, 0, 1000, 1000);
+</script>
+
+</html>

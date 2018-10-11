@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Microsoft YaHei UI", "Microsoft YaHei UI Light", "微软雅黑", "宋体", Helvetica-Black-SemiBold, Tahoma, Arial, sans-serif;
+}
+.container{
+    width: 1180px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    height: 373px;
+    /*padding-right: 7px;*/
+}
+.container3{
+    width: 1180px;
+    margin: 0 auto;
+    /*background-color: #f5f5f5;*/
+    /*height: 373px;*/
+    /*padding-right: 7px;*/
+}
+.container1{
+    width: 1180px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+}
+.container2{
+    width: 1180px;
+    margin: 0 auto;
+    /*background-color: #f5f5f5;*/
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.container1 h1{
+    font-size: 22px;
+    color: #575757;
+    text-align: center;
+    line-height: 114px;
+}
+.container2 h1{
+    font-size: 22px;
+    color: #575757;
+    text-align: center;
+    line-height: 108px;
+}
+.container .fl{
+    background-color: #fff;
+    text-align: center;
+    margin-left: 15px;
+}
+.container .fl:nth-child(1){
+    margin-left: 7px;
+}
+.container .fl span:nth-child(2){
+    font-size: 18px;
+    color: #575757;
+    /*border:2px solid red;*/
+    
+}
+.container .fl div:nth-child(4) {
+    font-size: 12px;
+    color: #b0b0b0;
+    margin-top: 17px;
+}
+.container .fl div:nth-child(5){
+    margin-top: 36px;
+}
+.container .fl a{
+    width: 100px;
+    height: 29px;
+    background: #fd5a66;
+    font-size: 14px;
+    color: #fff;
+}
+.container .fl div:nth-child(6){
+    font-size: 12px;
+    color: #b0b0b0;
+    margin-top: 19px;
+    margin-bottom: 38px;
+}
+.container .fl div:nth-child(6) em{
+    font-style: normal;
+    color: #fd5a66;
+}
+.container3 .fl div:nth-child(2) {
+    font-size: 14px;
+    color: #575757;
+    text-align: center;
+    margin-top: 18px;
+}
+.container3 .fl div:nth-child(3){
+    margin-top: 33px;
+}
+.container3 .fl div:nth-child(3) img{
+    margin-left: 15px;
+    vertical-align: middle;
+}
+.container3 .fl div:nth-child(3) span{
+    font-size: 12px;
+    color: #b0b0b0;
+    vertical-align: middle;
+}
+.container3 .fl div:nth-child(3) a:nth-child(3) span{
+    width: 64px;
+    height: 15px;
+    border: 1px solid #b0b0b0; 
+    text-align: center;
+    margin-right: 12px;
+}
+.container3 .fl{
+    margin-left: 14px;
+    margin-bottom: 21px;
+}
+.container3 .fl:nth-child(1){
+    margin-left: 10px;
+}

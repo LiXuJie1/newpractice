@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- 360急速模式 webkit内核 -->
+    <meta name="renderer" content="webkit">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css.map" rel="stylesheet">
+    <link rel="stylesheet" href="css/lesson2.css">
+    <!-- 自定义文件必须放后面 -->
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      /* @media only screen and(min-width:1200px){
+        .person-list{
+          padding: 0px;
+        height: 0px;
+        }
+      }
+      @media only screen and(min-width:100px) and (max-width:768px){
+        .person-list{
+         padding-left:0; 
+         padding-right:5px; 
+        }
+      } */
+
+      .nav{
+        border: none;
+      }
+      .nav:hover{
+        border-radius: 0;
+        background-color: #fff;
+      }
+      .navBar>li>a:hover{
+        background-color: #3db45e;
+      }
+      .navBar>li>a{
+        line-height: 36px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 下拉菜单 -->
+    <div class="container-fluid">
+        <div class="btn-group cc">
+            <button type="button" class="btn btn-default dropdown-toggle nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              关于 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu navBar">
+              <li><a href="#">线下体验</a></li>
+              <li><a href="#">关于智能</a></li>
+              <li><a href="#">联系我们</a></li>
+              <!-- <li role="separator" class="divider"></li> -->
+              <!-- <li><a href="#">Separated link</a></li> -->
+            </ul>
+          </div>
+    </div>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.nav').click(function(){
+          $('.nav').css({
+            backgroundColor:'#fff',
+            border:'none',
+            // outline:'none',
+            borderRadius:'0',
+            boxShadow:'none',
+            borderBottom:'2px solid green'
+          })
+        })
+        console.log($('.cc'));
+      })
+    </script>
+  </body>
+</html>

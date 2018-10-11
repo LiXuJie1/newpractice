@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/lunbo2.css">
+</head>
+
+<body>
+    <div class="pic_box re ">
+        <div class="run_box clearfix ab">
+            <img class="fl" src="images/1.jpg" alt="">
+            <img class="fl" src="images/2.jpg" alt="">
+            <img class="fl" src="images/3.jpg" alt="">
+            <img class="fl" src="images/4.jpg" alt="">
+            <img class="fl" src="images/5.jpg" alt="">
+            <img class="fl" src="images/6.jpg" alt="">
+            <img class="fl" src="images/7.jpg" alt="">
+            <img class="fl" src="images/8.jpg" alt="">
+        </div>
+        <div class="next ab tarch">></div>
+        <div class="last ab tarch">
+            <</div>
+        <div class="point_box ab"></div>
+        </div>
+        <script src="js/jquery-1.12.4.min.js"></script>
+        <script>
+            $(document).ready(function () {
+            //     //构造函数
+            //     function Slider(selector){
+            //         this.timer='';
+            //         this.t=0;
+            //         this.$container=$(selector);
+            //         this.$runBox=this.$container.find('.run_box');
+            //         this.$img=this.$runBox.find('img');
+            //         this.$pointBox=this.$runBox.find('.point_box');
+            //         this.$point=this.$pointBox.find('.point');
+            //         this.$next=this.$runBox.find('.next');
+            //         this.$last=this.$runBox.find('.last');
+            //         this.init();
+            //     }
+                
+            //     Slider.prototype={
+            //         constructor:Slider,
+            //         init:function(){
+            //             this.run();
+            //             this.run2();
+            //             this.play();
+            //             this.stop();
+            //         },
+            //         run:function(){
+            //             var self=this;
+            //              self.t = self.t + 1;
+            //         if (self.t == self.$img.length) {
+            //             self.$runBox.animate({
+            //                 left: '0px'
+            //             }, 0)
+            //             self.t=1;
+            //         }
+            //         if(self.t==self.$img.length-1){
+            //             self.$point.css({
+            //             backgroundColor: 'rgba(255, 255, 255, 0.6)'
+            //         })
+            //          self.$point.eq(0).css({
+            //             backgroundColor: '#ff666b'
+            //         })
+            //         }
+            //         else{
+            //             self.$point.css({
+            //             backgroundColor: 'rgba(255, 255, 255, 0.6)'
+            //         })
+            //         }
+            //         self.$runBox.stop(true).animate({
+            //             left: ((-self.$img.width()) * t) + 'px'
+            //         })
+            //         // point随图片变化而变化
+            //         self.$point.eq(t).css({
+            //             backgroundColor: '#ff666b'
+            //         })
+            //         },
+            //         run2:function(){
+            //             var self=this;
+            //              if (self.t == -1) {
+            //             self.$runBox.stop(true).animate({
+            //                 left: -(self.$img.width()*(self.$img.length-1))+'px'
+            //             }, 0)
+            //             self.t = 7;
+            //         }
+            //         self.$runBox.stop(true).animate({
+            //             left: (-(self.$img.width()) * self.t+1) + 'px'
+            //         })
+                    
+                    
+            //         // point随图片变化而变化
+            //         self.$point.css({
+            //             backgroundColor: 'rgba(255, 255, 255, 0.6)'
+            //         })
+            //         self.$point.eq(self.t).css({
+            //             backgroundColor: '#ff666b'
+            //         })
+            //         },
+            //         stop:function(){
+            //              clearInterval(this.timer);
+            //         },
+            //         play:function(){
+            //            var self=this;
+            //              this.timer = setInterval(function () {
+            //             run(self.t);
+            //         }, 2000)
+            //         }
+            //     }
+            //     // 生成圆点
+            //     var self=this; 
+            //      this.$img.each(function(){
+            //         self.$pointBox.append($('<div class="point"></div>'));
+            //      })
+            //     //  克隆
+            //     this.runBox.prepend(this.img.eq(this.img.length-1).clone());
+            //     //设置圆点盒子宽度
+            //     this.runBox.css({
+            //         width:((this.img).length)*(this.runBox).wdith()+'px'
+            //     })
+
+
+                var timer;
+                var t = 0;
+                // 根据图片个数生成点
+                for (var i = 0; i < $('img').length; i++) {
+                    $('.point_box').append($('<div class="point"></div>'));
+                }
+                // 克隆
+                $('.run_box').prepend($('img').eq($('img').length - 1).clone());
+                $('.run_box').css({
+                    width: ($('img').length) * ($('.run_box').width()) + 'px'
+                })
+                function run() {
+                    t = t + 1;
+                    if (t == $('img').length) {
+                        $('.run_box').animate({
+                            left: '0px'
+                        }, 0)
+                        t=1;
+                    }
+                    if(t==$('img').length-1){
+                        $('.point').css({
+                        backgroundColor: 'rgba(255, 255, 255, 0.6)'
+                    })
+                     $('.point').eq(0).css({
+                        backgroundColor: '#ff666b'
+                    })
+                    }
+                    else{
+                        $('.point').css({
+                        backgroundColor: 'rgba(255, 255, 255, 0.6)'
+                    })
+                    }
+                    $('.run_box').stop(true).animate({
+                        left: ((-$('img').width()) * t) + 'px'
+                    })
+                    // point随图片变化而变化
+                    $('.point').eq(t).css({
+                        backgroundColor: '#ff666b'
+                    })
+                }
+                function run2() {
+                    if (t == -1) {
+                        $('.run_box').stop(true).animate({
+                            left: -($('img').width()*($('img').length-1))+'px'
+                        }, 0)
+                        t = 7;
+                    }
+                    $('.run_box').stop(true).animate({
+                        left: (-($('img').width()) * t+1) + 'px'
+                    })
+                    
+                    
+                    // point随图片变化而变化
+                    $('.point').css({
+                        backgroundColor: 'rgba(255, 255, 255, 0.6)'
+                    })
+                    $('.point').eq(t).css({
+                        backgroundColor: '#ff666b'
+                    })
+                }
+                function stop() {
+                    clearInterval(timer);
+                }
+                function play() {
+                    timer = setInterval(function () {
+                        run(t);
+                    }, 2000)
+                }
+                play();
+                // 使小点无论怎么变化都居中
+                $('.point_box').css({
+                    marginLeft: -($('.point_box').width() / 2) + 'px'
+                })
+
+                // point触碰事件
+                $('.pic_box').find($('.point_box')).on('mouseenter', '.point', function () {
+                    $('.point').css({
+                        backgroundColor: 'rgba(255, 255, 255, 0.6)'
+                    })
+                    $(this).css({
+                        backgroundColor: '#ff666b'
+                    })
+                    console.log($(this).index())
+                    stop();
+                    $('.run_box').css({
+                        left: -($('img').width() * $(this).index()) + 'px'
+                    })
+                })
+                // point碰触离开
+                $('.point_box').on('mouseleave', '.point', function () {
+                    stop();
+                    t = $(this).index();
+                    play();
+                })
+                // 左右触碰事件
+                $('.pic_box').on('mouseenter','.tarch',function(){
+                    stop();
+                })
+                $('.pic_box').on('mouseleave','.tarch',function(){
+                    stop();
+                    play();
+                })
+                // 左右点击事件
+                $('.pic_box').on('click','.next',function(){
+                    run();
+                })
+                $('.pic_box').on('click','.last',function(){
+                    t = t - 1;
+                    run2();
+                   
+                })
+            })
+        </script>
+</body>
+
+</html>

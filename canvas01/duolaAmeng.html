@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .box{
+            background:url('../images/1.png') no-repeat top center;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas class="box" id="canvas"width="400px"height="600px;"></canvas>
+</body>
+<script>
+    //画布
+    oCanvas = document.getElementById('canvas');
+    var width = oCanvas.width;
+    var height = oCanvas.height;
+    //画笔
+    var context = oCanvas.getContext('2d');
+
+    //绘制背景
+    context.fillStyle = "rgba(255,255,255,0.2)";
+    context.fillRect(0, 0, width, height);
+    //哆啦欸梦
+    //头
+    context.beginPath();
+    var top=context.arc(199,175,175,0.3*Math.PI,0.7*Math.PI,true);
+    context.fillStyle="rgba(11,176,218,0.6)";
+    context.fill();
+    context.closePath();
+    
+    //头下面的领子
+    context.beginPath();
+    context.moveTo(85,331);
+    context.lineTo(317,331);
+    context.lineWidth=30;
+    context.lineCap="round";
+    context.lineJoin="round";
+    context.strokeStyle="rgba(177,50,9,0.6)";
+    // context.fill();
+    context.stroke();
+    context.closePath();
+    //身体
+    context.beginPath();
+    context.moveTo(80,346);
+    context.lineTo(27,404);
+    context.lineWidth=1;
+    context.quadraticCurveTo(66,399,68,437);
+    context.lineTo(84,418);
+    context.lineTo(84,528);
+    context.lineTo(180,528);
+    context.bezierCurveTo(180,502,220,502,220,528);
+    context.lineTo(315,528);
+    context.lineTo(315,418);
+    context.lineTo(332,435);
+    context.quadraticCurveTo(334,401,371,404);
+    context.lineTo(319,346);
+    context.strokeStyle="#010b0e";
+    context.stroke();
+    context.fillStyle="rgba(11,176,218,0.6)";
+    context.fill();
+    context.closePath();
+    //脚 手
+    context.beginPath();
+    context.moveTo(69,528);
+    context.lineTo(180,528);
+    context.bezierCurveTo(200,528,200,558,180,558);
+    context.lineTo(69,558);
+    context.bezierCurveTo(52,558,52,528,69,528);
+    context.moveTo(329,528);
+    context.lineTo(219,528);
+    context.moveTo(329,528);
+    context.bezierCurveTo(349,528,349,558,329,558);
+    context.lineTo(219,558);
+    context.bezierCurveTo(199,558,199,528,219,528);
+    context.strokeStyle="#010b0e";
+    context.stroke();
+    context.closePath();
+    // 左手
+    context.beginPath();
+    context.arc(37,432,30,0,2*Math.PI,true);
+    context.strokeStyle="#010b0e";
+    context.stroke();
+    context.closePath();
+    //右手
+    context.beginPath();
+    context.arc(363,432,30,0,2*Math.PI,true);
+    context.strokeStyle="#010b0e";
+    context.stroke();
+    context.closePath();
+    //面部
+    //白脸
+    context.beginPath();
+    context.moveTo(109,110);
+    context.quadraticCurveTo(-7,198,119,315);
+    context.lineTo(280,315);
+    context.quadraticCurveTo(411,198,288,110);
+    context.lineTo(109,110);
+    context.strokeStyle="#010b0e";
+    context.fillStyle="#fff";
+    context.stroke();
+    context.fill();
+    context.closePath();
+    //眼眶
+    context.beginPath();
+    context.ellipse(155,101,56,45,Math.PI/2,0,2*Math.PI,true);
+    context.moveTo(239,156);
+    context.ellipse(246,101,56,45,Math.PI/2,0,2*Math.PI,true);
+    context.fillStyle="#fff";
+    context.strokeStyle="#010b0e";
+    context.stroke();
+    context.fill();
+    context.closePath();
+    //眼睛
+    context.beginPath();
+    context.arc(169,129,12,0,2*Math.PI,true);
+    context.moveTo(224,142);
+    context.arc(225,129,12,0,2*Math.PI,true);
+    context.fillStyle="#000";
+    context.fill();
+    context.closePath();
+    //鼻子
+    context.beginPath();
+    context.arc(200,165,25,0,2*Math.PI,true);
+    context.fillStyle="#d05823";
+    context.fill();
+    context.closePath();
+    // 胡子
+    context.moveTo(200,195);
+    context.lineTo(200,289);
+    context.moveTo(78,240);
+    context.quadraticCurveTo(200,355,318,240);
+    context.moveTo(74,175);
+    context.lineTo(148,195);
+    context.moveTo(74,199);
+    context.lineTo(148,204);
+    context.moveTo(74,225);
+    context.lineTo(148,214);
+    context.moveTo(318,175);
+    context.lineTo(248,194);
+    context.moveTo(319,199);
+    context.lineTo(248,204);
+    context.moveTo(318,225);
+    context.lineTo(246,215);
+    context.strokeStyle="#010b0e";
+    context.stroke();
+    //肚子
+    context.beginPath();
+    // 193401
+    context.arc(200,401,92,1.2*Math.PI,1.8*Math.PI,true);
+    context.fillStyle="#fff";
+    context.fill();
+    context.strokeStyle="#010b0e";
+    context.stroke();
+    context.closePath();
+    //口袋
+    context.beginPath();
+    context.arc(200,394,71,1*Math.PI,2*Math.PI,true);
+    context.lineTo(128,394);
+    context.fillStyle="#fff";
+    context.fill();
+    context.strokeStyle="#010b0e";
+    context.stroke();
+    context.closePath();
+</script>
+
+</html>

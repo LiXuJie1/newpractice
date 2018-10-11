@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+		<audio controls="controls">
+			<source src="south Mountain.mp3">
+			<!-- <source src="south Mountain.ogg"> -->
+		</audio>
+		<!-- <video width="800"  src="mov_cartoon.mp4" autoplay="true" loop='loop'></video> -->
+		<video controls='true' autoplay="true">
+			<source src="mov_cartoon.mp4" type="video/mp4" >
+			<source src="mov_cartoon.ogg" type="video/ogg">
+		</video>
+		<!-- <video width="100%" autoplay="autoplay" loop="loop">
+			<source src="demo.mp4">
+		</video> -->
+		<button type="button" id="play">播放</button>
+		<button type="button" id="stop">暂停</button>
+		<button type="button" id="speed">加速</button>
+	<body>
+		<script>
+			var oVideo=document.querySelector('video');
+			var oPlay=document.getElementById('play');
+			var oStop=document.getElementById('stop');
+			var oAudio=document.querySelector('audio');
+			var oSpeed=document.getElementById('speed');
+			console.dir(oVideo);
+			oPlay.onclick=function(){
+				oVideo.play();
+			}
+			oStop.onclick=function(){
+				oVideo.pause();
+			}
+			//加速
+			oSpeed.onclick=function(){
+				oVideo.playbackRate=5;
+			}
+			
+			oVideo.onPlay=function(){
+				console.log(this.currentTime);
+			}
+			//显示当前时间
+			oVideo.ontimeupdate=function(){
+				console.log(this.currentTime);
+			}
+
+			//控制条用currentTime
+			//总时间 duration
+			//静音 nuted
+			//音量 volume
+			</script>
+	</body>
+
+</html>

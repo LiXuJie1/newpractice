@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .loading{
+            width: 100px;
+            height: 100px;
+            background-color: #00b4ed;
+            color: #fff;
+            line-height: 100px;
+            text-align: center;
+            margin: 250px auto;
+            animation: load 5s linear 1s infinite;
+        }
+        /* 定义动画 */
+        @keyframes load{
+            0%{
+                background: #00b4ed;
+                transform: rotateZ(0deg) scale(1);
+            }
+            50%{
+                background: #ff0000;
+                transform: rotateZ(360deg) scale(0.5);
+                border-radius:100%;
+            }
+            100%{
+                background: #00b4ed;
+                transform: rotateZ(0deg) scale(1);
+                border-radius:0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        ...
+    </div>
+</body>
+</html>

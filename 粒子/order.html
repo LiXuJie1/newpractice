@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--表单验证-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/header.css" />
+		<link rel="stylesheet" type="text/css" href="css/layer.css" />
+	</head>
+
+	<body>
+		<div class="black">
+
+		</div>
+		<!--头部灰色部分-->
+		<div class="topBack" id="topBack">
+			<div class="container clearfix">
+				<ul class="topList clearfix fr">
+					<li class="fl">
+						<a href="login.html">登陆</a>
+						<s>&nbsp;</s>
+						<a href="register.html">免费注册</a>
+					</li>
+					<li class="fl source re">
+						<a href="">关注我们
+							<img class="up_pic tran" src="images/down.png" alt=""></a>
+						<div class="microblog ab tran">
+							<div class="microblog_box">
+								<img class="weiBo" src="images/weibo.png" alt="">
+								<span>扫描二维码</span>
+								<p>关注丽子美妆微信</p>
+								<img class="saoMa" src="images/saoma.png" alt="">
+							</div>
+						</div>
+					</li>
+					<li class="fl">
+						<a href="">帮助中心</a>
+					</li>
+					<li class="fl">
+						<a href="">
+							<img src="images/heart.png" alt=""> 收藏粒子
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--标题-->
+		<div class="title">
+			<div class="container">
+				<div class="logo fl">
+					<a href="#"><img src="images/logo-lizi.png" /></a>
+					<span>确认订单</span>
+				</div>
+				<!--流程图-->
+				<div class="process fr">
+					<div class="next_step">
+
+					</div>
+				</div>
+				<div class="clear">
+				</div>
+			</div>
+		</div>
+		<!--主体-->
+		<div class="order">
+			<div class="container">
+				<div class="infor_order">
+					<ul class="infor_title clearfix">
+						<li class="fl"><span>选择收货地址</span></li>
+						<li class="fr">
+							<a href="user center.html">管理收货地址</a>
+						</li>
+					</ul>
+					<!---------------收货地址栏-->
+					<div class="adder clearfix">
+						<ul class="old-addr new_adder1 back fl">
+							<li class="receive">
+								<div class="re_officer">
+									<span>张女士</span>
+								</div>
+								<div class="re_adder pad">
+									<span class="province">重庆</span>
+									<span class="city">重庆市</span>
+									<span class="area">大足县</span>
+									<span class="street">45</span>
+								</div>
+								<div class="re_phone pad">
+									<span>15664235021</span>
+								</div>
+							</li>
+							<li class="edit clearfix">
+								<div class="red fl">默认地址</div>
+								<div class="wor_edit fr">
+									<a href="#none">编辑</a>
+								</div>
+							</li>
+						</ul>
+						<ul class="new_adder fl">
+							<li>
+								<a href="#">
+									<p class="iconfont">ƚ</p>
+									<p class="txt">新增地址</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!------------------商品信息-->
+					<div class="infor_item">
+						<p>确认商品信息</p>
+						<div class="item_line">
+							<span class="item">商品</span>
+							<span class="info">商品信息</span>
+							<span class="price">单价</span>
+							<span class="num">数量</span>
+							<span class="sum">小计</span>
+						</div>
+					</div>
+					<!----------------------------安妮商品------------------------------>
+					<div class="annie_goods" id="annie">
+						<div class="annie_word">
+							<span>店铺： <a href="#">安妮珍选</a></span>
+							<a href="#"><img src="images/shop_service.gif" /></a>
+						</div>
+						<!--商品-->
+						<div class="item_list">
+							<ul class="clearfix">
+								<li class="photo fl">
+									<a href="#"><img src="images/1d4649cbbbe09.jpg" /></a>
+									<a href="#"><span class="goods_word">HABA润泽柔肤水G水G露180ml补水保湿爽肤水化妆水孕妇可用无添加</span></a>
+								</li>
+								<li class="size_word fl">
+									<span class="size">规格：HABA润泽柔肤水180ml</span>
+								</li>
+								<li class="piece fl"><span>￥<i>219.00</i></span></li>
+								<li class="num fl">
+									<span>1</span>
+								</li>
+								<li class="sum fl">
+									<span>￥<i>219.00</i></span>
+								</li>
+							</ul>
+						</div>
+						<!--商品合计-->
+						<div class="annie_total clearfix">
+							<ul class="clearfix">
+								<li class="fl">
+									<span>备注：</span>
+									<input type="text" name="" id="" value="" class="remark" />
+								</li>
+								<li class="sale1 fr">店铺优惠：<span>-￥<i>1.00</i></span></li>
+							</ul>
+							<ul class="total fr">
+								<li>邮费：<span>已包邮</span></li>
+								<li class="all_total">合计：<span>¥<i>219.00</i></span></li>
+							</ul>
+						</div>
+					</div>
+					<!--------------------丽子自营----------------------->
+					<div class="annie_goods" id="goods">
+						<div class="annie_word">
+							<span>店铺： <a href="#">丽子自营</a></span>
+							<a href="#"><img src="images/shop_service.gif" /></a>
+						</div>
+						<!--商品-->
+						<div class="item_list">
+							<ul class="clearfix">
+								<li class="photo fl">
+									<a href="#"><img src="images/11def6b1ced4f.jpg" /></a>
+									<a href="#"><span class="goods_word"> 日本Freeplus芙丽芳丝控油修护化妆水130ml</span></a>
+								</li>
+								<li class="size_word fl">
+									<span class="size"></span>
+								</li>
+								<li class="piece fl"><span>￥<i>122.00</i></span></li>
+								<li class="num fl">
+									<span>1</span>
+								</li>
+								<li class="sum fl">
+									<span>￥<i>122.00</i></span>
+								</li>
+							</ul>
+						</div>
+						<div class="item_list">
+							<ul class="clearfix">
+								<li class="photo fl">
+									<a href="#"><img src="images/c3923d89f361.jpg" /></a>
+									<a href="#"><span class="goods_word"> 日本Dr.Ci:Labo城野医生LaboLabo毛孔收缩水100ml</span></a>
+								</li>
+								<li class="size_word fl">
+									<span class="size">规格：盒装</span>
+								</li>
+								<li class="piece fl"><span>￥<i>99.00</i></span></li>
+								<li class="num fl">
+									<span>1</span>
+								</li>
+								<li class="sum fl">
+									<span>￥<i>99.00</i></span>
+								</li>
+							</ul>
+						</div>
+						<div class="item_list">
+							<ul class="clearfix">
+								<li class="photo fl">
+									<a href="#"><img src="images/11e92359f6167.jpg" /></a>
+									<a href="#"><span class="goods_word">日本MUJI无印良品敏感肌舒柔化妆水爽肤水乳液200ml</span></a>
+								</li>
+								<li class="size_word fl">
+									<span class="size">规格：乳液（滋润型）</span>
+								</li>
+								<li class="piece fl"><span>￥<i>78.00</i></span></li>
+								<li class="num fl">
+									<span>1</span>
+								</li>
+								<li class="sum fl">
+									<span>￥<i>78.00</i></span>
+								</li>
+							</ul>
+						</div>
+						<!--商品合计-->
+						<div class="annie_total clearfix">
+							<ul class="clearfix">
+								<li class="fl">
+									<div class="invoice">
+										<a href="#none">
+											<span class="check"></span>
+											<span class="in_ask">索要发票:</span>
+										</a>
+									</div>
+								</li>
+								<li class="sale fr">店铺优惠：<span>-￥<i>1.00</i></span></li>
+							</ul>
+							<div class="hidden_check">
+								<label for="">发票抬头：</label>
+								<input type="radio" name="invo" id="" value="" />个人
+								<input type="radio" name="invo" id="" value="" />单位
+							</div>
+							<ul>
+								<li>
+									<span>备注：</span>
+									<input type="text" class="remark" id="" value="" />
+								</li>
+							</ul>
+							<ul class="total fr">
+								<li>邮费：<span>已包邮</span></li>
+								<li class="all_total">合计：<span>¥<i>299.00</i></span></li>
+							</ul>
+						</div>
+					</div>
+					<!---------------------丽子币------------------->
+					<div class="annie_money clearfix">
+						<ul class="fr">
+							<li>
+								<label for="">使用平台优惠券：</label>
+								<select name="">
+									<option value="" selected="selected">不使用平台优惠券</option>
+									<option value="">20元平台优惠券</option>
+									<option value="">30元平台优惠券</option>
+									<option value="">6元平台优惠券</option>
+									<option value="">6元平台优惠券</option>
+									<option value="">6元平台优惠券</option>
+								</select>
+							</li>
+							<li>
+								<div class="coin">
+									<label for="">使用丽子币：</label>
+									<input type="text" placeholder="0" name="" id="" value="" />
+									<span>-￥<i>1.00</i></span>
+								</div>
+								<p>可用<span>0</span>个丽子币，（共0个）</p>
+							</li>
+							<li>
+								<div class="balance">
+									<label for="">使用丽子余额：</label>
+									<input type="text" placeholder="0" name="" id="" value="" />
+									<span>-￥<i>1.00</i></span>
+								</div>
+								<p>可用<span>1.00</span>元，（共0.00元）</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-------------------提交订单---------------------->
+				<div class="rece_order clearfix">
+					<div class="collect fl">
+						<ul class="clearfix">
+							<li class="fl">
+								<a href="shopping-cart.html">
+									<i class="iconfont"></i>
+									<span>返回购物车</span>
+								</a>
+							</li>
+							<li class="fr">
+								<span>共有<i class="my_red">4</i>件商品，</span>
+								<span>总计：</span>
+								<span class="my_red incr-size">￥<i>518.00</i></span>
+							</li>
+						</ul>
+					</div>
+					<div class="order_btn fr">
+						<a href="pay.html">提交订单</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--编辑隐藏栏-->
+		<div class="layer">
+			<div class="layer_title">
+				<ul class="clearfix">
+					<li class="fl">编辑收货地址</li>
+					<li class="cancel_logo fr">
+						<a href="#none">×</a>
+					</li>
+				</ul>
+			</div>
+			<form action="" class="registerform">
+				<ul class="excel">
+					<li>
+						<label for="">收货人:</label>
+						<input type="text" name="" id="people" class="inputxt" value="" datatype="*3-10" nullmsg="必须填写用户名" errormsg="用户名为3-10位字符，请重新填写！" />
+					</li>
+					<li>
+						<fieldst>
+							<label for="">收货地区:</label>
+							<select name="province" id="province"></select>
+							<select name="city" id="city"></select>
+							<select name="area" id="area"></select>
+						</fieldst>
+					</li>
+					<li>
+						<label for="">街道地址:</label>
+						<input type="text" name="" id="" value="" class="add_street" />
+					</li>
+					<li>
+						<label for="">联系电话:</label>
+						<input type="text" name="" id="phone" class="inputxt" value="" datatype="m" nullmsg="必须填写手机号" errormsg="手机号格式不对，请重新填写！" />
+						<span>推荐手机，座机需加区号和'-'符号</span>
+					</li>
+				</ul>
+				<div class="layer_btn">
+					<input type="submit" name="" id="" value="确定" class="confirm" />
+					<input type="button" name="" id="" value="取消" class="cancel" />
+				</div>
+			</form>
+		</div>
+
+		<!--底部-->
+		<div class="bottom_back">
+			<div class="container clearfix">
+				<div class="footer_left fl">
+					<ul class="aboutUs clearfix">
+						<li class="fl">
+							<a href="">关于丽子/</a>
+						</li>
+						<li class="fl">
+							<a href="">商家入住/</a>
+						</li>
+						<li class="fl">
+							<a href="">加入我们/</a>
+						</li>
+						<li class="fl">
+							<a href="">配送政策/</a>
+						</li>
+						<li class="fl">
+							<a href="">售后保障/</a>
+						</li>
+						<li class="fl">
+							<a href="">帮助中心/</a>
+						</li>
+						<li class="fl">
+							<a href="">联系我们/</a>
+						</li>
+						<li class="fl">
+							<a href="">平台公告/</a>
+						</li>
+						<li class="fl">
+							<a href="">友情链接</a>
+						</li>
+					</ul>
+					<div class="copy">
+						<span>&copy;2018杭州徐娜拉电子商务有限公司LIZI.COM增值电信业务经营许可证:<a href="">浙ICP备11012845号-5</a></span>
+					</div>
+					<div class="copy">
+						<span>服务时间:09:00-23:00&nbsp;客服热线:0527-80200135&nbsp;<img src="images/ghs.png" alt=""><a href="">浙公安网备33010402001635号</a></span>
+					</div>
+					<ul class="about_us clearfix">
+						<li class="fl">
+							<a href="">米折网&nbsp;</a>
+						</li>
+						<li class="fl">
+							<a href="">一号店&nbsp;</a>
+						</li>
+						<li class="fl">
+							<a href="">国美在线&nbsp;</a>
+						</li>
+						<li class="fl">
+							<a href="">韩都衣舍&nbsp;</a>
+						</li>
+						<li class="fl">
+							<a href="">优购物&nbsp;</a>
+						</li>
+						<li class="fl">
+							<a href="">寺库网&nbsp;</a>
+						</li>
+						<li class="fl">
+							<a href="">海尔商城&nbsp;</a>
+						</li>
+						<li class="fl">
+							<a href="">比价网&nbsp;</a>
+						</li>
+						<li class="fl">
+							<a href="">挖东西&nbsp;</a>
+						</li>
+						<li class="fl">
+							<a href="">卷皮网&nbsp;</a>
+						</li>
+						<li class="fl">
+							<a href="">视客眼镜网&nbsp;</a>
+						</li>
+						<li class="fl">
+							<a href="">尚品网&nbsp;</a>
+						</li>
+						<li class="fl">
+							<a href="">飞牛网&nbsp;</a>
+						</li>
+						<li class="fl">
+							<a href="">悦美整形网&nbsp;</a>
+						</li>
+					</ul>
+					<div class="care">
+						<a href=""><img src="images/flogo-jindian.png"></a>
+						<a href=""><img src="images/flogo-picc.png"></a>
+					</div>
+				</div>
+				<div class="footer_right fr clearfix">
+					<div class="phone fr">
+						<a href="">
+							<img src="images/fapp.jpg" alt="">
+						</a>
+						<span><a href="">App</a></span>
+						<span><a href="">手机客户端下载</a></span>
+					</div>
+					<div class="phone fr">
+						<a href="">
+							<img src="images/d26f0c4f1d4.png" alt="">
+						</a>
+						<span><a href="" class="iconfont"></a></span>
+						<span><a href="">手机客户端下载</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Validform_v5.3.2_min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/layer-v3.1.1/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/PCASClass.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//	-------------- 索要发票-------------------------
+			var flag = true;
+			$(".check").click(function() {
+				if(flag) {
+					$(this).css({
+						"background": "url(images/checkbox-ico.png)0px -35px"
+					})
+					$(this).parents(".annie_total").find(".hidden_check").css("display", "block")
+					flag = false;
+				} else {
+					$(this).css({
+						"background": "url(images/checkbox-ico.png)0px 0px"
+					})
+					$(this).parents(".annie_total").find(".hidden_check").css("display", "none")
+					flag = true;
+				}
+			})
+			//	------------------ 点击编辑 -------------------------------
+			$(".adder").on("click", ".wor_edit", function() {
+				var peop = $(this).parents(".old-addr").find(".re_officer span").text();
+				var str = $(this).parents(".old-addr").find(".street").text()
+				var phone = $(this).parents(".old-addr").find(".re_phone span").text()
+				console.log(peop)
+				$("#people").val(peop);
+				$(".add_street").val(str);
+				$("#phone").val(phone)
+				//  -------------------   弹窗-------------------------
+				$(".layer").fadeIn(200)
+				$(".black").css({
+					display: "block",
+				})
+               });
+				//--------点击隐藏编辑栏确定按钮-----------------
+
+				$('.confirm').click(function() {
+
+					//	var peop1 = $("#people").val();
+					//	var str1 = $(".add_street").val();
+					//	var phone1 = $("#phone").val();
+					//	var province = $("#province").val();
+					//	var city = $("#city").val();
+					//	var area = $("#area").val()
+					//	console.log(peop1)
+					//	var num = parseInt($(this).index());
+					//	$(".re_officer span").eq(num).text(peop1);
+					//	$(".street").eq(num).text(str1);
+					//	$(".re_phone span").eq(num).text(phone1);
+					//	$(".province").eq(num).text(province);
+					//	$(".city").eq(num).text(city);
+					//	$(".area").eq(num).text(area);
+					//					表单验证
+
+					$("form").Validform({
+						tiptype: function(msg, o, cssctl) {
+							if(o.type != 2) {
+								layer.alert(msg, {
+									id: 'layerDemo',
+									icon: 7,
+									btnAlign: 'c',
+									shade: 0,
+									title: false,
+									skin: 'demo-class',
+									closeBtn: 0,
+								});
+							}
+						}
+					});
+					
+					var sign = $(".excel").find("input").hasClass("Validform_error");
+					console.log(sign)
+					if(sign==false) {
+						$(".layer").fadeOut(200);
+						$(".black").css({
+							display: "none",
+						})
+						var peop = $("#people").val();
+						var str = $(".add_street").val();
+						var phone = $("#phone").val();
+						var province = $("#province").val();
+						var city = $("#city").val();
+						var area = $("#area").val()
+						//	创建地址ul
+						var $ul = $("<ul></ul>");
+						$ul.addClass("new_adder new_adder1 fl");
+						$(".adder").prepend($ul);
+						//					创建li
+						var $li = $("<li></li>");
+						$li.addClass("receive");
+						$ul.append($li);
+						//					创建的收货人
+						$div = $("<div></div>");
+						$div.addClass("re_officer");
+						$li.append($div);
+						$div.html("<span>" + peop + "</span>");
+						//					创建的省市区
+						$div1 = $("<div></div>");
+						$div1.addClass("re_adder pad");
+						$li.append($div1);
+
+						$span = $("<span>" + province + "</span>")
+						$span.addClass("province")
+						$div1.append($span);
+
+						$span1 = $("<span>" + city + "</span>")
+						$span1.addClass("city")
+						$div1.append($span1);
+
+						$span2 = $("<span>" + area + "</span>")
+						$span2.addClass("area")
+						$div1.append($span2);
+
+						$span3 = $("<span>" + str + "</span>")
+						$span3.addClass("street")
+						$div1.append($span3);
+						//					$div1.html("<span>" + province + "</span> <span>" + city + "</span> <span>" + area + "</span> <span>" + str + "</span>");
+						//                  创建的手机号
+						$div2 = $("<div></div>");
+						$div2.addClass("re_phone pad");
+						$li.append($div2);
+						$div2.html("<span>" + phone + "</span>");
+						//					创建li
+						var $li1 = $("<li></li>");
+						$li1.addClass("edit clearfix");
+						$ul.append($li1);
+						//					创建默认地址
+						$div3 = $("<div></div>");
+						$div3.addClass("red fl")
+						$li1.append($div3);
+						$div3.text("默认地址");
+						//					创建编辑
+						$div4 = $("<div></div>");
+						$div4.addClass("wor_edit fr")
+						$li1.append($div4);
+						$div4.html("<a href='#'>编辑</a>");
+					}
+				});
+				//				点击取消按钮
+				$(".cancel").click(function() {
+					$(".layer").fadeOut(200);
+					$(".black").css({
+						display: "none",
+					})
+				})
+				//				点击x号
+				$(".cancel_logo").click(function() {
+					$(".layer").fadeOut(200);
+					$(".black").css({
+						display: "none",
+					})
+				})
+			
+			//	--------------点击地址添加按钮---------------------
+			$(".new_adder").click(function() {
+				//--------------------	 弹窗
+				$(".layer").fadeIn(200)
+				$(".black").css({
+					display: "block",
+				})
+			});
+			$(".adder").on("click", ".new_adder1", function() {
+				$(this).parents(".adder").find(".new_adder1").removeClass("back");
+				$(this).addClass("back");
+			})
+			//					$(".new//_adder1").each(function (index) {
+
+			// -----------------三级联动---------------------------
+			new PCAS("province", "city", "area", "重庆市");
+			//	计算
+			//-----------------------安妮商品合计----------------------
+			var price1 = $("#annie").find(".sum")
+			var sum1 = 0;
+			price1.each(function(index) {
+				console.dir($(this).children("span").text().slice(1))
+				var num1 = $(this).children("span").text().slice(1);
+				sum1 = sum1 + parseFloat(num1);
+			})
+			var sale1 = $(".sale1").children("span").text().slice(2);
+			sum1 = sum1 - parseFloat(sale1);
+			console.log(sum)
+			$("#annie").find(".all_total").children("span").text("￥" + sum1 + ".00");
+			//-----------------------丽子商品合计---------------------
+			var price = $("#goods").find(".sum")
+			var sum = 0;
+			price.each(function(index) {
+				console.dir($(this).children("span").text().slice(1))
+				var num = $(this).children("span").text().slice(1);
+				sum = sum + parseFloat(num);
+			})
+			var sale = $(".sale").children("span").text().slice(2);
+			sum = sum - parseFloat(sale);
+			console.log(sum)
+			$("#goods").find(".all_total").children("span").text("￥" + sum + ".00");
+			//--------------丽子余额，丽子币-----------------
+			var coin = $(".coin").children("span").text().slice(2);
+			var balance = $(".balance").children("span").text().slice(2);
+			//总计
+			var total = sum + sum1 - parseFloat(coin) - parseFloat(balance);
+			$(".incr-size").text("￥" + total + ".00");
+			
+		</script>
+	</body>
+
+</html>

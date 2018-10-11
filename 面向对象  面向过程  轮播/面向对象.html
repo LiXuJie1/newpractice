@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.slider_main {
+				width: 790px;
+				height: 340px;
+				margin: 20px auto;
+				position: relative;
+			}
+			
+			.slider_list {
+				margin: 0;
+				padding: 0;
+				height: 340px;
+			}
+			
+			.item {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				list-style: none;
+				display: none;
+			}
+			
+			.item:first-child {
+				display: block;
+			}
+			
+			.item a {
+				font-size: 0;
+			}
+			
+			.circle_dot {
+				position: absolute;
+				left: 50%;
+				bottom: 20px;
+				margin: auto;
+				font-size: 0;
+				padding: 4px 8px;
+				border-radius: 12px;
+				background-color: hsla(0, 0%, 100%, .3);
+				z-index: 1;
+				transform: translateX(-50%);
+			}
+			
+			.dot {
+				display: inline-block;
+				margin: 0 5px;
+				width: 12px;
+				height: 12px;
+				border-radius: 100%;
+				background-color: #fff;
+				cursor: pointer;
+			}
+			
+			.dot.active {
+				background-color: #db192a;
+			}
+			
+			.arrow {
+				display: none;
+				position: absolute;
+				z-index: 1;
+				top: 50%;
+				margin-top: -30px;
+				width: 30px;
+				height: 60px;
+				background-color: rgba(0, 0, 0, .1);
+				line-height: 60px;
+				text-align: center;
+				color: #fff;
+				font-size: 20px;
+				cursor: pointer;
+			}
+			
+			.arrow:hover {
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+			
+			.arrow_left {
+				left: 0;
+			}
+			
+			.arrow_right {
+				right: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="banner1" class="slider_main">
+			<ul class="slider_list">
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/1.jpg" />
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/2.jpg" />
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/3.jpg" />
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/4.jpg" />
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/5.jpg" />
+					</a>
+				</li>
+
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/6.jpg" />
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/7.jpg" />
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/8.jpg" />
+					</a>
+				</li>
+			</ul>
+			<!--指示器-->
+			<div class="circle_dot">
+
+			</div>
+			<!--箭头-->
+			<div class="arrow_left arrow">&lt;</div>
+			<div class="arrow_right arrow">&gt;</div>
+		</div>
+
+		<div id="banner2" class="slider_main">
+			<ul class="slider_list">
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/1.jpg" />
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/2.jpg" />
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/3.jpg" />
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/4.jpg" />
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/5.jpg" />
+					</a>
+				</li>
+
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/6.jpg" />
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/7.jpg" />
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<img class="item_img" src="img/8.jpg" />
+					</a>
+				</li>
+			</ul>
+			<div class="circle_dot">
+
+			</div>
+			<div class="arrow_left arrow">&lt;</div>
+			<div class="arrow_right arrow">&gt;</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//构造函数
+		function Slider(selector) {
+			//查找元素
+			this.$wrap = $(selector);
+			this.$item = this.$wrap.find(".item");
+			this.$dotBox = this.$wrap.find(".circle_dot");
+			this.$arrowLeft = this.$wrap.find(".arrow_left");
+			this.$arrowRight = this.$wrap.find(".arrow_right");
+			this.timer = '';
+			this.index = 0; //默认显示第i张
+			//初始化
+			this.init();
+		}
+		Slider.prototype = {
+			constructor: Slider,
+			//初始化
+			init: function() {
+				this.createDot();
+				this.setActiveDot(this.index);
+				this.play();
+				this.bindEvent();
+			},
+			//生成圆点
+			createDot: function() {
+				var self = this;
+				this.$item.each(function(i) {
+					self.$dotBox.append('<div class="dot"></div>');
+				});
+			},
+			//设置active 圆点
+			setActiveDot: function(i) {
+				this.$dotBox.find('.dot').removeClass("active").eq(i).addClass("active");
+			},
+			//设置定时器
+			play: function() {
+				var self = this;
+				clearInterval(this.timer);
+				this.timer = setInterval(function() {
+					self.$arrowRight.trigger("click");
+				}, 2000);
+			},
+			//停止定时器
+			stop: function() {
+				clearInterval(this.timer);
+			},
+			//切换图片
+			show: function(i) {
+				this.$item.fadeOut();
+				this.$item.eq(i).fadeIn();
+				this.setActiveDot(i);
+			},
+			//绑定事件
+			bindEvent: function() {
+				var self = this;
+				//指示器
+				this.$dotBox.on("mouseenter", '.dot', function() {
+					self.index = $(this).index();
+					self.show(self.index);
+				});
+				//容器的移入移出事件
+				this.$wrap.on("mouseenter", function() {
+					self.stop();
+					self.$arrowLeft.fadeIn();
+					self.$arrowRight.fadeIn();
+				})
+				this.$wrap.on("mouseleave", function() {
+					self.play();
+					self.$arrowLeft.fadeOut();
+					self.$arrowRight.fadeOut();
+				})
+				//左右箭头的事件
+				this.$arrowRight.click(function() {
+					if(self.index == self.$item.length - 1) {
+						self.index = 0;
+					} else {
+						self.index++;
+					}
+					self.show(self.index);
+				});
+				this.$arrowLeft.click(function() {
+					if(self.index == 0) {
+						self.index = self.$item.length - 1;
+					} else {
+						self.index--;
+					}
+					self.show(self.index);
+				});
+			}
+		}
+
+		new Slider("#banner1");
+		new Slider("#banner2");
+	</script>
+
+</html>

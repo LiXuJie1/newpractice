@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    text-decoration: none;
+    font-family: "Microsoft YaHei UI", "Microsoft YaHei UI Light", "微软雅黑", "宋体", Helvetica-Black-SemiBold, Tahoma, Arial, sans-serif;
+}
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.box{
+    width:220px ;
+    margin-left: 4px;
+    height:180px;
+    padding: 10px 8px;
+    background-color: #0f0;
+}
+
+
+/*text-indent 首段缩进  只有段落才缩进（p）*/
+.text-de .new{
+    text-decoration:underline;
+    text-indent: 2em;
+}
+p{
+    text-indent: 2em;
+}
+/*.ff{
+    text-indent: 2em;
+}*/
+input{
+    text-transform: uppercase;
+}
+.cc img,
+.cc span{
+    vertical-align: middle; 
+    font-size: 136px;
+}
+/*.cc{
+    vertical-align: middle;
+}*/
+

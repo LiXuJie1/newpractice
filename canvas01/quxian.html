@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="400px" height="400px"></canvas>
+</body>
+<script>
+    //画布
+    oCanvas = document.getElementById('canvas');
+    var width = oCanvas.width;
+    var height = oCanvas.height;
+    //画笔
+    var context = oCanvas.getContext('2d');
+
+    //绘制背景
+    context.fillStyle = "#eee";
+    context.fillRect(0, 0, width, height);
+   //绘制曲线
+   context.moveTo(50,50);
+   context.lineWidth=5;
+   context.arcTo(300,50,20,300,100);
+   context.strokeStyle="#00ff00";
+   context.stroke();
+//绘制二次贝塞尔曲线
+    context.moveTo(20,250);
+    context.quadraticCurveTo(20,300,200,250);
+    context.stroke();
+//绘制三次贝塞尔曲线
+context.moveTo(200,300);
+context.bezierCurveTo(200,350,300,350,300,300);
+context.stroke();
+</script>
+
+</html>

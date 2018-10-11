@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+    .container{
+        width: 800px;
+        margin: 0 auto;
+        color: #9f9f9f;
+        font-size: 20px;
+    }
+        .mallPrice span{
+            padding: 40px;
+            text-decoration: line-through;
+        }
+        .intPrice{
+            padding-top: 20px;
+            /*color:red;*/
+        }
+        .intPrice span:first-child{
+            padding-left: 40px;
+        }
+        .intPrice span:last-child{
+            padding-left: 10px;
+        }
+        .cate-box{
+            padding-top: 50px;
+        }
+        .cate-box span:first-child{
+            margin-right: 20px;
+        }
+        .cate-box li{
+            display: inline-block;
+            padding: 6px 12px;
+            border: 1px solid #999;
+            margin-right: 20px;
+            position: relative;
+        }
+        .cate-box li.active{
+            padding: 5px 11px;
+            border: 2px solid red;
+
+        }
+
+        .cate-box2{
+            padding-top: 50px;
+        }
+        .cate-box2 span:first-child{
+            margin-right: 20px;
+        }
+        .cate-box2 li{
+            display: inline-block;
+            padding: 4px 10px;
+            border: 1px solid #999;
+            position: relative;
+        }
+        .cate-box2 li.active{
+            padding: 3px 9px;
+            border: 2px solid red;
+        }
+        .right{
+            position: absolute;
+            bottom: -5px;
+            right: 0px;
+            display: none;
+        }
+        .boo{
+            position: absolute;
+            bottom: -5px;
+            right: 0px;
+            display: none;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="mallPrice">
+            市场价:<span>￥15.00</span>
+        </div>
+        <div class="intPrice">
+            本网价:<span class="color">￥</span><span class="price"></span>
+        </div>
+        <ul class="cate-box">
+            <span>颜色</span>
+            <li>红色<div class="right"><img src="pic/right.png" alt=""></div></li>
+            <li>黄色<div class="right"><img src="pic/right.png" alt=""></div></li>
+            <li>蓝色<div class="right"><img src="pic/right.png" alt=""></div></li>
+            <li>绿色<div class="right"><img src="pic/right.png" alt=""></div></li>
+            <li>灰色<div class="right"><img src="pic/right.png" alt=""></div></li>
+            <li>彩虹色<div class="right"><img src="pic/right.png" alt=""></div></li>
+        </ul>
+        <ul class="cate-box2">
+            <span>尺码</span>
+            <li>S<div class="boo"><img src="pic/right.png" alt=""></div></li>
+            <li>M<div class="boo"><img src="pic/right.png" alt=""></div></li>
+            <li>L<div class="boo"><img src="pic/right.png" alt=""></div></li>
+            <li>XL<div class="boo"><img src="pic/right.png" alt=""></div></li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!--jquery-->
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var price;
+            var price2;
+            var flag=true;
+            var flag2=true;
+            $('.cate-box li').click(function(){
+                // $('body').css({
+                //     color:'red',
+                //     // 'background-color':'blue',
+                //     // backgroundColor:'blue'
+                // })
+                //如果removeClass不写参数的时候全部移除
+                $('.cate-box li').removeClass('active');
+                var res=$(this).text();
+                $(this).addClass('active');
+                $('.right').css('display','none');
+                $('.price').css('color','red');
+                $('.color').css('color','red');
+                switch(res){
+                    case "红色":
+                    price=10;
+                    break;
+                    case "黄色":
+                    price=20;
+                    break;
+                    case "蓝色":
+                    price=30;
+                    break;
+                    case "绿色":
+                    price=40;
+                    break;
+                    case "灰色":
+                    price=50;
+                    break;
+                    case "彩虹色":
+                    price=60;
+                    break;
+                }
+                flag=false;
+                //  $('.color').text(res);
+                // $('.price').text(price+price2);
+                
+                plus(price,price2);
+                // console.log(price2);
+            });
+
+
+
+
+            
+            $('.cate-box2 li').click(function(){
+                $('.cate-box2 li').removeClass('active');
+                $(this).addClass('active');
+                var deg=$(this).text();
+                $('.boo').css('display','none');
+                $(this).find('.boo').css('display','block');
+                switch(deg){
+                    case 'S':
+                    price2=10;
+                    break;
+                    case 'M':
+                    price2=20;
+                    break;
+                    case 'L':
+                    price2=30;
+                    break;
+                    case 'XL':
+                    price2=40;
+                    break;
+                }
+                flag2=false;
+                // var price3=price+price2;
+                // $('.price').text(price+price2);
+                plus(price,price2);
+                
+            })
+
+
+
+
+            function plus(a,b){
+                if(flag==false&&flag2==true){
+                    $('.price').text(a);
+                }
+                
+                if(flag==true&&flag2==false){
+                    $('.price').text(b);
+                }
+                 if(flag==false&&flag2==false){
+                     $('.price').text(a+b);
+                 }
+            }
+
+            console.log(flag);
+           
+            // var width=$(window).width();
+            // console.log(width);
+        });
+    </script>
+</body>
+
+</html>

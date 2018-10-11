@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            list-style: none;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        .show {
+            height: 1000px;
+            transform-style: preserve-3d;
+            perspective: 2000px;
+            
+        }
+        .show img{
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+        }
+
+        .show .list {
+            transform-style: preserve-3d;
+            width: 200px;
+            height: 300px;
+            margin: 150px auto;
+            position: relative;
+            padding: 0;
+            transform: rotateX(-20deg) rotateY(0deg);
+
+        }
+
+        .list li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.5s;
+        }
+
+        .list.active li:nth-child(1) {
+            transform: translateZ(300px);
+            transition-delay:0.2s 
+        }
+
+        .list.active li:nth-child(2) {
+            transform: rotateY(40deg) translateZ(300px);
+            transition-delay:0.4s
+        }
+
+        .list.active li:nth-child(3) {
+            transform: rotateY(80deg) translateZ(300px);
+            transition-delay:0.6s
+        }
+
+        .list.active li:nth-child(4) {
+            transform: rotateY(120deg) translateZ(300px);
+            transition-delay:0.8s
+        }
+
+        .list.active li:nth-child(5) {
+            transform: rotateY(160deg) translateZ(300px);
+            transition-delay:1s
+        }
+
+        .list.active li:nth-child(6) {
+            transform: rotateY(200deg) translateZ(300px);
+            transition-delay:1.2s
+        }
+
+        .list.active li:nth-child(7) {
+            transform: rotateY(-120deg) translateZ(300px);
+            transition-delay:1.4s
+        }
+
+        .list.active li:nth-child(8) {
+            transform: rotateY(-80deg) translateZ(300px);
+            transition-delay:1.6s
+        }
+
+        .list.active li:nth-child(9) {
+            transform: rotateY(-40deg) translateZ(300px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="show" id="show">
+        <ul class="list" id="list">
+            <li>
+                <img src="../images/QQ图片20180911114732.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/QQ图片20180911114744.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/QQ图片20180911114751.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/QQ图片20180911114732.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/QQ图片20180911114744.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/QQ图片20180911114751.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/QQ图片20180911114732.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/QQ图片20180911114744.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/QQ图片20180911114751.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function () {
+            var oUl = document.getElementById('list');
+            var oImg = document.getElementsByTagName('img');
+            var oDiv = document.getElementById('show');
+            var timer;
+            var timer2;
+            var t = 0;
+            timer2=setTimeout(function(){
+                oUl.classList.add('active');
+            },500)
+            for (var i = 0; i < oImg.length; i++) {
+                oImg[i].onmousedown = function (e) {
+                    e.preventDefault();
+                }
+            }
+
+            function run(){
+                oUl.style.transform='rotateX(-20deg) rotateY('+t+'deg)';
+                t=t+0.1;
+            }
+            timer=setInterval(function(){
+                run();
+            });
+            oDiv.onmousedown = function (e) {
+                window.clearInterval(timer);
+                var startX = e.clientX;
+                var startY = e.clientY;
+                // console.log(startX);
+                document.onmousemove = function (e) {
+                    var endX = e.clientX;
+                    var endY = e.clientY;
+                    console.log(endX - startX);
+                    oUl.style.transform = 'rotateX(' + (startY-endY)+ 'deg) rotateY(' + (endX - startX) + 'deg)';
+                }
+            }
+            document.onmouseup=function(){
+                clearInterval(timer);
+            //     timer=setInterval(function(){
+            //     run();
+            // });
+                document.onmousemove=false;
+            }
+        }
+    </script>
+</body>
+
+</html>

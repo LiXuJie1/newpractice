@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Microsoft YaHei UI", "Microsoft YaHei UI Light", "微软雅黑", "宋体", Helvetica-Black-SemiBold, Tahoma, Arial, sans-serif;
+}
+.container{
+    width: 1169px;
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.back{
+    width: 100%;
+    height: 1116px;
+    background: url("../pic/psd15763_02.jpg") top center fixed ;
+}
+.back .container .title{
+    padding-left: 311px;
+    padding-bottom: 16px;
+}
+.back .container .title_txt{
+    font-size: 23px;
+    color: #fff;
+    padding-left: 552px;
+}
+.clothBox{
+    padding-top: 46px;
+}
+.third{
+    width: 1172px;
+    padding-right: 3px;
+    margin: 0 auto;
+}
+.man{
+    position: relative;
+    margin-left: 3px;
+}
+.price{
+    /*width: 288px;*/
+    position: absolute;
+    background-color: rgba(17, 15, 13, 90%);
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+}
+.price .txt{
+    font-size: 20px;
+    color: #acacac;  
+    padding: 12px 55px 0 13px;  
+}
+.price .eTxt{
+    font-size: 12px;
+    color: #d2d2d2;
+    padding: 5px 77px 6px 15px;
+    font-family: "Brasilia";
+}
+.price .redPrice{
+    font-family: "[FranklinGothic]";
+    color: #ec1311;
+    padding:0 184px 11px 14px;
+}

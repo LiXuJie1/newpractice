@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="400px" height="400px"></canvas>
+</body>
+<script>
+    //画布
+    oCanvas=document.getElementById('canvas');
+    var width=oCanvas.width;
+    var height=oCanvas.height;
+    //画笔
+    var context=oCanvas.getContext('2d');
+    //绘制背景
+    context.fillStyle="#eee";   
+    context.fillRect(0,0,width,height);
+    //实心字
+    context.fillStyle='#00ff00';
+    context.font='30px 微软雅黑';
+    //空心字
+    context.strokeText('Hello World',100,120);
+    //测量文字长度
+    var m=context.measureText('Hello World');
+    context.fillText('Hello World',(width-m.width)/2,60);
+</script>
+</html>

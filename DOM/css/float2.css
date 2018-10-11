@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.top{
+    background-color: #f29494;
+}
+.logo{
+    background-color: #a29efd;
+}
+.Big{
+    background-color: #1cefc4;
+}
+.mid{
+    background-color: #a29efd;
+}
+.mid-Y{
+    background-color: #2ad2df;
+}
+.bottom-B{
+    background-color: #9c99f4;
+}
+.bottom{
+    background-color: #48cdd4;
+}

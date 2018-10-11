@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+}
+body{
+    width: 1700px;
+    margin: 0 auto;
+}
+/*.container{
+    
+    margin: 0 auto;
+}*/
+.top{
+    /*width: 1180px;*/
+    height: 40px;
+    background-color: #2d3e50;
+    margin: 0 auto;
+}
+.vue{
+    /*width: 1180px;*/
+    height: 97px;
+    background-color: #fff;
+    overflow: hidden;
+    line-height: 97px;
+}
+ul{
+    overflow: hidden;
+    font-family: "Bahnschrift";
+    font-size: 39px;
+    margin-left: 238px;
+    float: left;
+    /*width: 215px;*/
+}
+li{
+    float: left;
+}
+.TextM{
+    color: #1fd2b2;
+}
+.VueRight{
+    width: 608px;
+    margin-left: 311px;
+    overflow: hidden;
+    float: left;
+}
+.VueRight div{
+    float: left;
+    line-height: 97px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 39px;
+    
+}
+.VueRight div a{
+    color: #5a6d7e; 
+}
+.VueRight div:hover a{
+    color: #2cd4b1;
+}
+.VueRight div:hover .FirstBlue{
+    bottom: 1px;
+    
+}
+.VueRight>div:nth-child(1){
+    position: relative;
+    /*background-color: #00f; */
+}
+
+.VueRight>div:nth-child(2){
+    position: relative;
+    /*background-color: #00f; */
+}
+.VueRight>div:nth-child(3){
+    position: relative;
+    /*background-color: #00f; */
+}
+.VueRight>div:nth-child(4){
+    position: relative;
+    /*background-color: #00f; */
+}
+.VueRight>div:nth-child(5){
+    position: relative;
+    /*background-color: #00f; */
+}
+.VueRight>div:nth-child(6){
+    position: relative;
+    /*background-color: #00f; */
+}
+.FirstBlue{
+    width: 39px;
+    height: 3px;
+    position: absolute;
+    background-color: #2cd4b1;
+}
+.tra{
+    transition: 1s;
+}
+
+.MinPic{
+    width: 1700px;
+    height: 698px;
+    position: relative;
+    overflow: hidden;
+    /*margin-top: 3px;*/
+}
+.MinPic img{
+        
+}
+#But_S{
+    width: 218px;
+    height: 55px;
+    left: 646px;
+    bottom: 219px;
+    float: left;
+    background-color: #1dd2af;
+    border-radius:3px; 
+    position: absolute;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+#But_M{
+    width: 155px;
+    height: 55px;
+    right: 645px;
+    bottom: 219px;
+    float: left;
+    position: absolute;
+    /*opacity: 0.1;*/
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.nav{
+
+}

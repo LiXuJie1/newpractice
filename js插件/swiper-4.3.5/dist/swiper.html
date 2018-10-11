@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper.css">
+    <style>
+        /* .swiper-container {
+            width: 600px;
+            height: 300px;
+        } */
+        .swiper-container{
+            width: 1200px;
+            height: 300px;
+            text-align: center;
+        }
+        .swiper-container img{
+            width: 1200px;
+            height: 300px;
+        }
+
+        .swiper-container-vertical>.swiper-pagination-bullets {
+            transform: translate3d(0, 0, 0);
+            width: 60px;
+            display: inline;
+            left: 50% !important;
+            margin-left: -30px !important;
+            top: 90% !important;
+            /* height: 6px !important; */
+
+        }
+        .swiper-button-next,
+        .swiper-button-prev{
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .swiper-container-vertical>.swiper-pagination-bullets span {
+            display: inline-block !important;
+            margin: 6px !important;
+            bottom: 0 !important;
+
+        }
+
+        .swiper-wrapper {
+            /* transition-duration: 0ms !important; */
+            /* transform: translate3d(-600px, 0px, 0px)!important; */
+        }
+        .swiper-pagination-bullet-active{
+            background:#fff; 
+        }
+        .swiper-container-horizontal   {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="20180822170328.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="20180822170423.jpg" alt=""></div>
+            <div class="swiper-slide"></div>
+        </div> -->
+        <!-- 如果需要分页器 -->
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <!-- 如果需要导航按钮 -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
+
+        <!-- 如果需要滚动条 -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    <!-- </div> -->
+    <!-- <script scr="js/swiper.min.js"></script> -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="first_act">
+            <div class="swiper-slide">
+                <a href=""><img src="banner1.png" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <a href=""><img src="banner2.png" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <a href=""><img src="banner3.png22" alt=""></a>
+            </div>
+        </div>
+         <div class="swiper-pagination"> 
+        </div>  
+        <div class="swiper-button-prev iconfont">&#xe61f;</div>
+        <div class="swiper-button-next iconfont">&#x1ce;</div>
+    </div>
+    <script src="js/swiper.min.js"></script>
+    <script>        
+        window.onload = function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+
+                // 如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // 如果需要前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                //   如果需要滚动条
+                //   scrollbar: {
+                //     el: '.swiper-scrollbar',
+                //   },
+            })
+        }
+
+    </script>
+</body>
+
+</html>

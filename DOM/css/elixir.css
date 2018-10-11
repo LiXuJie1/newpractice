@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Microsoft YaHei UI", "Microsoft YaHei UI Light", "微软雅黑", "宋体", Helvetica-Black-SemiBold, Tahoma, Arial, sans-serif;
+}
+.container{
+    width: 1171px;
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.back{
+    background-color: #282e3b;
+}
+/*第一列*/
+.back .fl:nth-child(1)>div:nth-child(1){
+    padding-top: 57px;
+    padding-bottom: 24.5px;
+}
+.back .fl:nth-child(1)>div:nth-child(2) span{
+    width: 233px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #b2bacf;
+    padding-bottom: 27px;
+}
+.back .fl:nth-child(1)>div:nth-child(3) span a{
+    font-size: 14px;
+    color: #33b2c5; 
+}
+.back .fl:nth-child(1)>div:nth-child(3) {
+    padding-bottom: 74px;
+}
+
+
+
+/*以下第二列第一部分*/
+.back .taiCan{
+    padding-left: 30px;
+}
+.back .fl:nth-child(2)>div:nth-child(1){
+    padding-top: 40px;
+    padding-bottom: 26.5px;
+}
+.back .fl:nth-child(2)>div:nth-child(1) img{
+    vertical-align: middle;
+}
+.back .fl:nth-child(2)>div:nth-child(1) span{
+    vertical-align: middle;
+    font-size: 23px;
+    color: #fff;
+}
+
+
+/*以下第二列第二部分*/
+/*.back .fl:nth-child(2)>div:nth-child(2){
+    padding-bottom: 20px;
+}*/
+.back .fl:nth-child(2)>div:nth-child(2)>div:nth-child(1)>img{
+    padding-top: 3.5px;
+}
+.back .fl:nth-child(2)>div:nth-child(2)>div:nth-child(2)>span{
+    padding-left: 9px;
+    width: 174px;
+    font-size: 12px;
+    font-family: "Times New Roman";
+    color: #b2bacf;
+    line-height: 20px;
+}
+.back .fl:nth-child(2)>div:nth-child(2)>div:nth-child(2)>div{
+    padding-left: 12px;
+}
+.back .fl:nth-child(2)>div:nth-child(2)>div:nth-child(2)>div>img:nth-child(1){
+    vertical-align: middle;
+}
+.back .fl:nth-child(2)>div:nth-child(2)>div:nth-child(2)>div>span:nth-child(2){
+    font-size: 12px;
+    color: #b2bacf;
+    vertical-align: middle;
+}
+.back .fl:nth-child(2)>div:nth-child(2)>div:nth-child(2)>div>img:nth-child(3){
+    padding-left: 22px;
+    vertical-align: middle;
+}
+.back .fl:nth-child(2)>div:nth-child(2)>div:nth-child(2)>div>span:nth-child(4){
+    font-size: 12px;
+    color: #b2bacf;
+    vertical-align: middle;
+}
+
+
+
+
+
+/*以下第二列第三部分*/
+
+.back .fl:nth-child(2)>div:nth-child(3)>div:nth-child(1)>img{
+    /*padding-top: 3.5px;*/
+    padding-top:23.5px;
+}
+.back .fl:nth-child(2)>div:nth-child(3)>div:nth-child(2)>span{
+    padding-left: 9px;
+    width: 174px;
+    font-size: 12px;
+    font-family: "Times New Roman";
+    color: #b2bacf;
+    line-height: 20px;
+    padding-top: 20px;
+}
+.back .fl:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div{
+    padding-left: 12px;
+}
+.back .fl:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div>img:nth-child(1){
+    vertical-align: middle;
+}
+.back .fl:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div>span:nth-child(2){
+    font-size: 12px;
+    color: #b2bacf;
+    vertical-align: middle;
+}
+.back .fl:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div>img:nth-child(3){
+    padding-left: 22px;
+    vertical-align: middle;
+}
+.back .fl:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div>span:nth-child(4){
+    font-size: 12px;
+    color: #b2bacf;
+    vertical-align: middle;
+}
+
+
+
+
+/*以下第二列第四部分*/
+.back .fl:nth-child(2)>div:nth-child(4)>div:nth-child(1)>img{
+    padding-top: 23.5px;
+}
+.back .fl:nth-child(2)>div:nth-child(4)>div:nth-child(2)>span{
+    padding-left: 9px;
+    width: 174px;
+    font-size: 12px;
+    font-family: "Times New Roman";
+    color: #b2bacf;
+    line-height: 20px;
+    padding-top: 20px;
+}
+.back .fl:nth-child(2)>div:nth-child(4)>div:nth-child(2)>div{
+    padding-left: 12px;
+}
+.back .fl:nth-child(2)>div:nth-child(4)>div:nth-child(2)>div>img:nth-child(1){
+    vertical-align: middle;
+}
+.back .fl:nth-child(2)>div:nth-child(4)>div:nth-child(2)>div>span:nth-child(2){
+    font-size: 12px;
+    color: #b2bacf;
+    vertical-align: middle;
+}
+.back .fl:nth-child(2)>div:nth-child(4)>div:nth-child(2)>div>img:nth-child(3){
+    padding-left: 22px;
+    vertical-align: middle;
+}
+.back .fl:nth-child(2)>div:nth-child(4)>div:nth-child(2)>div>span:nth-child(4){
+    font-size: 12px;
+    color: #b2bacf;
+    vertical-align: middle;
+}
+
+
+
+/*第三列 第一部分*/
+.back .can{
+    padding-right:30px;
+    padding-left: 30px;
+}
+
+.back .fl:nth-child(3)>div:nth-child(1){
+    padding-top: 40px;
+    padding-bottom: 26.5px;
+    padding-left: 5px;
+}
+.back .fl:nth-child(3)>div:nth-child(1) img{
+    vertical-align: middle;
+}
+.back .fl:nth-child(3)>div:nth-child(1) span{
+    vertical-align: middle;
+    font-size: 23px;
+    color: #fff;
+}
+
+
+
+/*第三列第二部分*/
+
+.back .fl:nth-child(3)>div:nth-child(2){
+    /*padding-top:29px; */
+    width: 265px;
+    padding-bottom: 131px;
+}
+.back .fl:nth-child(3)>div:nth-child(2)>div>span {
+    padding: 10px 7px;
+    background-color: #1c212b;
+}
+.back .fl:nth-child(3)>div:nth-child(2)>div{
+    margin:5px;
+    height: 37px;
+}
+
+.back .fl:nth-child(3)>div:nth-child(2)>div>span a{
+    font-size: 16px;
+    color: #b2bacf;
+}
+
+
+
+
+/*第四列第一部分*/
+.back .fl:nth-child(4){
+    /*padding-left: 1px;*/
+}
+.back .fl:nth-child(4)>div:nth-child(1){
+    padding-top: 40px;
+    padding-bottom: 26.5px;
+    /*padding-left: 5px;*/
+}
+.back .fl:nth-child(4)>div:nth-child(1) img{
+    vertical-align: middle;
+}
+.back .fl:nth-child(4)>div:nth-child(1) span{
+    vertical-align: middle;
+    font-size: 23px;
+    color: #fff;
+}
+
+/*第四列第二部分*/
+.back .fl:nth-child(4)>div:nth-child(2){
+    width: 300px;
+}
+.back .fl:nth-child(4)>div:nth-child(2)>div:nth-child(2){
+    padding: 0 6px 0 6px;
+}
+.back .fl:nth-child(4)>div:nth-child(2)>div:nth-child(3){
+    padding-top: 0;
+}
+.back .fl:nth-child(4)>div:nth-child(2)>div:nth-child(4){
+    padding-top: 6px;
+}
+.back .fl:nth-child(4)>div:nth-child(2)>div:nth-child(5){
+    padding: 6px 6px 0 6px;
+}
+.back .fl:nth-child(4)>div:nth-child(2)>div:nth-child(6){
+    padding: 6px 0 0 0;
+}
+
+.backC{
+    background-color: #171b24;
+}
+.backC .fl{
+    font-size: 14px;
+    color: #cdd1dd;
+    line-height: 75px;
+}
+.backC .fl a{
+    color: #cdd1dd;
+    padding-left: 32px;
+}
+
+
+
+/*我再也不皮了,别骂我*/

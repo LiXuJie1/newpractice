@@ -1,0 +1,40 @@
+/*body .demo-class .layui-layer-btn{border:2px solid #000}*/
+/*body .demo-class .layui-layer-btn a{background:#333;}*/
+body .demo-class .layui-layer-btn .layui-layer-btn0{
+	border: 0;
+	background: #FF666B;
+	padding:0 30px;
+	margin-right: 30px;
+	border-radius:3px ;
+}
+body .demo-class .layui-layer-btn .layui-layer-btn1{
+	background:#C2C2C2;
+	border: 0;
+	padding: 0 30px;
+	border-radius:3px ;
+}
+/*body .demo-class .layui-layer{border:2px solid #000}*/
+.layer{
+	display: none;
+	padding: 20px 20px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.layer li{
+	font-size: 14px;
+	padding-bottom: 15px;
+}
+.layer label{
+	display: inline-block;
+	width: 68px;
+	text-align: right;
+}
+.layer input{
+	padding:5px  10px;
+}
+.layer .add_street{
+	width: 400px;
+}
+body .demo-class1 .layui-layer-btn{
+	border-top:1px solid #CCCCCC;
+	background-color: #cccccc2b;
+}

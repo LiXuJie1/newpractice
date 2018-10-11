@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .container {
+            width: 1319px;
+            margin: 0 auto;
+        }
+        
+        .left_form {
+            padding-top: 49px;
+            padding-bottom: 18px;
+        }
+        
+        #fm {
+            padding-left: 15px;
+            padding-top: 17px;
+        }
+        
+        label {
+            display: inline-block;
+            width: 108px;
+            font-size: 18px;
+            text-align: right;
+        }
+        
+        input {
+            width: 446px;
+            height: 37px;
+            border-radius: 10px;
+            margin-left: 33px;
+            outline: none;
+        }
+        
+        .right_form {
+            padding-top: 49px;
+            padding-bottom: 17px;
+        }
+        
+        #rm {
+            padding-top: 17px;
+            padding-left: 51px;
+        }
+        
+        .right_form #bm:nth-child(4) {
+            padding-left: 193px;
+            padding-top: 17px;
+        }
+        
+        .right_form #bm:nth-child(5) {
+            padding-left: 25px;
+            padding-top: 17px;
+        }
+        
+        #btn,
+        #btn1 {
+            font-size: 18px;
+            padding: 11px 14px 11px 15px;
+            background-color: #337ab7;
+            border-radius: 10px;
+            outline: none;
+        }
+        
+        table {
+            color: #000;
+            font-weight: bold;
+            border: 2px solid #d7d7d7;
+        }
+        
+        table thead tr th {
+            height: 38px;
+            border: none;
+            border-bottom: 2px solid #c0d1d7;
+            padding-left: 20px;
+        }
+        
+        table tbody tr td {
+            height: 40px;
+            border-right: 1px dashed #d0d4d7;
+        }
+        
+        table thead tr th:first-child {
+            padding-left: 0;
+        }
+        
+        table thead tr th:last-child {
+            text-align: right;
+            padding-right: 13px;
+        }
+        
+        table thead tr th #check {
+            width: 18px;
+            height: 18px;
+            margin-left: 13px;
+        }
+        
+        table tbody tr td #check {
+            width: 18px;
+            height: 18px;
+            margin-left: 13px;
+        }
+        
+        table tbody tr td span {
+            padding-left: 6px;
+        }
+        
+        .pic {
+            padding-left: 16px;
+        }
+        
+        .pic img {
+            margin-right: 6px;
+        }
+        
+        tr {
+            display: "block";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container clearfix">
+        <div class="left_form fl">
+            <form action="" method="" id="fm">
+                <label for="">供应商名称</label>
+                <input type="text" id="name">
+            </form>
+            <form action="" method="" id="fm">
+                <label for="">供应商编号</label>
+                <input type="text" id="number">
+            </form>
+            <form action="" method="" id="fm">
+                <label for="">邮箱</label>
+                <input type="text" id="emil">
+            </form>
+            <form action="" method="" id="fm">
+                <label for="">法人代表</label>
+                <input type="text" id="people">
+            </form>
+        </div>
+        <div class=" right_form fl clearfix">
+            <form action="" method=" " id="rm">
+                <label for="">公司资源</label>
+                <input type="text" id="company">
+            </form>
+            <form action="" method=" " id="rm">
+                <label for="">经营期限</label>
+                <input type="text" id="time">
+            </form>
+            <form action="" method=" " id="rm">
+                <label for="">所属行业</label>
+                <input type="text" id="work">
+            </form>
+            <form action="" method=" " id="bm" class="fl">
+                <button type="button" id="btn">添加供应商</button>
+            </form>
+            <form action="" method=" " id="bm" class="fl">
+                <button type="button" id="btn1">保存修改</button>
+            </form>
+        </div>
+        <table width="1319px" id="table">
+            <thead>
+                <tr>
+                    <th width="41px">
+                        <input id="check" type="checkbox">
+                    </th>
+                    <th width="247px"><span>供应商名称</span></th>
+                    <th width="157px"><span>供应商编号</span></th>
+                    <th width="220px"><span>邮箱</span></th>
+                    <th width="122px"><span>法人代表</span></th>
+                    <th width="148px"><span>公司资质</span></th>
+                    <th width="122px"><span>经营期限</span></th>
+                    <th width="140px"><span>所属行业</span></th>
+                    <th width="88px"><span>操作</span></th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!--1-->
+                <tr>
+                    <td>
+                        <input id="check" type="checkbox">
+                    </td>
+                    <td><span>广州创惠科技有限公司</span></td>
+                    <td><span>20130908</span></td>
+                    <td><span>admin@163.com</span></td>
+                    <td><span>王青云</span></td>
+                    <td><span>品牌潜力</span></td>
+                    <td><span>2013-09-09 15：05</span></td>
+                    <td><span>高新技术行业</span></td>
+                    <td>
+                        <div class="pic">
+                            <img class="img1" src="images/clear.png" alt="">
+                            <img class="img2" src="images/write.png" alt="">
+                            <img class="img3" src="images/see.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+                <!--2-->
+                <tr>
+                    <td>
+                        <input id="check" type="checkbox">
+                    </td>
+                    <td><span>江苏天意网络信息有限公司</span></td>
+                    <td><span>20130907</span></td>
+                    <td><span>admin@163.com</span></td>
+                    <td><span>笑三千</span></td>
+                    <td><span>未来的发展</span></td>
+                    <td><span>2013-09-09 15：05</span></td>
+                    <td><span>网站空间</span></td>
+                    <td>
+                        <div class="pic">
+                            <img class="img1" src="images/clear.png" alt="">
+                            <img class="img2" src="images/write.png" alt="">
+                            <img class="img3" src="images/see.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+                <!--3-->
+                <tr>
+                    <td>
+                        <input id="check" type="checkbox">
+                    </td>
+                    <td><span>广州创惠科技有限公司</span></td>
+                    <td><span>20130908</span></td>
+                    <td><span>admin@163.com</span></td>
+                    <td><span>王青云</span></td>
+                    <td><span>品牌潜力</span></td>
+                    <td><span>2013-09-09 15：05</span></td>
+                    <td><span>高新技术行业</span></td>
+                    <td>
+                        <div class="pic">
+                            <img class="img1" src="images/clear.png" alt="">
+                            <img class="img2" src="images/write.png" alt="">
+                            <img class="img3" src="images/see.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+                <!--4-->
+                <tr>
+                    <td>
+                        <input id="check" type="checkbox">
+                    </td>
+                    <td><span>广州创惠科技有限公司</span></td>
+                    <td><span>20130908</span></td>
+                    <td><span>admin@163.com</span></td>
+                    <td><span>王青云</span></td>
+                    <td><span>品牌潜力</span></td>
+                    <td><span>2013-09-09 15：05</span></td>
+                    <td><span>高新技术行业</span></td>
+                    <td>
+                        <div class="pic">
+                            <img class="img1" src="images/clear.png" alt="">
+                            <img class="img2" src="images/write.png" alt="">
+                            <img class="img3" src="images/see.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+                <!--5-->
+                <tr>
+                    <td>
+                        <input id="check" type="checkbox">
+                    </td>
+                    <td><span>广州创惠科技有限公司</span></td>
+                    <td><span>20130908</span></td>
+                    <td><span>admin@163.com</span></td>
+                    <td><span>王青云</span></td>
+                    <td><span>品牌潜力</span></td>
+                    <td><span>2013-09-09 15：05</span></td>
+                    <td><span>高新技术行业</span></td>
+                    <td>
+                        <div class="pic">
+                            <img class="img1" src="images/clear.png" alt="">
+                            <img class="img2" src="images/write.png" alt="">
+                            <img class="img3" src="images/see.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+                <!--6-->
+                <tr>
+                    <td>
+                        <input id="check" type="checkbox">
+                    </td>
+                    <td><span>广州创惠科技有限公司</span></td>
+                    <td><span>20130908</span></td>
+                    <td><span>admin@163.com</span></td>
+                    <td><span>王青云</span></td>
+                    <td><span>品牌潜力</span></td>
+                    <td><span>2013-09-09 15：05</span></td>
+                    <td><span>高新技术行业</span></td>
+                    <td>
+                        <div class="pic">
+                            <img class="img1" src="images/clear.png" alt="">
+                            <img class="img2" src="images/write.png" alt="">
+                            <img class="img3" src="images/see.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+                <!--7-->
+                <tr>
+                    <td>
+                        <input id="check" type="checkbox">
+                    </td>
+                    <td><span>广州创惠科技有限公司</span></td>
+                    <td><span>20130908</span></td>
+                    <td><span>admin@163.com</span></td>
+                    <td><span>王青云</span></td>
+                    <td><span>品牌潜力</span></td>
+                    <td><span>2013-09-09 15：05</span></td>
+                    <td><span>高新技术行业</span></td>
+                    <td>
+                        <div class="pic">
+                            <img class="img1" src="images/clear.png" alt="">
+                            <img class="img2" src="images/write.png" alt="">
+                            <img class="img3" src="images/see.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+                <!--8-->
+                <tr>
+                    <td>
+                        <input id="check" type="checkbox">
+                    </td>
+                    <td><span>广州创惠科技有限公司</span></td>
+                    <td><span>20130908</span></td>
+                    <td><span>admin@163.com</span></td>
+                    <td><span>王青云</span></td>
+                    <td><span>品牌潜力</span></td>
+                    <td><span>2013-09-09 15：05</span></td>
+                    <td><span>高新技术行业</span></td>
+                    <td>
+                        <div class="pic">
+                            <img class="img1" src="images/clear.png" alt="">
+                            <img class="img2" src="images/write.png" alt="">
+                            <img class="img3" src="images/see.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+                <!--9-->
+                <tr>
+                    <td>
+                        <input id="check" type="checkbox">
+                    </td>
+                    <td><span>广州创惠科技有限公司</span></td>
+                    <td><span>20130908</span></td>
+                    <td><span>admin@163.com</span></td>
+                    <td><span>王青云</span></td>
+                    <td><span>品牌潜力</span></td>
+                    <td><span>2013-09-09 15：05</span></td>
+                    <td><span>高新技术行业</span></td>
+                    <td>
+                        <div class="pic">
+                            <img class="img1" src="images/clear.png" alt="">
+                            <img class="img2" src="images/write.png" alt="">
+                            <img class="img3" src="images/see.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--js-->
+    <script>
+        // 获取元素
+        var oTr = document.querySelectorAll("tbody tr");
+        var oBtn = document.getElementById("btn");
+        var oBtn1 = document.getElementById("btn1");
+        var oTbody = document.getElementById("tbody");
+        var oName = document.getElementById("name");
+        var oNumber = document.getElementById("number");
+        var oEmil = document.getElementById("emil");
+        var oPeople = document.getElementById("people");
+        var oCompany = document.getElementById("company");
+        var oTime = document.getElementById("time");
+        var oWork = document.getElementById("work");
+        var oImg1 = document.querySelectorAll(".pic img:nth-child(1)");
+        var oImg2 = document.querySelectorAll(".pic img:nth-child(2)");
+        var oImg3 = document.querySelectorAll(".pic img:nth-child(3)");
+        var oSpan = document.querySelectorAll("table tbody tr td span");
+        var oDiv=document.querySelector(".container");
+        // var oPic=document.querySelectorAll(".pic");
+        // console.log(oPic);
+        var flag = true;
+        oBtn.style.display = "block";
+        oBtn1.style.display = "none";
+
+
+        // 便利列表
+        // var span = [];
+        // for (i = 1; i <= oTr.length; i++) {
+        //     var oSpan = document.querySelectorAll("tbody tr:nth-child(" + i + ") td span");
+        //     //    console.log(i);  
+        //     span = span + oSpan;
+        //     console.log(span);
+        //     console.log(oSpan);
+        //     //    console.log(oSpan[0]);
+        //     console.dir(span);
+        // }
+        // oSpan.setAttribute('display','block');
+        // var pare=par.parentNode;
+
+
+        // console.log(oImg3);
+
+        // 换颜色
+        window.onload = function () {
+            for (var i = 0; i < oTr.length; i++) {
+                if (i % 2 != 0) {
+                    oTr[i].style.backgroundColor = "#f4f8fb";
+                }
+                else if (i % 2 == 0) {
+                    oTr[i].style.backgroundColor = "#00ff00";
+                }
+            }
+
+
+
+            // 添加事件
+            oBtn.onclick = function () {
+                var oname = oName.value;
+                var onumber = oNumber.value;
+                var oemil = oEmil.value;
+                var opeople = oPeople.value;
+                var ocompany = oCompany.value;
+                var otime = oTime.value;
+                var owork = oWork.value;
+                var otr = document.createElement("tr");
+                otr.innerHTML = '<tr><td><input id="check" type="checkbox"></td><td><span>' + oname + '</span></td><td><span>' + onumber + '</span></td><td><span>' + oemil + '</span></td><td><span>' + opeople + '</span></td><td><span>' + ocompany + '</span></td><td><span>' + otime + '</span></td><td><span>' + owork + '</span></td><td><div class="pic"><img class="img1" src="images/clear.png" alt=""><img class="img2" src="images/write.png" alt=""><img class="img3" src="images/see.png" alt=""></div></td></tr>';
+                oTbody.insertBefore(otr, oTbody.lastChild);
+                var oTr = document.querySelectorAll("tbody tr");
+                oName.value = '';
+                oNumber.value = '';
+                oEmil.value = '';
+                oPeople.value = '';
+                oCompany.value = '';
+                oTime.value = '';
+                oWork.value = '';
+
+                for (var i = 0; i < oTr.length; i++) {
+                    if (i % 2 != 0) {
+                        oTr[i].style.backgroundColor = "#f4f8fb";
+                    }
+                    else if (i % 2 == 0) {
+                        oTr[i].style.backgroundColor = "#00ff00";
+                    }
+                }
+
+                //    新增条目删除
+                var oImg1 = document.querySelectorAll(".pic img:nth-child(1)");
+                // console.log(oImg1)
+                for (var i = 0; i < oImg1.length; i++) {
+
+                    oImg1[i].onclick = function () {
+                        if (!flag) {
+                            return false;
+                        }
+                        // console.log(i);
+                        var opic = this.parentNode;
+                        var tr = opic.parentNode;
+                        // console.log(tr.parentNode);
+                        oTbody.removeChild(tr.parentNode);
+                        var oTr = document.querySelectorAll("tbody tr");
+                        for (var i = 0; i < oTr.length; i++) {
+                            if (i % 2 != 0) {
+                                oTr[i].style.backgroundColor = "#f4f8fb";
+                            }
+                            else if (i % 2 == 0) {
+                                oTr[i].style.backgroundColor = "#00ff00";
+                            }
+                        }
+
+                    }
+                }
+
+                // 新增条目隐藏
+                var oImg3 = document.querySelectorAll(".pic img:nth-child(3)");
+                for (i = 0; i < oImg3.length; i++) {
+                    oImg3[i].onclick = function () {
+                        //  找到最终父级tr然后找到tr子集 排除掉图片的tr子集再找到剩下的的子集
+                        var opic = this.parentNode;
+                        var tr = opic.parentNode;
+                        var trr = tr.parentNode;
+                        var trrr = trr.children;
+                        // console.dir(trrr[1].children);
+                        if (trrr[1].children[0].style.display != "none") {
+                            for (var j = 1; j < trrr.length - 1; j++) {
+                                trrr[j].children[0].style.display = "none";
+                            }
+                        }
+                        else {
+                            for (var j = 1; j < trrr.length - 1; j++) {
+                                trrr[j].children[0].style.display = "block";
+                            }
+                        }
+                        // console.dir(trrr[1].children);
+                    }
+                }
+
+                // 新增条目编辑
+
+                // 新增条目编辑
+                var oImg2 = document.querySelectorAll(".pic img:nth-child(2)");
+                for (var i = 0; i < oImg2.length; i++) {
+                    oImg2[i].onclick = function () {
+                        var opic = this.parentNode;
+                        var tr = opic.parentNode;
+                        var trr = tr.parentNode;
+                        var trrr = trr.children;
+                        // console.dir(trrr[1].children[0].innerText);
+                        var array = [];
+                        for (var i = 1; i < trrr.length; i++) {
+                            array[i - 1] = trrr[i].children[0].innerText;
+                        }
+                        console.dir(array);
+                        oName.value = array[0];
+                        oNumber.value = array[1];
+                        oEmil.value = array[2];
+                        oPeople.value = array[3];
+                        oCompany.value = array[4];
+                        oTime.value = array[5];
+                        oWork.value = array[6];
+                        flag = false;
+                        oBtn.style.display = "none";
+                        oBtn1.style.display = "block";
+
+
+                        // 保存按钮新增
+                        oBtn1.onclick = function () {
+                            trrr[1].children[0].innerText = oName.value;
+                            trrr[2].children[0].innerText = oNumber.value;
+                            trrr[3].children[0].innerText = oEmil.value;
+                            trrr[4].children[0].innerText = oPeople.value;
+                            trrr[5].children[0].innerText = oCompany.value;
+                            trrr[6].children[0].innerText = oTime.value;
+                            trrr[7].children[0].innerText = oWork.value;
+                            oName.value = '';
+                            oNumber.value = '';
+                            oEmil.value = '';
+                            oPeople.value = '';
+                            oCompany.value = '';
+                            oTime.value = '';
+                            oWork.value = '';
+                            // console.log(oName.value);
+                            oBtn.style.display = "block";
+                            oBtn1.style.display = "none";
+                            flag = true;
+                        }
+
+                    }
+                }
+
+            }
+            // console.log(oSpan);
+
+            // 删除条目
+            // for (var i = 0; i < oImg1.length; i++) {
+            //     // console.log(oImg1);
+            //     oImg1[i].onclick = function () {
+            //         // console.log(i);
+            //         if (flag != true) {
+            //             return false;
+            //         }
+            //         var opic = this.parentNode;
+            //         var tr = opic.parentNode;
+            //         // console.log(tr.parentNode);
+            //         oTbody.removeChild(tr.parentNode);
+            //         var oTr = document.querySelectorAll("tbody tr");
+            //         for (var i = 0; i < oTr.length; i++) {
+            //             if (i % 2 != 0) {
+            //                 oTr[i].style.backgroundColor = "#f4f8fb";
+            //             }
+            //             else if (i % 2 == 0) {
+            //                 oTr[i].style.backgroundColor = "#00ff00";
+            //             }
+            //         }
+            //     }
+            // }
+            console.log(1);
+            oTbody.onclick=function (e) {
+                if (e.target.className == "img1") {
+                    var opic = e.target.parentNode;
+                    var tr = opic.parentNode;
+                    oTbody.removeChild(tr.parentNode);
+                    var oTr = document.querySelectorAll("tbody tr");
+                    for (var i = 0; i < oTr.length; i++) {
+                        if (i % 2 != 0) {
+                            oTr[i].style.backgroundColor = "#f4f8fb";
+                        }
+                        else if (i % 2 == 0) {
+                            oTr[i].style.backgroundColor = "#00ff00";
+                        }
+                    }
+                }
+            })
+
+
+
+            //隐藏
+            // for (i = 0; i < oImg3.length; i++) {
+            //     oImg3[i].onclick = function () {
+            //         //  找到最终父级tr然后找到tr子集 排除掉图片的tr子集再找到剩下的的子集
+            //         var opic = this.parentNode;
+            //         var tr = opic.parentNode;
+            //         var trr = tr.parentNode;
+            //         var trrr = trr.children;
+            //         // console.dir(trrr[1].children);
+            //         if (trrr[1].children[0].style.display != "none") {
+            //             for (var j = 1; j < trrr.length - 1; j++) {
+            //                 trrr[j].children[0].style.display = "none";
+            //             }
+            //         }
+            //         else {
+            //             for (var j = 1; j < trrr.length - 1; j++) {
+            //                 trrr[j].children[0].style.display = "block";
+            //             }
+            //         }
+            //         // console.dir(trrr[1].children);
+            //     }
+            // }
+
+            oTbody.onclick = function (e) {
+                if (e.target.className == "img3") {
+                    var opic = e.target.parentNode;
+                    var tr = opic.parentNode;
+                    var trr = tr.parentNode;
+                    var trrr = trr.children;
+                    // console.dir(trrr[1].children);
+                    if (trrr[1].children[0].style.display != "none") {
+                        for (var j = 1; j < trrr.length - 1; j++) {
+                            trrr[j].children[0].style.display = "none";
+                        }
+                    }
+                    else {
+                        for (var j = 1; j < trrr.length - 1; j++) {
+                            trrr[j].children[0].style.display = "block";
+                        }
+                    }
+                }
+            }
+
+            //编辑
+            // for (var i = 0; i < oImg2.length; i++) {
+            //     oImg2[i].onclick = function () {
+            //         var opic = this.parentNode;
+            //         var tr = opic.parentNode;
+            //         var trr = tr.parentNode;
+            //         var trrr = trr.children;
+            //         // console.dir(trrr[1].children[0].innerText);
+            //         var array = [];
+            //         for (var i = 1; i < trrr.length; i++) {
+            //             array[i - 1] = trrr[i].children[0].innerText;
+            //         }
+            //         // console.dir();
+            //         oName.value = array[0];
+            //         oNumber.value = array[1];
+            //         oEmil.value = array[2];
+            //         oPeople.value = array[3];
+            //         oCompany.value = array[4];
+            //         oTime.value = array[5];
+            //         oWork.value = array[6];
+            //         flag = false;
+            //         oBtn.style.display = "none";
+            //         oBtn1.style.display = "block";
+            oTbody.onclick = function (e) {
+                if (e.target.className == "img2") {
+                    var opic = e.target.parentNode;
+                    var tr = opic.parentNode;
+                    var trr = tr.parentNode;
+                    var trrr = trr.children;
+                    var array = [];
+                    for (var i = 1; i < trrr.length; i++) {
+                        array[i - 1] = trrr[i].children[0].innerText;
+                    }
+                    oName.value = array[0];
+                    oNumber.value = array[1];
+                    oEmil.value = array[2];
+                    oPeople.value = array[3];
+                    oCompany.value = array[4];
+                    oTime.value = array[5];
+                    oWork.value = array[6];
+                    flag = false;
+                    oBtn.style.display = "none";
+                    oBtn1.style.display = "block";
+                }
+            }
+
+
+            // 保存按钮
+            // oBtn1.onclick = function () {
+            //     trrr[1].children[0].innerText = oName.value;
+            //     trrr[2].children[0].innerText = oNumber.value;
+            //     trrr[3].children[0].innerText = oEmil.value;
+            //     trrr[4].children[0].innerText = oPeople.value;
+            //     trrr[5].children[0].innerText = oCompany.value;
+            //     trrr[6].children[0].innerText = oTime.value;
+            //     trrr[7].children[0].innerText = oWork.value;
+            //     oName.value = '';
+            //     oNumber.value = '';
+            //     oEmil.value = '';
+            //     oPeople.value = '';
+            //     oCompany.value = '';
+            //     oTime.value = '';
+            //     oWork.value = '';
+            //     // console.log(oName.value);
+            //     oBtn.style.display = "block";
+            //     oBtn1.style.display = "none";
+            //     flag = true;
+            // }
+            oDiv.onclick = function (e) {
+                if (e.target.className == "btn1") {
+                    trrr[1].children[0].innerText = oName.value;
+                    trrr[2].children[0].innerText = oNumber.value;
+                    trrr[3].children[0].innerText = oEmil.value;
+                    trrr[4].children[0].innerText = oPeople.value;
+                    trrr[5].children[0].innerText = oCompany.value;
+                    trrr[6].children[0].innerText = oTime.value;
+                    trrr[7].children[0].innerText = oWork.value;
+                    oName.value = '';
+                    oNumber.value = '';
+                    oEmil.value = '';
+                    oPeople.value = '';
+                    oCompany.value = '';
+                    oTime.value = '';
+                    oWork.value = '';
+                    // console.log(oName.value);
+                    oBtn.style.display = "block";
+                    oBtn1.style.display = "none";
+                    flag = true;
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

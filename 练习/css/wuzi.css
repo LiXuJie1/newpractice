@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.five{
+    width: 640px;
+    height: 550px;
+    position: relative;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.intro p{
+    width: 640px;
+    font-size: 29px;
+}
+.intro{
+    background-color:rgba(255, 255, 255, 50%);
+    position: absolute;
+    
+}
+.five:hover{
+    box-shadow: rgb(0, 1, 1) 3px 10px 2px;
+}
+.five:hover .intro{
+    top: 46%;
+    left: 0;
+}
+.member{
+    width: 640px;
+    height: 117px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+}
+.tra{
+    transition: 1s;
+    top:66%;
+    left: 0;
+}
+.member .fr{
+    width: 70px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 14px; 
+    margin-right: 20px;
+    background-color:yellow; 
+    margin-top: 77px;
+    color:#fff;
+    text-align: center;
+    line-height: 30px;
+}
+.member .fl:nth-child(1){
+    padding-top: 77px;
+    padding-left: 20px;
+    
+}
+.member .fl:nth-child(1) img{
+    vertical-align: middle;
+}
+.member .fl:nth-child(1) span{
+    vertical-align: middle;
+    color: #a9a9a9;
+    
+}

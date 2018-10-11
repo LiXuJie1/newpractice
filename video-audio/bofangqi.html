@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            color: #fff;
+        }
+        
+        video {
+            padding-top: 30px;
+            padding-bottom: 20px;
+            background-color: #000;
+        }
+        
+        .bottom {
+            width: 600px;
+            height: 50px;
+            margin: 0 auto;
+            background-color: #373742;
+            position: absolute;
+            top: 380px;
+            left: 383px;
+        }
+        
+        .first {
+            font-size: 30px;
+            font-weight: normal;
+            padding-left: 10px;
+            padding-top: 12px;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        
+        .persent {
+            width: 600px;
+            height: 10px;
+            background-color: rgba(0, 0, 0, 0.4);
+            line-height: 50px;
+            position: relative;
+        }
+        
+        .color {
+            width: 0px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* transition: 0.95s linear; */
+        }
+        
+        .go {
+            font-size: 30px;
+            padding-right: 30px;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        
+        .voice {
+            padding-right: 5px;
+            font-size: 30px;
+            line-height: 30px;
+            cursor: pointer;
+            color: #ff8c00;
+        }
+        
+        .fly {
+            width: 114px;
+            height: 5px;
+            border-radius: 14px;
+            background-color: #fff;
+            margin-right: 20px;
+            margin-top: 15px;
+            position: relative;
+        }
+        
+        .point {
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            position: absolute;
+            top: -5px;
+            border-radius: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <video width="600" id="video">
+        <source src="mov_cartoon.mp4">
+    </video>
+    <div class="bottom clearfix">
+        <div class="fa fa-play first fl" id="first"></div>
+        <div class="persent">
+            <div class="color" id="color"></div>
+        </div>
+        <div class="fly fr">
+            <div class="point" id="point"></div>
+        </div>
+        <div class="fr fa fa-volume-up voice" id="voice"></div>
+        <div class="fr fa fa-fast-forward go" id="go">
+        </div>
+
+    </div>
+    <script>
+        window.onload = function () {
+            var flag = true;
+            var flag2 = true;
+            var t = 0;
+            var timer;
+            var i = 1;
+            var oVideo = document.getElementById('video');
+            var oFirst = document.getElementById('first');
+            var oColor = document.getElementById('color');
+            var oGo = document.getElementById('go')
+            var oPoint = document.getElementById('point');
+            var oVoice = document.getElementById('voice');
+
+            function run() {
+                t = t + i;
+                oColor.style.width = t + 'px';
+                if (t >= 600) {
+                    stop();
+                    t = 0;
+                    i = 1;
+                    oVideo.currentTime = 0;
+                    oVideo.playbackRate = 1;
+                    oGo.style.color = "#fff";
+                }
+                // oVideo.muted=true;
+                // oVideo.volume=1;
+            }
+            function play() {
+                oVideo.play();
+                oFirst.classList.remove('fa-play');
+                oFirst.classList.add('fa-pause');
+                oFirst.style.color = "#ff8c00";
+                flag = false;
+                clearInterval(timer);
+                timer = window.setInterval(run, 1000 / 60);
+                run();
+
+            }
+            function stop() {
+                clearInterval(timer);
+                oVideo.pause();
+                oFirst.classList.remove('fa-pause');
+                oFirst.classList.add('fa-play');
+                oFirst.style.color = "#fff";
+                flag = true;
+            }
+
+            oFirst.onclick = function () {
+                if (flag == true) {
+                    play();
+
+                } else {
+                    stop();
+                }
+            }
+            oVoice.onclick = function () {
+                if (flag2 == false) {
+                    oVideo.muted = false;
+                    oVoice.style.color = "#ff8c00";
+                    flag2 = true;
+                } else {
+                    oVideo.muted = true;
+                    oVoice.style.color = "#fff";
+                    flag2 = false;
+                }
+            }
+            oGo.onclick = function () {
+                i = 5;
+                oVideo.playbackRate = 5;
+                this.style.color = "#ff8c00";
+            }
+            oPoint.onmousedown = function (e) {
+                this.style.backgroundColor = "#ff8c00";
+                var startx = e.clientX;
+                document.onmousemove = function (e) {
+                    var x = e.clientX;
+                    oPoint.style.left = x - startx + 'px';
+                    var pi = oPoint.offsetLeft;
+                    if (parseInt(oPoint.style.left) > 0) {
+                        oVoice.style.color = "#ff8c00";
+                    }
+                    if (parseInt(oPoint.style.left) >= 100) {
+                        oPoint.style.left = 100 + 'px';
+                    }
+                    if (parseInt(oPoint.style.left) < 0) {
+                        oPoint.style.left = 0 + 'px';
+                        oVoice.style.color = "#fff";
+                    }
+                    oVideo.volume = parseInt(parseInt(oPoint.style.left)) / 100;
+                }
+                document.onmouseup = function () {
+                    document.onmousemove = false;
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

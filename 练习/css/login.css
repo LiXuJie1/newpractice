@@ -1,0 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+form{
+            width: 230px;
+            margin: 0 auto;
+        }

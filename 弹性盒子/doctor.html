@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* body{
+            margin: 0;
+            padding: 0;
+        } */
+        .doctorPage {
+            width: 100%;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            height: 65px;
+            line-height: 65px;
+            border-bottom: 1px solid #efece5;
+        }
+
+        .top .title {
+            padding-right: 50%;
+            width: 18.1%;
+            font-size: 16px;
+            color: #333;
+            margin-right: -32px;
+        }
+
+        .top .back {
+            font-size: 16px;
+            color: #333;
+            padding-left: 4%;
+        }
+
+        .message {
+            display: flex;
+            display: flex;
+            height: 124px;
+            justify-content: space-between;
+        }
+
+        .message .left {
+            padding-left: 4%;
+        }
+
+        .message .name {
+            padding-top: 22%;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .message .id {
+            width: 101.6%;
+            padding-top: 5.6%;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .message .right {
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            background-color: red;
+            overflow: hidden;
+            margin-right: 4%;
+            margin-top: 4%;
+        }
+
+        .work {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            padding-bottom: 15px;
+            margin-left: 4%;
+            border-bottom: 10px solid #f7f4ed;
+        }
+
+        .work .year {
+            width: 10.7%;
+            padding-left: 15.2%;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .work .number {
+            width: 21%;
+            font-size: 16px;
+            color: #333;
+            /* padding-left: 17.2%; */
+        }
+
+        .work .face {
+            width: 13%;
+            font-size: 16px;
+            color: #333;
+            padding-right: 11.7%;
+        }
+
+        .work .box2 {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .service {
+            padding-left: 4%;
+        }
+
+        .service .title {
+            font-size: 15px;
+            color: #666;
+            padding-top: 16px;
+        }
+
+        .service .heart {
+            display: flex;
+            font-size: 14px;
+            color: #333;
+            justify-content: space-between;
+            padding-top: 19px;
+            padding-bottom: 9px;
+            border-bottom: 1px solid #efece5;
+        }
+
+        .service .body {
+            font-size: 14px;
+            color: #333;
+            padding-top: 19px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .address {
+            margin-left: 4%;
+            padding-bottom: 23px;
+            border-bottom: 10px solid #f7f4ed;
+        }
+
+        .address .serviceAdress {
+            padding-top: 34px;
+            font-size: 15px;
+            padding-bottom: 12px;
+            color: #666;
+        }
+        .address .area{
+            display: flex;
+        }
+        .address .area .ad {
+            width: 17.8%;
+            height: 27px;
+            line-height: 27px;
+            background-color: #f7f4ed;
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+        }
+        .address .area .ad:nth-child(2),
+        .address .area .ad:nth-child(3){
+            margin-left: 2.7%;
+        }
+        .eva{
+            padding-left: 4%;
+        }
+        .eva .blok:nth-child(2){
+            padding-bottom: 12px;
+            border-bottom: 1px solid #efece5;
+        }
+        .eva .title{
+            padding-top: 14px;
+            font-size: 15px;
+            color: #333;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #efece5;
+        }
+        .eva .blok .left{
+            display: flex;
+            width: 100%;
+        }
+        .eva .top2{
+            padding-top: 16px;
+            display: flex;
+            justify-content:space-between;
+        }
+        .eva .headPhoto{
+            width: 38px;
+            height: 38px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .eva .name{
+            padding-left: 1.8%;
+            font-size: 14px;
+            color: #333;
+            width: 33.4%;
+        }
+        .eva .data{
+            /* padding-left: 65.4%; */
+            width: 26.9%;
+            font-size: 13px;
+            color: #999;
+        }
+        .eva .text{
+            padding-left: 11.8%;
+            font-size: 13px;
+            color: #333;
+        }
+        .go{
+            margin-top: 30px;
+            height: 45px;
+            background-color: #ffc51b;
+            color: #fff;
+            font-size: 13px;
+            text-align: center;
+            line-height: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="doctorPage">
+        <div class="top">
+            <div class="back">
+                <</div> <div class="title">医生主页
+            </div>
+        </div>
+        <div class="message">
+            <div class="left">
+                <div class="name">张大千</div>
+                <div class="star"></div>
+                <div class="id">工号：123923</div>
+            </div>
+            <div class="right">
+                <div class="headPhoto">
+                </div>
+            </div>
+        </div>
+        <div class="work">
+            <div class="year">
+                <div>10年</div>
+                <div class="box2">经验</div>
+            </div>
+            <div class="number">
+                <div>123123份</div>
+                <div class="box2">预约</div>
+            </div>
+            <div class="face">
+                <div>3-6岁</div>
+                <div class="box2">对象</div>
+            </div>
+        </div>
+        <div class="service">
+            <div class="title">服务</div>
+            <div class="heart">
+                <div class="name">心理咨询</div>
+                <div class="hour">2小时</div>
+            </div>
+            <div class="body">
+                <div class="name">脾胃调理</div>
+                <div class="hour">2小时</div>
+            </div>
+        </div>
+        <div class="address">
+            <div class="serviceAdress">服务区域</div>
+            <div class="area">
+                <div class="ad">上地</div>
+                <div class="ad">回龙观</div>
+                <div class="ad">立水桥</div>
+            </div>
+        </div>
+        <div class="eva">
+            <div class="title">评价(2)</div>
+            <div class="blok">
+                <div class="top2">
+                    <div class="left">
+                    <div class="headPhoto"></div>
+                    <div class="name">
+                        <div>王大拿</div>
+                        <div>一二三四五4.5</div>
+                    </div>
+                </div>
+                    <div class="data">2018-07-01</div>
+                </div>
+                <div class="text">
+                    王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿
+                </div>
+            </div>
+            <div class="blok">
+                <div class="top2">
+                    <div class="left">
+                    <div class="headPhoto"></div>
+                    <div class="name">
+                        <div>王大拿</div>
+                        <div>一二三四五4.5</div>
+                    </div>
+                </div>
+                    <div class="data">2018-07-01</div>
+                </div>
+                <div class="text">
+                    王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿王大拿  
+                </div>
+            </div>
+        </div>
+        <div class="go">
+            立即预约
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/lunbo.css">
+</head>
+
+<body>
+    <div class="banner">
+        <div class="image re">
+            <img class="ab first" src="images/1.jpg" alt="">
+            <img class="ab second" src="images/2.jpg" alt="">
+            <img class="ab third" src="images/3.jpg" alt="">
+            <img class="ab fourth" src="images/4.jpg" alt="">
+            <img class="ab fifth" src="images/5.jpg" alt="">
+            <img class="ab sixth" src="images/6.jpg" alt="">
+            <img class="ab seventh" src="images/7.jpg" alt="">
+            <img class="ab eigth" src="images/8.jpg" alt="">
+            <div class="next ab tarch">></div>
+            <div class="last ab tarch"><</div>
+            <div class="point_box ab">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var array = [];
+        var arr = []
+        var t = 0;
+        var timer;
+        array.push($('img'));
+        for (var i = 0; i < array[0].length; i++) {
+            $('.point_box').append($('<div class="point"></div>'));
+        }
+        arr.push($('.point'));
+        $('.point_box').css({
+            marginLeft: -(((array[0].length) * 20 + 24) / 2) + 'px'
+        })
+        console.log(array)
+        // 定时器
+        timer = setInterval(function () {
+            // 隐藏全部
+            for (var i = 0; i < array[0].length; i++) {
+                $(array[0][i]).css({
+                    opacity: '0',
+                    display: 'none'
+                })
+                $(arr[0][i]).css({
+                    backgroundColor: 'rgba(255, 255, 255, 0.6)'
+                })
+            }
+
+            //    运行run方法
+            run();
+            //    全部图片隐藏消失
+            $(array[0][t]).css({
+                display: 'block'
+            })
+            //    指定图片出现
+            $(array[0][t]).stop(true).animate({
+                opacity: '1'
+            })
+            $(arr[0][t]).css({
+                backgroundColor: '#ff666b'
+            })
+        }, 2000)
+        // 下标t的循环
+        function run() {
+            t = t + 1;
+            if (t >= array[0].length) {
+                t = 0;
+            }
+        }
+
+
+
+        // 鼠标移动到左右分页处停止计时器
+        $('.tarch').hover(function () {
+            // 清楚计时器
+            window.clearInterval(timer);
+        }, function () {
+            window.clearInterval(timer);
+            // 重新启动定时器！！！！！！！！！！！！！！！！！！！！
+            timer = setInterval(function () {
+                // 隐藏全部
+                for (var i = 0; i < array[0].length; i++) {
+                    $(array[0][i]).css({
+                        opacity: '0',
+                        display: 'none'
+                    })
+                    $(arr[0][i]).css({
+                        backgroundColor: 'rgba(255, 255, 255, 0.6)'
+                    })
+                }
+                //    运行run方法
+                run();
+                //    全部图片隐藏消失
+                $(array[0][t]).css({
+                    display: 'block'
+                })
+                $(arr[0][t]).css({
+                    backgroundColor: '#ff666b'
+                })
+                //    指定图片出现
+                $(array[0][t]).stop(true).animate({
+                    opacity: '1'
+                })
+            }, 2000)
+        })
+
+        // 鼠标点击左右分页出滑向下一个页面
+
+
+
+
+        //point hover事件
+
+        for (let i = 0; i < arr[0].length; i++) {
+            $(arr[0][i]).hover(function () {
+                $(array[0]).css({
+                    opacity: '0',
+                    display: 'none'
+                })
+                $(arr[0]).css({
+                    backgroundColor: 'rgba(255, 255, 255, 0.6)'
+                })
+                $(array[0][i]).css({
+                    display: 'block'
+                })
+                $(arr[0][i]).css({
+                    backgroundColor: '#ff666b'
+                })
+                $(array[0][i]).stop(true).animate({
+                    opacity: '1'
+                })
+
+            }, function () {
+            })
+        }
+
+
+        // 点击左右翻到下一页
+
+        $($('.next')[0]).click(function () {
+
+            for (var i = 0; i < array[0].length; i++) {
+                $(array[0][i]).css({
+                    opacity: '0',
+                    display: 'none'
+                })
+                $(arr[0][i]).css({
+                    backgroundColor: 'rgba(255, 255, 255, 0.6)'
+                })
+            }
+
+            $(array[0][t + 1]).animate({
+                opacity: '1'
+            })
+            $(array[0][t + 1]).css({
+                display: 'block'
+            })
+            $(arr[0][t + 1]).css({
+                backgroundColor: '#ff666b'
+            })
+            t = t + 1;
+            if ((t + 1) >= array[0].length) {
+                t = -1;
+            }
+
+        })
+        $($('.last')[0]).click(function () {
+
+            for (var i = 0; i < array[0].length; i++) {
+                $(array[0][i]).css({
+                    opacity: '0',
+                    display: 'none'
+                })
+                $(arr[0][i]).css({
+                    backgroundColor: 'rgba(255, 255, 255, 0.6)'
+                })
+            }
+
+            t = t - 1;
+            if (t < 1) {
+                t = (array[0].length);
+            }
+            $(array[0][t - 1]).animate({
+                opacity: '1'
+            })
+            $(array[0][t - 1]).css({
+                display: 'block'
+            })
+            $(arr[0][t - 1]).css({
+                backgroundColor: '#ff666b'
+            })
+            console.log(t);
+
+        })
+
+
+
+        console.log()
+
+
+
+
+    })
+
+</script>
+
+</html>

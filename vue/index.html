@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-model他的值对应于创建的vue实例的data选项中的name字段，这是vue的数据绑定 -->
+        <input type="text" v-model="name" placeholder="你的名字">
+        <input type="text" v-model="age" placeholder="年龄">
+        <input type="text" v-model="sex" placeholder="性别 0||1">
+        <!-- <h1>你好，{{name}} 今年{{age}}岁</h1> -->
+        <div v-html="name"></div>
+        <div v-if="sex==1">男</div>
+        <div v-else-if="sex==2">女</div>
+        <div v-else="sex==''"></div>
+        <div v-show="ok">显示</div>
+        
+            {{date}}
+        
+        <table >
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>价格</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(item,index) in books":key="index">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.author}}</td>
+                    <td>{{item.price}}</td>
+                </tr>
+                <tr>
+                    <td v-for="(person,index) in persons">
+                        {{person}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var app =new Vue({
+            // el用来用页面中存在的dom来挂载vue实例
+            el:'#app',
+            data:{
+                name:'',
+                age:'',
+                sex:'',
+                ok:true,
+                date:new Date(),
+                persons:['haunglei','dmnand','fnaof;','fniaowf','fnwaiof;o'],
+                books:[{
+                    id:1,
+                    author:'曹雪芹',
+                    name:'红楼梦',
+                    price:'21'
+                },{
+                    id:2,
+                    author:'曹雪芹',
+                    name:'西游记',
+                    price:'21'
+                },{
+                    id:3,
+                    author:'曹雪芹',
+                    name:'水浒传',
+                    price:'21'
+                },{
+                    id:4,
+                    author:'曹雪芹',
+                    name:'三国演义',
+                    price:'21'
+                }]
+                
+            },
+            mounted:function(){
+                    var_this=this;
+                    this.timer=setInterval(function(){
+                        var_this.date=new Date();
+                    },1000);
+                },
+                beforeDestroy:function(){
+                    if(this.timer){
+                        clearInterval(this.timer);
+                    }
+                }
+        })
+    </script>
+</body>
+</html>
